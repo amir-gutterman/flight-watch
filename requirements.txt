@@ -1,2 +1,3 @@
 fast-flights
+typing_extensions
 python-dotenv
