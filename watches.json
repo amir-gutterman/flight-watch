@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Madrid to Tel Aviv - September",
+    "origin": "MAD",
+    "destination": "TLV",
+    "outbound_window": { "start": "2026-09-01", "end": "2026-09-30" },
+    "return_window": { "start": "2026-09-01", "end": "2026-09-30" },
+    "min_stay_days": 3,
+    "max_stay_days": 21,
+    "direct_only": true,
+    "currency": "EUR",
+    "max_price": 350,
+    "adults": 1
+  }
+]
