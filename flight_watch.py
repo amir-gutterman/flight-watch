@@ -102,12 +102,21 @@ def watch_key(watch):
     return watch.get("id") or watch["name"]
 
 
+def parse_dt(s):
+    """Parse an ISO timestamp from either Python (naive) or JS (Z-suffixed,
+    timezone-aware) and normalize to a naive datetime for comparison."""
+    dt = datetime.fromisoformat(s)
+    if dt.tzinfo is not None:
+        dt = dt.replace(tzinfo=None)
+    return dt
+
+
 def is_expired(watch):
     expires_after_days = watch.get("expires_after_days")
     created_at = watch.get("created_at")
     if not expires_after_days or not created_at:
         return False
-    age_days = (datetime.now() - datetime.fromisoformat(created_at)).days
+    age_days = (datetime.now() - parse_dt(created_at)).days
     return age_days >= expires_after_days
 
 
@@ -116,7 +125,7 @@ def due_for_check(watch, entry):
     last_checked_at = entry.get("last_checked_at")
     if not last_checked_at:
         return True
-    elapsed_hours = (datetime.now() - datetime.fromisoformat(last_checked_at)).total_seconds() / 3600
+    elapsed_hours = (datetime.now() - parse_dt(last_checked_at)).total_seconds() / 3600
     return elapsed_hours >= interval_hours
 
 
@@ -125,7 +134,7 @@ def should_alert(entry, price):
     alerted_at = entry.get("alerted_at")
     if prior is None:
         return True
-    days_since = (datetime.now() - datetime.fromisoformat(alerted_at)).days
+    days_since = (datetime.now() - parse_dt(alerted_at)).days
     if price < prior * 0.95:
         return True
     if days_since >= 7:
