@@ -3,9 +3,9 @@ fares across a date window and emails alerts when the cheapest fare found
 drops to or below a configured threshold.
 
 Run manually with: python flight_watch.py
-Config lives in watches.json (one or more independent route/date/price watches).
-Per-watch alert history lives in state.json so repeat runs don't re-spam the
-same price.
+Config lives in watches.json (one or more independent route/date/price watches,
+each with its own check interval and optional expiry). Per-watch state
+(last check time, price history, last alert) lives in state.json.
 """
 import os
 import sys
@@ -29,6 +29,7 @@ STATE_FILE = os.path.join(os.path.dirname(__file__), "state.json")
 OUTBOUND_SAMPLE_STEP_DAYS = 3
 STAY_LENGTHS_DAYS = [7, 10, 14]
 MAX_QUERIES_PER_WATCH = 20
+HISTORY_CAP = 200
 
 
 def daterange_step(start, end, step_days):
@@ -85,24 +86,47 @@ def search_offer(watch, out_date, ret_date):
     }
 
 
-def load_state():
-    if os.path.exists(STATE_FILE):
-        with open(STATE_FILE) as f:
+def load_json(path, default):
+    if os.path.exists(path):
+        with open(path) as f:
             return json.load(f)
-    return {}
+    return default
 
 
-def save_state(state):
-    with open(STATE_FILE, "w") as f:
-        json.dump(state, f, indent=2)
+def save_json(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
 
 
-def should_alert(watch_name, price, state):
-    prior = state.get(watch_name)
+def watch_key(watch):
+    return watch.get("id") or watch["name"]
+
+
+def is_expired(watch):
+    expires_after_days = watch.get("expires_after_days")
+    created_at = watch.get("created_at")
+    if not expires_after_days or not created_at:
+        return False
+    age_days = (datetime.now() - datetime.fromisoformat(created_at)).days
+    return age_days >= expires_after_days
+
+
+def due_for_check(watch, entry):
+    interval_hours = watch.get("check_interval_hours", 6)
+    last_checked_at = entry.get("last_checked_at")
+    if not last_checked_at:
+        return True
+    elapsed_hours = (datetime.now() - datetime.fromisoformat(last_checked_at)).total_seconds() / 3600
+    return elapsed_hours >= interval_hours
+
+
+def should_alert(entry, price):
+    prior = entry.get("alerted_price")
+    alerted_at = entry.get("alerted_at")
     if prior is None:
         return True
-    days_since = (datetime.now() - datetime.fromisoformat(prior["alerted_at"])).days
-    if price < prior["price"] * 0.95:
+    days_since = (datetime.now() - datetime.fromisoformat(alerted_at)).days
+    if price < prior * 0.95:
         return True
     if days_since >= 7:
         return True
@@ -120,13 +144,30 @@ def send_email(subject, body):
         smtp.send_message(msg)
 
 
-def run(dry_run=False):
-    with open(WATCHES_FILE) as f:
-        watches = json.load(f)
-    state = load_state()
+def run(dry_run=False, force=False):
+    watches = load_json(WATCHES_FILE, [])
+    state = load_json(STATE_FILE, {})
+    watches_changed = False
 
     for watch in watches:
         name = watch["name"]
+        key = watch_key(watch)
+        entry = state.setdefault(key, {})
+
+        if not watch.get("enabled", True):
+            print(f"[{name}] disabled, skipping")
+            continue
+
+        if is_expired(watch):
+            print(f"[{name}] expired, disabling")
+            watch["enabled"] = False
+            watches_changed = True
+            continue
+
+        if not force and not due_for_check(watch, entry):
+            print(f"[{name}] not due yet (checks every {watch.get('check_interval_hours', 6)}h)")
+            continue
+
         best = None
         for out_date, ret_date in candidate_date_pairs(watch):
             offer = search_offer(watch, out_date, ret_date)
@@ -135,6 +176,8 @@ def run(dry_run=False):
             print(f"[{name}]   checked {out_date} -> {ret_date}: "
                   f"{offer['price'] if offer else 'no offers'}")
 
+        entry["last_checked_at"] = datetime.now().isoformat()
+
         if best is None:
             print(f"[{name}] no offers found")
             continue
@@ -142,7 +185,12 @@ def run(dry_run=False):
         print(f"[{name}] cheapest found: {best['price']} {best['currency']} "
               f"({best['out_date']} -> {best['ret_date']}, {best['airlines']})")
 
-        deal_hit = best["price"] <= watch["max_price"] and should_alert(name, best["price"], state)
+        history = entry.setdefault("history", [])
+        history.append({"ts": entry["last_checked_at"], "price": best["price"],
+                         "out_date": best["out_date"], "ret_date": best["ret_date"]})
+        del history[:-HISTORY_CAP]
+
+        deal_hit = best["price"] <= watch["max_price"] and should_alert(entry, best["price"])
         if deal_hit and dry_run:
             print(f"[{name}] DRY RUN: would send alert email (price under threshold)")
         elif deal_hit:
@@ -157,12 +205,15 @@ def run(dry_run=False):
                     f"Threshold: {watch['max_price']} {watch.get('currency', 'EUR')}\n"
                 ),
             )
-            state[name] = {"price": best["price"], "alerted_at": datetime.now().isoformat()}
+            entry["alerted_price"] = best["price"]
+            entry["alerted_at"] = datetime.now().isoformat()
             print(f"[{name}] ALERT sent")
 
     if not dry_run:
-        save_state(state)
+        save_json(STATE_FILE, state)
+        if watches_changed:
+            save_json(WATCHES_FILE, watches)
 
 
 if __name__ == "__main__":
-    run(dry_run="--dry-run" in sys.argv)
+    run(dry_run="--dry-run" in sys.argv, force="--force" in sys.argv)

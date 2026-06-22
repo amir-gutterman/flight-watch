@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flight Watch</title>
+<style>
+  :root {
+    --bg: #0b0e14;
+    --panel: #131725;
+    --panel-2: #1a1f33;
+    --border: #262c45;
+    --text: #e8eaf2;
+    --muted: #8b93b0;
+    --accent: #5b8cff;
+    --accent-2: #34d399;
+    --danger: #f3596b;
+    --warn: #f0b429;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(circle at top, #141a2c 0%, var(--bg) 60%);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 32px 24px 80px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
+  h1 { font-size: 24px; margin: 0; display: flex; align-items: center; gap: 10px; }
+  h1 .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 12px var(--accent-2); }
+  .subtitle { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: opacity .15s, transform .1s;
+  }
+  button:hover { opacity: .9; }
+  button:active { transform: scale(.97); }
+  button.primary { background: var(--accent); color: white; }
+  button.ghost { background: var(--panel-2); color: var(--text); border: 1px solid var(--border); }
+  button.danger { background: transparent; color: var(--danger); border: 1px solid rgba(243,89,107,.4); }
+  button.small { padding: 6px 10px; font-size: 12px; }
+  button:disabled { opacity: .4; cursor: not-allowed; }
+
+  #token-bar {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+    display: none;
+  }
+  #token-bar.show { display: block; }
+  #token-bar p { margin: 0 0 10px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+  #token-bar input { width: 100%; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel-2); color: var(--text); font-size: 13px; margin-bottom: 10px; }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .route { font-size: 16px; font-weight: 600; }
+  .meta { color: var(--muted); font-size: 12.5px; margin-top: 4px; line-height: 1.6; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 600; margin-right: 6px; }
+  .badge.on { background: rgba(52,211,153,.15); color: var(--accent-2); }
+  .badge.off { background: rgba(243,89,107,.15); color: var(--danger); }
+  .price-now { font-size: 22px; font-weight: 700; }
+  .price-now.under { color: var(--accent-2); }
+  .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+
+  .switch { position: relative; width: 38px; height: 22px; flex-shrink: 0; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; inset: 0; background: var(--panel-2); border: 1px solid var(--border); border-radius: 100px; cursor: pointer; transition: .15s; }
+  .slider:before { content: ""; position: absolute; width: 16px; height: 16px; left: 2px; top: 2px; background: var(--muted); border-radius: 50%; transition: .15s; }
+  .switch input:checked + .slider { background: rgba(52,211,153,.25); border-color: var(--accent-2); }
+  .switch input:checked + .slider:before { transform: translateX(16px); background: var(--accent-2); }
+
+  .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+
+  .chart { width: 100%; height: 60px; margin-top: 12px; }
+
+  dialog {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--panel);
+    color: var(--text);
+    padding: 24px;
+    width: min(480px, 92vw);
+  }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+  dialog h2 { margin-top: 0; font-size: 18px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+  .form-grid .full { grid-column: 1 / -1; }
+  label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 5px; }
+  input, select { width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel-2); color: var(--text); font-size: 13px; }
+  .dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
+  .checkbox-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+  .toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: var(--panel-2); border: 1px solid var(--border); color: var(--text);
+    padding: 10px 18px; border-radius: 10px; font-size: 13px; opacity: 0; transition: opacity .2s;
+    pointer-events: none;
+  }
+  .toast.show { opacity: 1; }
+  .spinner { display: inline-block; width: 13px; height: 13px; border: 2px solid rgba(255,255,255,.3); border-top-color: white; border-radius: 50%; animation: spin .7s linear infinite; vertical-align: -2px; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1><span class="dot"></span> Flight Watch</h1>
+      <div class="subtitle">Monitoring routes for price drops &middot; runs hourly on GitHub Actions</div>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <button class="ghost small" id="settings-btn">Settings</button>
+      <button class="primary" id="add-btn">+ Add route</button>
+    </div>
+  </header>
+
+  <div id="token-bar">
+    <p>
+      Paste a GitHub <strong>fine-grained personal access token</strong> scoped to this repo
+      (Contents: read/write, Actions: read/write). It's stored only in this browser's
+      local storage and sent directly to the GitHub API — never to any other server.
+    </p>
+    <input type="password" id="token-input" placeholder="github_pat_..." />
+    <div style="display:flex; gap:8px;">
+      <button class="primary small" id="save-token">Save token</button>
+      <button class="ghost small" id="clear-token">Clear</button>
+    </div>
+  </div>
+
+  <div id="list"></div>
+</div>
+
+<dialog id="watch-dialog">
+  <h2 id="dialog-title">Add route</h2>
+  <form id="watch-form">
+    <div class="form-grid">
+      <div class="full">
+        <label>Name</label>
+        <input name="name" required placeholder="Madrid to Tel Aviv - September" />
+      </div>
+      <div>
+        <label>Origin (IATA)</label>
+        <input name="origin" required maxlength="4" placeholder="MAD" style="text-transform:uppercase" />
+      </div>
+      <div>
+        <label>Destination (IATA)</label>
+        <input name="destination" required maxlength="4" placeholder="TLV" style="text-transform:uppercase" />
+      </div>
+      <div>
+        <label>Outbound window start</label>
+        <input name="out_start" type="date" required />
+      </div>
+      <div>
+        <label>Outbound window end</label>
+        <input name="out_end" type="date" required />
+      </div>
+      <div>
+        <label>Return window start</label>
+        <input name="ret_start" type="date" required />
+      </div>
+      <div>
+        <label>Return window end</label>
+        <input name="ret_end" type="date" required />
+      </div>
+      <div>
+        <label>Min stay (days)</label>
+        <input name="min_stay_days" type="number" value="3" min="0" />
+      </div>
+      <div>
+        <label>Max stay (days)</label>
+        <input name="max_stay_days" type="number" value="21" min="1" />
+      </div>
+      <div>
+        <label>Max price</label>
+        <input name="max_price" type="number" required min="1" placeholder="350" />
+      </div>
+      <div>
+        <label>Currency</label>
+        <input name="currency" value="EUR" maxlength="3" style="text-transform:uppercase" />
+      </div>
+      <div>
+        <label>Check every (hours)</label>
+        <input name="check_interval_hours" type="number" value="6" min="1" />
+      </div>
+      <div>
+        <label>Stop after (days)</label>
+        <input name="expires_after_days" type="number" value="90" min="1" />
+      </div>
+      <div class="full checkbox-row">
+        <input type="checkbox" name="direct_only" id="direct_only" checked style="width:auto" />
+        <label for="direct_only" style="margin:0">Direct flights only</label>
+      </div>
+    </div>
+    <div class="dialog-actions">
+      <button type="button" class="ghost" id="cancel-btn">Cancel</button>
+      <button type="submit" class="primary" id="save-btn">Save route</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const OWNER = "amir-gutterman";
+const REPO = "flight-watch";
+const API = `https://api.github.com/repos/${OWNER}/${REPO}`;
+
+const $ = (s) => document.querySelector(s);
+const toast = (msg) => {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2600);
+};
+
+function getToken() { return localStorage.getItem("fw_token") || ""; }
+function setToken(t) { localStorage.setItem("fw_token", t); }
+
+async function ghGet(path) {
+  const res = await fetch(`${API}/contents/${path}`, {
+    headers: { Authorization: `Bearer ${getToken()}`, Accept: "application/vnd.github+json" },
+  });
+  if (res.status === 404) return { json: null, sha: null };
+  if (!res.ok) throw new Error(`GET ${path} failed: ${res.status}`);
+  const data = await res.json();
+  const text = decodeURIComponent(escape(atob(data.content)));
+  return { json: JSON.parse(text), sha: data.sha };
+}
+
+async function ghPut(path, json, sha, message) {
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(json, null, 2))));
+  const res = await fetch(`${API}/contents/${path}`, {
+    method: "PUT",
+    headers: { Authorization: `Bearer ${getToken()}`, Accept: "application/vnd.github+json" },
+    body: JSON.stringify({ message, content, sha: sha || undefined }),
+  });
+  if (!res.ok) throw new Error(`PUT ${path} failed: ${res.status} ${await res.text()}`);
+  return res.json();
+}
+
+async function ghDispatch(force) {
+  const res = await fetch(`${API}/actions/workflows/flight-watch.yml/dispatches`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${getToken()}`, Accept: "application/vnd.github+json" },
+    body: JSON.stringify({ ref: "master", inputs: { force: force ? "true" : "false" } }),
+  });
+  if (!res.ok) throw new Error(`dispatch failed: ${res.status} ${await res.text()}`);
+}
+
+let watchesSha = null;
+let editingIndex = null;
+
+function sparkline(history) {
+  if (!history || history.length < 2) return "";
+  const prices = history.map((h) => h.price);
+  const min = Math.min(...prices), max = Math.max(...prices);
+  const w = 280, h = 50, pad = 4;
+  const points = prices.map((p, i) => {
+    const x = pad + (i / (prices.length - 1)) * (w - pad * 2);
+    const y = max === min ? h / 2 : h - pad - ((p - min) / (max - min)) * (h - pad * 2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(" ");
+  return `<svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+    <polyline points="${points}" fill="none" stroke="#5b8cff" stroke-width="2" />
+  </svg>`;
+}
+
+function renderList(watches, state) {
+  const list = $("#list");
+  if (!watches.length) {
+    list.innerHTML = `<div class="empty">No routes yet. Click "+ Add route" to start monitoring a flight.</div>`;
+    return;
+  }
+  list.innerHTML = watches.map((w, i) => {
+    const key = w.id || w.name;
+    const entry = state[key] || {};
+    const history = entry.history || [];
+    const last = history[history.length - 1];
+    const lastChecked = entry.last_checked_at ? new Date(entry.last_checked_at).toLocaleString() : "never";
+    const priceClass = last && last.price <= w.max_price ? "under" : "";
+    return `
+    <div class="card" data-index="${i}">
+      <div class="card-head">
+        <div>
+          <div class="route">${w.origin} &rarr; ${w.destination}</div>
+          <div class="meta">${w.name}</div>
+          <div class="meta">
+            <span class="badge ${w.enabled !== false ? "on" : "off"}">${w.enabled !== false ? "Active" : "Paused"}</span>
+            Out: ${w.outbound_window.start} → ${w.outbound_window.end} &middot;
+            Back: ${w.return_window.start} → ${w.return_window.end} &middot;
+            ${w.direct_only ? "Direct only" : "Any stops"}
+          </div>
+          <div class="meta">
+            Checks every ${w.check_interval_hours || 6}h, stops after ${w.expires_after_days || "∞"} days &middot;
+            Threshold ${w.max_price} ${w.currency || "EUR"} &middot; Last checked: ${lastChecked}
+          </div>
+        </div>
+        <div style="text-align:right">
+          ${last ? `<div class="price-now ${priceClass}">${last.price} ${w.currency || "EUR"}</div>
+          <div class="meta">${last.out_date} → ${last.ret_date}</div>` : `<div class="meta">no data yet</div>`}
+          <label class="switch" style="margin-top:8px; display:inline-block">
+            <input type="checkbox" class="toggle" ${w.enabled !== false ? "checked" : ""} />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      ${sparkline(history)}
+      <div class="actions">
+        <button class="ghost small edit-btn">Edit</button>
+        <button class="ghost small run-btn">Run now</button>
+        <button class="danger small delete-btn">Delete</button>
+      </div>
+    </div>`;
+  }).join("");
+
+  list.querySelectorAll(".toggle").forEach((el) => {
+    el.addEventListener("change", async (e) => {
+      const idx = Number(e.target.closest(".card").dataset.index);
+      watches[idx].enabled = e.target.checked;
+      await persistWatches(watches, `Toggle ${watches[idx].name}`);
+      toast(`${watches[idx].name} ${e.target.checked ? "resumed" : "paused"}`);
+    });
+  });
+  list.querySelectorAll(".edit-btn").forEach((el) => {
+    el.addEventListener("click", (e) => openDialog(watches, Number(e.target.closest(".card").dataset.index)));
+  });
+  list.querySelectorAll(".delete-btn").forEach((el) => {
+    el.addEventListener("click", async (e) => {
+      const idx = Number(e.target.closest(".card").dataset.index);
+      if (!confirm(`Delete "${watches[idx].name}"?`)) return;
+      watches.splice(idx, 1);
+      await persistWatches(watches, "Delete route");
+      await loadAndRender();
+      toast("Route deleted");
+    });
+  });
+  list.querySelectorAll(".run-btn").forEach((el) => {
+    el.addEventListener("click", async (e) => {
+      const btn = e.target;
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner"></span> Triggering...`;
+      try {
+        await ghDispatch(true);
+        toast("Check triggered — results appear in a minute or two");
+      } catch (err) {
+        toast("Failed to trigger: " + err.message);
+      }
+      btn.disabled = false;
+      btn.textContent = "Run now";
+    });
+  });
+}
+
+async function persistWatches(watches, message) {
+  const result = await ghPut("watches.json", watches, watchesSha, message);
+  watchesSha = result.content.sha;
+}
+
+function openDialog(watches, idx) {
+  editingIndex = idx;
+  const dialog = $("#watch-dialog");
+  const form = $("#watch-form");
+  form.reset();
+  $("#dialog-title").textContent = idx === null ? "Add route" : "Edit route";
+  if (idx !== null) {
+    const w = watches[idx];
+    form.name.value = w.name;
+    form.origin.value = w.origin;
+    form.destination.value = w.destination;
+    form.out_start.value = w.outbound_window.start;
+    form.out_end.value = w.outbound_window.end;
+    form.ret_start.value = w.return_window.start;
+    form.ret_end.value = w.return_window.end;
+    form.min_stay_days.value = w.min_stay_days ?? 3;
+    form.max_stay_days.value = w.max_stay_days ?? 21;
+    form.max_price.value = w.max_price;
+    form.currency.value = w.currency || "EUR";
+    form.check_interval_hours.value = w.check_interval_hours ?? 6;
+    form.expires_after_days.value = w.expires_after_days ?? 90;
+    form.direct_only.checked = !!w.direct_only;
+  }
+  dialog.showModal();
+}
+
+$("#add-btn").addEventListener("click", () => openDialog(currentWatches, null));
+$("#cancel-btn").addEventListener("click", () => $("#watch-dialog").close());
+
+$("#watch-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const fd = new FormData(form);
+  const watch = {
+    id: editingIndex !== null ? currentWatches[editingIndex].id : `${fd.get("origin")}-${fd.get("destination")}-${Date.now()}`.toLowerCase(),
+    name: fd.get("name"),
+    enabled: editingIndex !== null ? currentWatches[editingIndex].enabled !== false : true,
+    created_at: editingIndex !== null ? currentWatches[editingIndex].created_at : new Date().toISOString(),
+    check_interval_hours: Number(fd.get("check_interval_hours")),
+    expires_after_days: Number(fd.get("expires_after_days")),
+    origin: fd.get("origin").toUpperCase(),
+    destination: fd.get("destination").toUpperCase(),
+    outbound_window: { start: fd.get("out_start"), end: fd.get("out_end") },
+    return_window: { start: fd.get("ret_start"), end: fd.get("ret_end") },
+    min_stay_days: Number(fd.get("min_stay_days")),
+    max_stay_days: Number(fd.get("max_stay_days")),
+    direct_only: fd.get("direct_only") === "on",
+    currency: fd.get("currency").toUpperCase(),
+    max_price: Number(fd.get("max_price")),
+    adults: 1,
+  };
+  const btn = $("#save-btn");
+  btn.disabled = true;
+  btn.innerHTML = `<span class="spinner"></span> Saving...`;
+  try {
+    if (editingIndex !== null) currentWatches[editingIndex] = watch;
+    else currentWatches.push(watch);
+    await persistWatches(currentWatches, editingIndex !== null ? `Edit ${watch.name}` : `Add ${watch.name}`);
+    $("#watch-dialog").close();
+    toast("Saved");
+    await loadAndRender();
+  } catch (err) {
+    toast("Save failed: " + err.message);
+  }
+  btn.disabled = false;
+  btn.textContent = "Save route";
+});
+
+$("#settings-btn").addEventListener("click", () => $("#token-bar").classList.toggle("show"));
+$("#save-token").addEventListener("click", () => {
+  setToken($("#token-input").value.trim());
+  $("#token-input").value = "";
+  $("#token-bar").classList.remove("show");
+  toast("Token saved");
+  loadAndRender();
+});
+$("#clear-token").addEventListener("click", () => {
+  localStorage.removeItem("fw_token");
+  toast("Token cleared");
+});
+
+let currentWatches = [];
+
+async function loadAndRender() {
+  if (!getToken()) {
+    $("#token-bar").classList.add("show");
+    $("#list").innerHTML = `<div class="empty">Add a GitHub token above to load your routes.</div>`;
+    return;
+  }
+  try {
+    const watchesRes = await ghGet("watches.json");
+    const stateRes = await ghGet("state.json");
+    currentWatches = watchesRes.json || [];
+    watchesSha = watchesRes.sha;
+    renderList(currentWatches, stateRes.json || {});
+  } catch (err) {
+    $("#list").innerHTML = `<div class="empty">Failed to load: ${err.message}</div>`;
+  }
+}
+
+loadAndRender();
+</script>
+</body>
+</html>
