@@ -2,5 +2,18 @@
   "Madrid to Tel Aviv - September": {
     "price": 348,
     "alerted_at": "2026-06-22T05:20:03.954583"
+  },
+  "mad-tlv-september": {
+    "last_checked_at": "2026-06-22T23:25:17.584006",
+    "history": [
+      {
+        "ts": "2026-06-22T23:25:17.584006",
+        "price": 348,
+        "out_date": "2026-09-16",
+        "ret_date": "2026-09-30"
+      }
+    ],
+    "alerted_price": 348,
+    "alerted_at": "2026-06-22T23:25:18.602624"
   }
 }
