@@ -6,22 +6,22 @@
 <title>Flight Watch</title>
 <style>
   :root {
-    --bg: #0b0e14;
-    --panel: #131725;
-    --panel-2: #1a1f33;
-    --border: #262c45;
-    --text: #e8eaf2;
-    --muted: #8b93b0;
-    --accent: #5b8cff;
-    --accent-2: #34d399;
-    --danger: #f3596b;
-    --warn: #f0b429;
+    --bg: #f4f6fb;
+    --panel: #ffffff;
+    --panel-2: #f0f2f8;
+    --border: #dde2ee;
+    --text: #1c2030;
+    --muted: #707892;
+    --accent: #3b6df0;
+    --accent-2: #1aa872;
+    --danger: #e0335a;
+    --warn: #c98a06;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: radial-gradient(circle at top, #141a2c 0%, var(--bg) 60%);
+    background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 60%);
     color: var(--text);
     min-height: 100vh;
     padding: 32px 24px 80px;
@@ -228,12 +228,16 @@
         <input name="max_stay_days" type="number" value="21" min="1" />
       </div>
       <div>
-        <label>Max price (USD)</label>
+        <label>Max price</label>
         <input name="max_price" type="number" required min="1" placeholder="350" />
       </div>
       <div>
         <label>Currency</label>
-        <input name="currency" value="USD" maxlength="3" style="text-transform:uppercase" disabled title="Always USD — forcing other currencies breaks the scraper for some routes" />
+        <select name="currency">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="ILS">ILS</option>
+        </select>
       </div>
       <div>
         <label>Check every (hours)</label>
@@ -389,7 +393,7 @@ function renderList(watches, state) {
         </div>
         <div>
           ${last
-            ? `<div class="price-now ${priceClass}">${last.price} ${w.currency || "USD"}</div>`
+            ? `<div class="price-now ${priceClass}">${last.price} ${last.currency || w.currency || "USD"}</div>`
             : `<div class="price-now pending">—</div>`}
         </div>
       </div>
@@ -471,7 +475,7 @@ function openDialog(watches, idx) {
     form.min_stay_days.value = w.min_stay_days ?? 3;
     form.max_stay_days.value = w.max_stay_days ?? 21;
     form.max_price.value = w.max_price;
-    form.currency.value = w.currency || "EUR";
+    form.currency.value = w.currency || "USD";
     form.check_interval_hours.value = w.check_interval_hours ?? 6;
     form.expires_after_days.value = w.expires_after_days ?? 90;
     form.direct_only.checked = !!w.direct_only;
@@ -500,7 +504,7 @@ $("#watch-form").addEventListener("submit", async (e) => {
     min_stay_days: Number(fd.get("min_stay_days")),
     max_stay_days: Number(fd.get("max_stay_days")),
     direct_only: fd.get("direct_only") === "on",
-    currency: "USD",
+    currency: fd.get("currency"),
     max_price: Number(fd.get("max_price")),
     adults: 1,
   };

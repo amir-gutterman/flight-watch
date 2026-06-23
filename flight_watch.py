@@ -64,10 +64,11 @@ SEARCH_RETRIES = 3
 def search_offer(watch, out_date, ret_date):
     # Without an explicit currency, Google picks one based on route/locale
     # heuristics (observed ILS-like pricing for a Madrid->Tel Aviv search),
-    # which would silently mislabel prices. Always force USD for consistent
-    # units. Google Flights also intermittently returns a transient error
-    # response (independent of route or currency) - retry a few times
-    # before giving up on this date pair.
+    # which would silently mislabel prices. Always force the watch's chosen
+    # currency for consistent units. Google Flights also intermittently
+    # returns a transient error response (independent of route or currency)
+    # - retry a few times before giving up on this date pair.
+    currency = watch.get("currency", "USD")
     query = create_query(
         flights=[
             FlightQuery(date=out_date.isoformat(), from_airport=watch["origin"], to_airport=watch["destination"]),
@@ -76,7 +77,7 @@ def search_offer(watch, out_date, ret_date):
         trip="round-trip",
         seat="economy",
         passengers=Passengers(adults=watch.get("adults", 1)),
-        currency="USD",
+        currency=currency,
         max_stops=0 if watch.get("direct_only") else None,
     )
     results = None
@@ -91,7 +92,7 @@ def search_offer(watch, out_date, ret_date):
     cheapest = min(results, key=lambda f: f.price)
     return {
         "price": cheapest.price,
-        "currency": "USD",
+        "currency": currency,
         "airlines": ", ".join(cheapest.airlines),
         "out_date": out_date.isoformat(),
         "ret_date": ret_date.isoformat(),
@@ -208,6 +209,7 @@ def run(dry_run=False, force=False):
 
         history = entry.setdefault("history", [])
         history.append({"ts": entry["last_checked_at"], "price": best["price"],
+                         "currency": best["currency"],
                          "out_date": best["out_date"], "ret_date": best["ret_date"]})
         del history[:-HISTORY_CAP]
 
@@ -223,7 +225,7 @@ def run(dry_run=False, force=False):
                     f"Return: {best['ret_date']}\n"
                     f"Airline: {best['airlines']}\n"
                     f"Price: {best['price']} {best['currency']}\n"
-                    f"Threshold: {watch['max_price']} {watch.get('currency', 'EUR')}\n"
+                    f"Threshold: {watch['max_price']} {watch.get('currency', 'USD')}\n"
                 ),
             )
             entry["alerted_price"] = best["price"]
