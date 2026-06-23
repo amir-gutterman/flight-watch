@@ -186,12 +186,12 @@
         <input name="max_stay_days" type="number" value="21" min="1" />
       </div>
       <div>
-        <label>Max price</label>
+        <label>Max price (USD)</label>
         <input name="max_price" type="number" required min="1" placeholder="350" />
       </div>
       <div>
         <label>Currency</label>
-        <input name="currency" value="EUR" maxlength="3" style="text-transform:uppercase" />
+        <input name="currency" value="USD" maxlength="3" style="text-transform:uppercase" disabled title="Always USD — forcing other currencies breaks the scraper for some routes" />
       </div>
       <div>
         <label>Check every (hours)</label>
@@ -418,7 +418,7 @@ $("#watch-form").addEventListener("submit", async (e) => {
     min_stay_days: Number(fd.get("min_stay_days")),
     max_stay_days: Number(fd.get("max_stay_days")),
     direct_only: fd.get("direct_only") === "on",
-    currency: fd.get("currency").toUpperCase(),
+    currency: "USD",
     max_price: Number(fd.get("max_price")),
     adults: 1,
   };

@@ -58,7 +58,16 @@ def candidate_date_pairs(watch):
     return pairs[:MAX_QUERIES_PER_WATCH]
 
 
+SEARCH_RETRIES = 3
+
+
 def search_offer(watch, out_date, ret_date):
+    # Without an explicit currency, Google picks one based on route/locale
+    # heuristics (observed ILS-like pricing for a Madrid->Tel Aviv search),
+    # which would silently mislabel prices. Always force USD for consistent
+    # units. Google Flights also intermittently returns a transient error
+    # response (independent of route or currency) - retry a few times
+    # before giving up on this date pair.
     query = create_query(
         flights=[
             FlightQuery(date=out_date.isoformat(), from_airport=watch["origin"], to_airport=watch["destination"]),
@@ -67,19 +76,22 @@ def search_offer(watch, out_date, ret_date):
         trip="round-trip",
         seat="economy",
         passengers=Passengers(adults=watch.get("adults", 1)),
-        currency=watch.get("currency", "EUR"),
+        currency="USD",
         max_stops=0 if watch.get("direct_only") else None,
     )
-    try:
-        results = get_flights(query)
-    except (FlightsNotFound, Exception):
-        return None
+    results = None
+    for _ in range(SEARCH_RETRIES):
+        try:
+            results = get_flights(query)
+            break
+        except (FlightsNotFound, Exception):
+            continue
     if not results:
         return None
     cheapest = min(results, key=lambda f: f.price)
     return {
         "price": cheapest.price,
-        "currency": watch.get("currency", "EUR"),
+        "currency": "USD",
         "airlines": ", ".join(cheapest.airlines),
         "out_date": out_date.isoformat(),
         "ret_date": ret_date.isoformat(),

@@ -19,8 +19,8 @@
     "min_stay_days": 3,
     "max_stay_days": 21,
     "direct_only": true,
-    "currency": "EUR",
-    "max_price": 350,
+    "currency": "USD",
+    "max_price": 380,
     "adults": 1
   },
   {
@@ -43,8 +43,8 @@
     "min_stay_days": 10,
     "max_stay_days": 25,
     "direct_only": true,
-    "currency": "EUR",
-    "max_price": 1000,
+    "currency": "USD",
+    "max_price": 1080,
     "adults": 1
   }
 ]
