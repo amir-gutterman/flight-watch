@@ -22,29 +22,5 @@
     "currency": "EUR",
     "max_price": 350,
     "adults": 1
-  },
-  {
-    "id": "mad-bkk-1782171051021",
-    "name": "Madrid to Bangkok 2026",
-    "enabled": true,
-    "created_at": "2026-06-22T23:30:51.021Z",
-    "check_interval_hours": 6,
-    "expires_after_days": 5,
-    "origin": "MAD",
-    "destination": "BKK",
-    "outbound_window": {
-      "start": "2026-08-01",
-      "end": "2026-12-17"
-    },
-    "return_window": {
-      "start": "2026-08-06",
-      "end": "2026-12-31"
-    },
-    "min_stay_days": 10,
-    "max_stay_days": 25,
-    "direct_only": true,
-    "currency": "USD",
-    "max_price": 1080,
-    "adults": 1
   }
 ]
