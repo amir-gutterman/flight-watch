@@ -42,6 +42,11 @@ def daterange_step(start, end, step_days):
 def candidate_date_pairs(watch):
     out_start = datetime.strptime(watch["outbound_window"]["start"], "%Y-%m-%d").date()
     out_end = datetime.strptime(watch["outbound_window"]["end"], "%Y-%m-%d").date()
+
+    if watch.get("trip_type") == "one_way":
+        dates = list(daterange_step(out_start, out_end, OUTBOUND_SAMPLE_STEP_DAYS))
+        return [(d, None) for d in dates[:MAX_QUERIES_PER_WATCH]]
+
     ret_start = datetime.strptime(watch["return_window"]["start"], "%Y-%m-%d").date()
     ret_end = datetime.strptime(watch["return_window"]["end"], "%Y-%m-%d").date()
     min_stay = watch.get("min_stay_days", 3)
@@ -69,12 +74,13 @@ def search_offer(watch, out_date, ret_date):
     # returns a transient error response (independent of route or currency)
     # - retry a few times before giving up on this date pair.
     currency = watch.get("currency", "USD")
+    one_way = ret_date is None
+    flights = [FlightQuery(date=out_date.isoformat(), from_airport=watch["origin"], to_airport=watch["destination"])]
+    if not one_way:
+        flights.append(FlightQuery(date=ret_date.isoformat(), from_airport=watch["destination"], to_airport=watch["origin"]))
     query = create_query(
-        flights=[
-            FlightQuery(date=out_date.isoformat(), from_airport=watch["origin"], to_airport=watch["destination"]),
-            FlightQuery(date=ret_date.isoformat(), from_airport=watch["destination"], to_airport=watch["origin"]),
-        ],
-        trip="round-trip",
+        flights=flights,
+        trip="one-way" if one_way else "round-trip",
         seat="economy",
         passengers=Passengers(adults=watch.get("adults", 1)),
         currency=currency,
@@ -95,7 +101,7 @@ def search_offer(watch, out_date, ret_date):
         "currency": currency,
         "airlines": ", ".join(cheapest.airlines),
         "out_date": out_date.isoformat(),
-        "ret_date": ret_date.isoformat(),
+        "ret_date": ret_date.isoformat() if ret_date else None,
     }
 
 
@@ -195,7 +201,8 @@ def run(dry_run=False, force=False):
             offer = search_offer(watch, out_date, ret_date)
             if offer and (best is None or offer["price"] < best["price"]):
                 best = offer
-            print(f"[{name}]   checked {out_date} -> {ret_date}: "
+            pair_desc = out_date if ret_date is None else f"{out_date} -> {ret_date}"
+            print(f"[{name}]   checked {pair_desc}: "
                   f"{offer['price'] if offer else 'no offers'}")
 
         entry["last_checked_at"] = datetime.now().isoformat()
@@ -204,8 +211,9 @@ def run(dry_run=False, force=False):
             print(f"[{name}] no offers found")
             continue
 
+        trip_desc = best["out_date"] if best["ret_date"] is None else f"{best['out_date']} -> {best['ret_date']}"
         print(f"[{name}] cheapest found: {best['price']} {best['currency']} "
-              f"({best['out_date']} -> {best['ret_date']}, {best['airlines']})")
+              f"({trip_desc}, {best['airlines']})")
 
         history = entry.setdefault("history", [])
         history.append({"ts": entry["last_checked_at"], "price": best["price"],
@@ -217,12 +225,13 @@ def run(dry_run=False, force=False):
         if deal_hit and dry_run:
             print(f"[{name}] DRY RUN: would send alert email (price under threshold)")
         elif deal_hit:
+            return_line = f"Return: {best['ret_date']}\n" if best["ret_date"] else ""
             send_email(
                 subject=f"Flight deal: {name} - {best['price']} {best['currency']}",
                 body=(
                     f"{watch['origin']} -> {watch['destination']}\n"
                     f"Outbound: {best['out_date']}\n"
-                    f"Return: {best['ret_date']}\n"
+                    f"{return_line}"
                     f"Airline: {best['airlines']}\n"
                     f"Price: {best['price']} {best['currency']}\n"
                     f"Threshold: {watch['max_price']} {watch.get('currency', 'USD')}\n"

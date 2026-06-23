@@ -203,27 +203,34 @@
         <label>Destination (IATA)</label>
         <input name="destination" required maxlength="4" placeholder="TLV" style="text-transform:uppercase" />
       </div>
+      <div class="full">
+        <label>Trip type</label>
+        <select name="trip_type" id="trip_type">
+          <option value="round_trip">Round trip</option>
+          <option value="one_way">One way</option>
+        </select>
+      </div>
       <div>
-        <label>Outbound window start</label>
+        <label id="out-window-label">Outbound window start</label>
         <input name="out_start" type="date" required />
       </div>
       <div>
-        <label>Outbound window end</label>
+        <label id="out-window-label-end">Outbound window end</label>
         <input name="out_end" type="date" required />
       </div>
-      <div>
+      <div class="round-trip-only">
         <label>Return window start</label>
-        <input name="ret_start" type="date" required />
+        <input name="ret_start" type="date" />
       </div>
-      <div>
+      <div class="round-trip-only">
         <label>Return window end</label>
-        <input name="ret_end" type="date" required />
+        <input name="ret_end" type="date" />
       </div>
-      <div>
+      <div class="round-trip-only">
         <label>Min stay (days)</label>
         <input name="min_stay_days" type="number" value="3" min="0" />
       </div>
-      <div>
+      <div class="round-trip-only">
         <label>Max stay (days)</label>
         <input name="max_stay_days" type="number" value="21" min="1" />
       </div>
@@ -357,9 +364,12 @@ function renderList(watches, state) {
           <div class="meta">${w.name}</div>
           <div class="meta-row">
             <span class="meta-item">${ICONS.takeoff} ${w.outbound_window.start} → ${w.outbound_window.end}</span>
-            <span class="meta-item">${ICONS.landing} ${w.return_window.start} → ${w.return_window.end}</span>
+            ${w.trip_type !== "one_way" && w.return_window
+              ? `<span class="meta-item">${ICONS.landing} ${w.return_window.start} → ${w.return_window.end}</span>`
+              : ""}
           </div>
           <div class="pill-row">
+            <span class="pill">${w.trip_type === "one_way" ? "One way" : "Round trip"}</span>
             <span class="pill">${w.direct_only ? "Direct only" : "Any stops"}</span>
             <span class="pill">≤ ${w.max_price} ${w.currency || "USD"}</span>
           </div>
@@ -387,7 +397,7 @@ function renderList(watches, state) {
         <div>
           ${last
             ? `<div class="result-label">Best match dates</div>
-               <div class="meta" style="font-size:13px">${last.out_date} → ${last.ret_date}</div>`
+               <div class="meta" style="font-size:13px">${last.ret_date ? `${last.out_date} → ${last.ret_date}` : last.out_date}</div>`
             : `<div class="result-label">Best match dates</div>
                <div class="meta" style="font-size:13px">Pending initial scan</div>`}
         </div>
@@ -457,6 +467,17 @@ async function persistWatches(watches, message) {
   watchesSha = result.content.sha;
 }
 
+function applyTripTypeVisibility() {
+  const isOneWay = $("#trip_type").value === "one_way";
+  document.querySelectorAll(".round-trip-only").forEach((el) => {
+    el.style.display = isOneWay ? "none" : "";
+    el.querySelectorAll("input").forEach((i) => { i.required = !isOneWay; });
+  });
+  $("#out-window-label").textContent = isOneWay ? "Departure window start" : "Outbound window start";
+  $("#out-window-label-end").textContent = isOneWay ? "Departure window end" : "Outbound window end";
+}
+$("#trip_type").addEventListener("change", applyTripTypeVisibility);
+
 function openDialog(watches, idx) {
   editingIndex = idx;
   const dialog = $("#watch-dialog");
@@ -468,10 +489,13 @@ function openDialog(watches, idx) {
     form.name.value = w.name;
     form.origin.value = w.origin;
     form.destination.value = w.destination;
+    form.trip_type.value = w.trip_type || "round_trip";
     form.out_start.value = w.outbound_window.start;
     form.out_end.value = w.outbound_window.end;
-    form.ret_start.value = w.return_window.start;
-    form.ret_end.value = w.return_window.end;
+    if (w.return_window) {
+      form.ret_start.value = w.return_window.start;
+      form.ret_end.value = w.return_window.end;
+    }
     form.min_stay_days.value = w.min_stay_days ?? 3;
     form.max_stay_days.value = w.max_stay_days ?? 21;
     form.max_price.value = w.max_price;
@@ -480,6 +504,7 @@ function openDialog(watches, idx) {
     form.expires_after_days.value = w.expires_after_days ?? 90;
     form.direct_only.checked = !!w.direct_only;
   }
+  applyTripTypeVisibility();
   dialog.showModal();
 }
 
@@ -490,6 +515,7 @@ $("#watch-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = e.target;
   const fd = new FormData(form);
+  const tripType = fd.get("trip_type");
   const watch = {
     id: editingIndex !== null ? currentWatches[editingIndex].id : `${fd.get("origin")}-${fd.get("destination")}-${Date.now()}`.toLowerCase(),
     name: fd.get("name"),
@@ -499,15 +525,18 @@ $("#watch-form").addEventListener("submit", async (e) => {
     expires_after_days: Number(fd.get("expires_after_days")),
     origin: fd.get("origin").toUpperCase(),
     destination: fd.get("destination").toUpperCase(),
+    trip_type: tripType,
     outbound_window: { start: fd.get("out_start"), end: fd.get("out_end") },
-    return_window: { start: fd.get("ret_start"), end: fd.get("ret_end") },
-    min_stay_days: Number(fd.get("min_stay_days")),
-    max_stay_days: Number(fd.get("max_stay_days")),
     direct_only: fd.get("direct_only") === "on",
     currency: fd.get("currency"),
     max_price: Number(fd.get("max_price")),
     adults: 1,
   };
+  if (tripType !== "one_way") {
+    watch.return_window = { start: fd.get("ret_start"), end: fd.get("ret_end") };
+    watch.min_stay_days = Number(fd.get("min_stay_days"));
+    watch.max_stay_days = Number(fd.get("max_stay_days"));
+  }
   const btn = $("#save-btn");
   btn.disabled = true;
   btn.innerHTML = `<span class="spinner"></span> Saving...`;
