@@ -67,16 +67,58 @@
     border-radius: 14px;
     padding: 18px 20px;
     margin-bottom: 14px;
+    position: relative;
   }
   .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
   .route { font-size: 16px; font-weight: 600; }
   .meta { color: var(--muted); font-size: 12.5px; margin-top: 4px; line-height: 1.6; }
+  .meta-row { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; }
+  .meta-item { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 12.5px; }
+  .meta-item svg { width: 13px; height: 13px; flex-shrink: 0; opacity: .85; }
   .badge { display: inline-block; padding: 2px 8px; border-radius: 100px; font-size: 11px; font-weight: 600; margin-right: 6px; }
   .badge.on { background: rgba(52,211,153,.15); color: var(--accent-2); }
   .badge.off { background: rgba(243,89,107,.15); color: var(--danger); }
+  .pill { display: inline-flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 100px; font-size: 11px; font-weight: 600; background: rgba(91,140,255,.15); color: var(--accent); }
+  .pill-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
   .price-now { font-size: 22px; font-weight: 700; }
   .price-now.under { color: var(--accent-2); }
-  .actions { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+  .price-now.pending { font-size: 18px; color: var(--muted); font-weight: 500; }
+  .result-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+  .actions { display: flex; gap: 4px; margin-top: 14px; flex-wrap: wrap; }
+
+  .icon-btn {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .icon-btn svg { width: 15px; height: 15px; }
+  .icon-btn.danger { color: var(--danger); }
+
+  .kebab-wrap { position: relative; }
+  .kebab-btn {
+    background: transparent; border: none; color: var(--muted);
+    width: 28px; height: 28px; border-radius: 6px;
+    display: inline-flex; align-items: center; justify-content: center; padding: 0;
+  }
+  .kebab-btn:hover { background: var(--panel-2); }
+  .kebab-menu {
+    position: absolute; right: 0; top: 32px; z-index: 10;
+    background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px;
+    min-width: 140px; padding: 6px; display: none; box-shadow: 0 8px 24px rgba(0,0,0,.4);
+  }
+  .kebab-menu.open { display: block; }
+  .kebab-menu button {
+    display: flex; align-items: center; gap: 8px; width: 100%;
+    background: transparent; color: var(--text); font-weight: 500;
+    padding: 8px 10px; border-radius: 6px; text-align: left;
+  }
+  .kebab-menu button:hover { background: rgba(255,255,255,.06); }
+  .kebab-menu button.danger { color: var(--danger); }
+  .kebab-menu svg { width: 14px; height: 14px; flex-shrink: 0; }
 
   .switch { position: relative; width: 38px; height: 22px; flex-shrink: 0; }
   .switch input { opacity: 0; width: 0; height: 0; }
@@ -280,6 +322,16 @@ function sparkline(history) {
   </svg>`;
 }
 
+const ICONS = {
+  takeoff: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16h20M6 16l5-9 2 1-3 8M13 8l5 2c1 .4 1 1.6 0 2l-5 1"/></svg>`,
+  landing: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20M5 14l6-3 1 2-4 3M12 9l5-2c1-.4 2 .3 2 1.3 0 .7-.4 1.3-1 1.6l-5 2"/></svg>`,
+  clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>`,
+  edit: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>`,
+  play: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`,
+  trash: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m3 0-1 14a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1L5 6"/></svg>`,
+  kebab: `<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>`,
+};
+
 function renderList(watches, state) {
   const list = $("#list");
   if (!watches.length) {
@@ -299,34 +351,64 @@ function renderList(watches, state) {
         <div>
           <div class="route">${w.origin} &rarr; ${w.destination}</div>
           <div class="meta">${w.name}</div>
-          <div class="meta">
-            <span class="badge ${w.enabled !== false ? "on" : "off"}">${w.enabled !== false ? "Active" : "Paused"}</span>
-            Out: ${w.outbound_window.start} → ${w.outbound_window.end} &middot;
-            Back: ${w.return_window.start} → ${w.return_window.end} &middot;
-            ${w.direct_only ? "Direct only" : "Any stops"}
+          <div class="meta-row">
+            <span class="meta-item">${ICONS.takeoff} ${w.outbound_window.start} → ${w.outbound_window.end}</span>
+            <span class="meta-item">${ICONS.landing} ${w.return_window.start} → ${w.return_window.end}</span>
           </div>
-          <div class="meta">
-            Checks every ${w.check_interval_hours || 6}h, stops after ${w.expires_after_days || "∞"} days &middot;
-            Threshold ${w.max_price} ${w.currency || "EUR"} &middot; Last checked: ${lastChecked}
+          <div class="pill-row">
+            <span class="pill">${w.direct_only ? "Direct only" : "Any stops"}</span>
+            <span class="pill">≤ ${w.max_price} ${w.currency || "USD"}</span>
+          </div>
+          <div class="meta" style="margin-top:8px">
+            <span class="meta-item" style="display:inline-flex">${ICONS.clock} Checks every ${w.check_interval_hours || 6}h ·</span>
+            stops after ${w.expires_after_days || "∞"} days · Last checked: ${lastChecked}
           </div>
         </div>
         <div style="text-align:right">
-          ${last ? `<div class="price-now ${priceClass}">${last.price} ${w.currency || "EUR"}</div>
-          <div class="meta">${last.out_date} → ${last.ret_date}</div>` : `<div class="meta">no data yet</div>`}
-          <label class="switch" style="margin-top:8px; display:inline-block">
+          <div class="kebab-wrap">
+            <button class="kebab-btn" aria-label="More actions">${ICONS.kebab}</button>
+            <div class="kebab-menu">
+              <button class="edit-btn">${ICONS.edit} Edit</button>
+              <button class="run-btn">${ICONS.play} Run now</button>
+              <button class="delete-btn danger">${ICONS.trash} Delete</button>
+            </div>
+          </div>
+          <label class="switch" style="margin-top:6px; display:inline-block">
             <input type="checkbox" class="toggle" ${w.enabled !== false ? "checked" : ""} />
             <span class="slider"></span>
           </label>
         </div>
       </div>
-      ${sparkline(history)}
-      <div class="actions">
-        <button class="ghost small edit-btn">Edit</button>
-        <button class="ghost small run-btn">Run now</button>
-        <button class="danger small delete-btn">Delete</button>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-top:14px;">
+        <div>
+          ${last
+            ? `<div class="result-label">Best match dates</div>
+               <div class="meta" style="font-size:13px">${last.out_date} → ${last.ret_date}</div>`
+            : `<div class="result-label">Best match dates</div>
+               <div class="meta" style="font-size:13px">Pending initial scan</div>`}
+        </div>
+        <div>
+          ${last
+            ? `<div class="price-now ${priceClass}">${last.price} ${w.currency || "USD"}</div>`
+            : `<div class="price-now pending">—</div>`}
+        </div>
       </div>
+      ${sparkline(history)}
     </div>`;
   }).join("");
+
+  list.querySelectorAll(".kebab-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const menu = btn.nextElementSibling;
+      const isOpen = menu.classList.contains("open");
+      list.querySelectorAll(".kebab-menu.open").forEach((m) => m.classList.remove("open"));
+      if (!isOpen) menu.classList.add("open");
+    });
+  });
+  document.addEventListener("click", () => {
+    list.querySelectorAll(".kebab-menu.open").forEach((m) => m.classList.remove("open"));
+  });
 
   list.querySelectorAll(".toggle").forEach((el) => {
     el.addEventListener("change", async (e) => {
@@ -351,7 +433,7 @@ function renderList(watches, state) {
   });
   list.querySelectorAll(".run-btn").forEach((el) => {
     el.addEventListener("click", async (e) => {
-      const btn = e.target;
+      const btn = e.currentTarget;
       btn.disabled = true;
       btn.innerHTML = `<span class="spinner"></span> Triggering...`;
       try {
@@ -361,7 +443,7 @@ function renderList(watches, state) {
         toast("Failed to trigger: " + err.message);
       }
       btn.disabled = false;
-      btn.textContent = "Run now";
+      btn.innerHTML = `${ICONS.play} Run now`;
     });
   });
 }
