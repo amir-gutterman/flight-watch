@@ -41,5 +41,30 @@
     "currency": "EUR",
     "max_price": 400,
     "adults": 1
+  },
+  {
+    "id": "mad-rak-1782431030784",
+    "name": "Madrid Marrakesh round trip",
+    "enabled": true,
+    "created_at": "2026-06-25T23:43:50.784Z",
+    "check_interval_hours": 6,
+    "expires_after_days": 10,
+    "origin": "MAD",
+    "destination": "RAK",
+    "trip_type": "round_trip",
+    "outbound_window": {
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "direct_only": true,
+    "currency": "EUR",
+    "max_price": 120,
+    "adults": 1,
+    "return_window": {
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "min_stay_days": 3,
+    "max_stay_days": 21
   }
 ]
