@@ -147,6 +147,20 @@
   input, select { width: 100%; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel-2); color: var(--text); font-size: 13px; }
   .dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 20px; }
   .checkbox-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+
+  .airport-field { position: relative; }
+  .airport-dropdown {
+    position: absolute; top: calc(100% + 4px); left: 0; right: 0; z-index: 20;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    max-height: 220px; overflow-y: auto; display: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  }
+  .airport-dropdown.open { display: block; }
+  .airport-option { padding: 8px 12px; cursor: pointer; font-size: 13px; }
+  .airport-option:hover, .airport-option.active { background: var(--panel-2); }
+  .airport-option .code { font-weight: 700; color: var(--accent); margin-right: 6px; }
+  .airport-option .place { color: var(--muted); font-size: 12px; }
+  .airport-option .place strong { color: var(--text); font-weight: 600; }
   .toast {
     position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
     background: var(--panel-2); border: 1px solid var(--border); color: var(--text);
@@ -195,13 +209,15 @@
         <label>Name</label>
         <input name="name" required placeholder="e.g. Summer trip to Tel Aviv" />
       </div>
-      <div>
-        <label>Origin (IATA)</label>
-        <input name="origin" required maxlength="4" placeholder="e.g. MAD" style="text-transform:uppercase" />
+      <div class="airport-field">
+        <label>Origin</label>
+        <input name="origin" required maxlength="40" placeholder="City or airport name" autocomplete="off" />
+        <div class="airport-dropdown"></div>
       </div>
-      <div>
-        <label>Destination (IATA)</label>
-        <input name="destination" required maxlength="4" placeholder="e.g. TLV" style="text-transform:uppercase" />
+      <div class="airport-field">
+        <label>Destination</label>
+        <input name="destination" required maxlength="40" placeholder="City or airport name" autocomplete="off" />
+        <div class="airport-dropdown"></div>
       </div>
       <div class="full">
         <label>Trip type</label>
@@ -359,6 +375,141 @@ function sparkline(history) {
     <span class="result-label" style="margin-top:0">${shortDate(history[0].ts)}</span>
     <span class="result-label" style="margin-top:0">price per check &middot; ${shortDate(history[history.length - 1].ts)}</span>
   </div>`;
+}
+
+const AIRPORTS = [
+  ["MAD","Madrid","Spain","Adolfo Suárez Madrid–Barajas"],["BCN","Barcelona","Spain","Barcelona–El Prat"],
+  ["AGP","Málaga","Spain","Málaga–Costa del Sol"],["VLC","Valencia","Spain","Valencia"],
+  ["SVQ","Seville","Spain","Seville"],["BIO","Bilbao","Spain","Bilbao"],["PMI","Palma de Mallorca","Spain","Palma de Mallorca"],
+  ["TLV","Tel Aviv","Israel","Ben Gurion"],["ETH","Eilat","Israel","Ramon"],
+  ["LHR","London","United Kingdom","Heathrow"],["LGW","London","United Kingdom","Gatwick"],
+  ["LTN","London","United Kingdom","Luton"],["STN","London","United Kingdom","Stansted"],
+  ["MAN","Manchester","United Kingdom","Manchester"],["EDI","Edinburgh","United Kingdom","Edinburgh"],
+  ["CDG","Paris","France","Charles de Gaulle"],["ORY","Paris","France","Orly"],
+  ["NCE","Nice","France","Côte d'Azur"],["LYS","Lyon","France","Saint-Exupéry"],["MRS","Marseille","France","Provence"],
+  ["FRA","Frankfurt","Germany","Frankfurt"],["MUC","Munich","Germany","Munich"],["BER","Berlin","Germany","Brandenburg"],
+  ["HAM","Hamburg","Germany","Hamburg"],["DUS","Düsseldorf","Germany","Düsseldorf"],
+  ["AMS","Amsterdam","Netherlands","Schiphol"],["BRU","Brussels","Belgium","Brussels"],
+  ["ZRH","Zurich","Switzerland","Zurich"],["GVA","Geneva","Switzerland","Geneva"],
+  ["VIE","Vienna","Austria","Vienna"],["FCO","Rome","Italy","Fiumicino"],["CIA","Rome","Italy","Ciampino"],
+  ["MXP","Milan","Italy","Malpensa"],["LIN","Milan","Italy","Linate"],["VCE","Venice","Italy","Marco Polo"],
+  ["NAP","Naples","Italy","Naples"],["BLQ","Bologna","Italy","Bologna"],
+  ["LIS","Lisbon","Portugal","Humberto Delgado"],["OPO","Porto","Portugal","Porto"],
+  ["ATH","Athens","Greece","Eleftherios Venizelos"],["JTR","Santorini","Greece","Santorini"],["HER","Heraklion","Greece","Heraklion"],
+  ["IST","Istanbul","Turkey","Istanbul"],["SAW","Istanbul","Turkey","Sabiha Gökçen"],
+  ["WAW","Warsaw","Poland","Chopin"],["KRK","Krakow","Poland","Kraków"],
+  ["PRG","Prague","Czechia","Václav Havel"],["BUD","Budapest","Hungary","Budapest"],
+  ["CPH","Copenhagen","Denmark","Copenhagen"],["OSL","Oslo","Norway","Oslo"],
+  ["ARN","Stockholm","Sweden","Arlanda"],["HEL","Helsinki","Finland","Helsinki"],
+  ["DUB","Dublin","Ireland","Dublin"],["KEF","Reykjavik","Iceland","Keflavík"],
+  ["LCA","Larnaca","Cyprus","Larnaca"],["SOF","Sofia","Bulgaria","Sofia"],["OTP","Bucharest","Romania","Henri Coandă"],
+  ["ZAG","Zagreb","Croatia","Zagreb"],["SPU","Split","Croatia","Split"],["DBV","Dubrovnik","Croatia","Dubrovnik"],
+  ["BEG","Belgrade","Serbia","Nikola Tesla"],["RIX","Riga","Latvia","Riga"],["TLL","Tallinn","Estonia","Tallinn"],
+  ["VNO","Vilnius","Lithuania","Vilnius"],["LJU","Ljubljana","Slovenia","Ljubljana"],
+  ["JFK","New York","United States","John F. Kennedy"],["EWR","New York","United States","Newark"],
+  ["LGA","New York","United States","LaGuardia"],["LAX","Los Angeles","United States","Los Angeles"],
+  ["ORD","Chicago","United States","O'Hare"],["MIA","Miami","United States","Miami"],
+  ["SFO","San Francisco","United States","San Francisco"],["BOS","Boston","United States","Logan"],
+  ["IAD","Washington","United States","Dulles"],["DCA","Washington","United States","Reagan National"],
+  ["ATL","Atlanta","United States","Hartsfield–Jackson"],["DFW","Dallas","United States","Dallas/Fort Worth"],
+  ["SEA","Seattle","United States","Seattle–Tacoma"],["LAS","Las Vegas","United States","Harry Reid"],
+  ["YYZ","Toronto","Canada","Toronto Pearson"],["YUL","Montreal","Canada","Montréal–Trudeau"],
+  ["YVR","Vancouver","Canada","Vancouver"],
+  ["MEX","Mexico City","Mexico","Benito Juárez"],["CUN","Cancún","Mexico","Cancún"],
+  ["GRU","São Paulo","Brazil","Guarulhos"],["GIG","Rio de Janeiro","Brazil","Galeão"],
+  ["EZE","Buenos Aires","Argentina","Ezeiza"],["SCL","Santiago","Chile","Santiago"],["BOG","Bogotá","Colombia","El Dorado"],
+  ["LIM","Lima","Peru","Jorge Chávez"],
+  ["DXB","Dubai","UAE","Dubai"],["AUH","Abu Dhabi","UAE","Abu Dhabi"],["DOH","Doha","Qatar","Hamad"],
+  ["AMM","Amman","Jordan","Queen Alia"],["CAI","Cairo","Egypt","Cairo"],["HRG","Hurghada","Egypt","Hurghada"],
+  ["RUH","Riyadh","Saudi Arabia","King Khalid"],["JED","Jeddah","Saudi Arabia","King Abdulaziz"],
+  ["BAH","Manama","Bahrain","Bahrain"],["KWI","Kuwait City","Kuwait","Kuwait"],["MCT","Muscat","Oman","Muscat"],
+  ["BEY","Beirut","Lebanon","Beirut"],
+  ["JNB","Johannesburg","South Africa","O.R. Tambo"],["CPT","Cape Town","South Africa","Cape Town"],
+  ["NBO","Nairobi","Kenya","Jomo Kenyatta"],["CMN","Casablanca","Morocco","Mohammed V"],
+  ["RAK","Marrakesh","Morocco","Menara"],["TUN","Tunis","Tunisia","Tunis–Carthage"],
+  ["DEL","Delhi","India","Indira Gandhi"],["BOM","Mumbai","India","Chhatrapati Shivaji"],
+  ["BLR","Bangalore","India","Kempegowda"],["GOI","Goa","India","Goa"],
+  ["BKK","Bangkok","Thailand","Suvarnabhumi"],["DMK","Bangkok","Thailand","Don Mueang"],
+  ["HKT","Phuket","Thailand","Phuket"],["SIN","Singapore","Singapore","Changi"],
+  ["KUL","Kuala Lumpur","Malaysia","Kuala Lumpur"],["CGK","Jakarta","Indonesia","Soekarno–Hatta"],
+  ["DPS","Bali","Indonesia","Ngurah Rai"],["MNL","Manila","Philippines","Ninoy Aquino"],
+  ["HAN","Hanoi","Vietnam","Noi Bai"],["SGN","Ho Chi Minh City","Vietnam","Tan Son Nhat"],
+  ["HKG","Hong Kong","Hong Kong","Hong Kong"],["TPE","Taipei","Taiwan","Taoyuan"],
+  ["ICN","Seoul","South Korea","Incheon"],["NRT","Tokyo","Japan","Narita"],["HND","Tokyo","Japan","Haneda"],
+  ["KIX","Osaka","Japan","Kansai"],["PEK","Beijing","China","Capital"],["PVG","Shanghai","China","Pudong"],
+  ["CAN","Guangzhou","China","Baiyun"],
+  ["SYD","Sydney","Australia","Kingsford Smith"],["MEL","Melbourne","Australia","Melbourne"],
+  ["BNE","Brisbane","Australia","Brisbane"],["AKL","Auckland","New Zealand","Auckland"],
+];
+
+function searchAirports(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) return [];
+  const scored = AIRPORTS.map(([code, city, country, name]) => {
+    const codeMatch = code.toLowerCase() === q;
+    const codeStarts = code.toLowerCase().startsWith(q);
+    const cityStarts = city.toLowerCase().startsWith(q);
+    const cityIncludes = city.toLowerCase().includes(q);
+    const nameIncludes = name.toLowerCase().includes(q);
+    let score = -1;
+    if (codeMatch) score = 100;
+    else if (cityStarts) score = 90;
+    else if (codeStarts) score = 80;
+    else if (cityIncludes) score = 50;
+    else if (nameIncludes) score = 30;
+    return { code, city, country, name, score };
+  }).filter((r) => r.score > 0);
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, 8);
+}
+
+function attachAirportAutocomplete(input) {
+  const dropdown = input.parentElement.querySelector(".airport-dropdown");
+  let activeIndex = -1;
+
+  function render(results) {
+    if (!results.length) {
+      dropdown.classList.remove("open");
+      dropdown.innerHTML = "";
+      return;
+    }
+    dropdown.innerHTML = results.map((r, i) => `
+      <div class="airport-option ${i === activeIndex ? "active" : ""}" data-code="${r.code}">
+        <span class="code">${r.code}</span>
+        <span class="place"><strong>${r.city}</strong>, ${r.country} — ${r.name}</span>
+      </div>`).join("");
+    dropdown.classList.add("open");
+    dropdown.querySelectorAll(".airport-option").forEach((el) => {
+      el.addEventListener("click", () => {
+        input.value = el.dataset.code;
+        dropdown.classList.remove("open");
+      });
+    });
+  }
+
+  input.addEventListener("input", () => {
+    activeIndex = -1;
+    // Once the field already holds a bare 2-4 letter code (e.g. user typed
+    // it directly, or a previous selection), skip searching by code text.
+    render(searchAirports(input.value));
+  });
+  input.addEventListener("keydown", (e) => {
+    const options = Array.from(dropdown.querySelectorAll(".airport-option"));
+    if (!options.length) return;
+    if (e.key === "ArrowDown") { e.preventDefault(); activeIndex = Math.min(activeIndex + 1, options.length - 1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); activeIndex = Math.max(activeIndex - 1, 0); }
+    else if (e.key === "Enter" && activeIndex >= 0) {
+      e.preventDefault();
+      input.value = options[activeIndex].dataset.code;
+      dropdown.classList.remove("open");
+      return;
+    } else return;
+    options.forEach((el, i) => el.classList.toggle("active", i === activeIndex));
+  });
+  input.addEventListener("focus", () => { if (input.value) render(searchAirports(input.value)); });
+  document.addEventListener("click", (e) => {
+    if (!input.parentElement.contains(e.target)) dropdown.classList.remove("open");
+  });
 }
 
 const ICONS = {
@@ -537,6 +688,9 @@ function openDialog(watches, idx) {
   dialog.showModal();
 }
 
+attachAirportAutocomplete($("#watch-form").origin);
+attachAirportAutocomplete($("#watch-form").destination);
+
 $("#add-btn").addEventListener("click", () => openDialog(currentWatches, null));
 $("#cancel-btn").addEventListener("click", () => $("#watch-dialog").close());
 
@@ -544,6 +698,13 @@ $("#watch-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const form = e.target;
   const fd = new FormData(form);
+
+  const isValidCode = (v) => /^[A-Za-z]{3}$/.test(v.trim());
+  if (!isValidCode(fd.get("origin")) || !isValidCode(fd.get("destination"))) {
+    toast("Pick an airport from the dropdown for origin and destination");
+    return;
+  }
+
   const tripType = fd.get("trip_type");
   const watch = {
     id: editingIndex !== null ? currentWatches[editingIndex].id : `${fd.get("origin")}-${fd.get("destination")}-${Date.now()}`.toLowerCase(),
