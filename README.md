@@ -41,10 +41,18 @@ State is kept in `state.json` (auto-created).
 
 ## Scheduling
 
-Run on a recurring schedule with Windows Task Scheduler:
+Runs automatically via the `.github/workflows/flight-watch.yml` GitHub Actions
+workflow, on a cron schedule (currently twice an hour). Each per-watch
+`check_interval_hours` then decides whether that particular watch is actually
+due for a real search on a given tick.
 
-```
-schtasks /create /tn "FlightWatch" /tr "python C:\Users\amir4\.claude\sessions\flight-watch\flight_watch.py" /sc hourly /mo 6 /st 00:00
-```
-
-This runs the script every 6 hours.
+**Known limitation:** GitHub Actions scheduled workflows are not guaranteed
+to fire exactly on time — GitHub explicitly documents that scheduled runs can
+be delayed during high platform load, especially right at the top of every
+hour, and free-tier/public repos get lower scheduling priority. So a watch
+configured to check "every 6h" may sometimes go 7-8h between real checks if
+GitHub delays or skips a few ticks. The workflow's cron is intentionally set
+to fire twice an hour at off-peak minutes (`:13` and `:43`, avoiding `:00`)
+to reduce how often this happens, but it can't be eliminated entirely on the
+free tier. You can trigger an immediate check anytime via the "Run now"
+button on the webpage if you don't want to wait.
