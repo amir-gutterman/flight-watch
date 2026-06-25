@@ -193,15 +193,15 @@
     <div class="form-grid">
       <div class="full">
         <label>Name</label>
-        <input name="name" required placeholder="Madrid to Tel Aviv - September" />
+        <input name="name" required placeholder="e.g. Summer trip to Tel Aviv" />
       </div>
       <div>
         <label>Origin (IATA)</label>
-        <input name="origin" required maxlength="4" placeholder="MAD" style="text-transform:uppercase" />
+        <input name="origin" required maxlength="4" placeholder="e.g. MAD" style="text-transform:uppercase" />
       </div>
       <div>
         <label>Destination (IATA)</label>
-        <input name="destination" required maxlength="4" placeholder="TLV" style="text-transform:uppercase" />
+        <input name="destination" required maxlength="4" placeholder="e.g. TLV" style="text-transform:uppercase" />
       </div>
       <div class="full">
         <label>Trip type</label>
@@ -241,8 +241,8 @@
       <div>
         <label>Currency</label>
         <select name="currency">
-          <option value="USD">USD</option>
           <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
           <option value="ILS">ILS</option>
         </select>
       </div>
@@ -252,7 +252,7 @@
       </div>
       <div>
         <label>Stop after (days)</label>
-        <input name="expires_after_days" type="number" value="90" min="1" />
+        <input name="expires_after_days" type="number" value="30" min="1" />
       </div>
       <div class="full checkbox-row">
         <input type="checkbox" name="direct_only" id="direct_only" checked style="width:auto" />
@@ -318,6 +318,30 @@ async function ghDispatch(force) {
 let watchesSha = null;
 let editingIndex = null;
 
+function timeAgo(isoString) {
+  if (!isoString) return "never";
+  const diffMs = Date.now() - new Date(isoString).getTime();
+  const mins = Math.round(diffMs / 60000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  const hours = Math.round(mins / 60);
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.round(hours / 24);
+  return `${days}d ago`;
+}
+
+function daysRemainingLabel(createdAt, expiresAfterDays) {
+  if (!expiresAfterDays) return "never stops";
+  if (!createdAt) return `stops in ${expiresAfterDays}d`;
+  const ageDays = (Date.now() - new Date(createdAt).getTime()) / 86400000;
+  const remaining = Math.max(0, Math.ceil(expiresAfterDays - ageDays));
+  return remaining <= 0 ? "stopping soon" : `stops in ${remaining}d`;
+}
+
+function shortDate(isoString) {
+  return new Date(isoString).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+}
+
 function sparkline(history) {
   if (!history || history.length < 2) return "";
   const prices = history.map((h) => h.price);
@@ -330,7 +354,11 @@ function sparkline(history) {
   }).join(" ");
   return `<svg class="chart" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
     <polyline points="${points}" fill="none" stroke="#5b8cff" stroke-width="2" />
-  </svg>`;
+  </svg>
+  <div style="display:flex; justify-content:space-between; margin-top:2px;">
+    <span class="result-label" style="margin-top:0">${shortDate(history[0].ts)}</span>
+    <span class="result-label" style="margin-top:0">price per check &middot; ${shortDate(history[history.length - 1].ts)}</span>
+  </div>`;
 }
 
 const ICONS = {
@@ -354,13 +382,14 @@ function renderList(watches, state) {
     const entry = state[key] || {};
     const history = entry.history || [];
     const last = history[history.length - 1];
-    const lastChecked = entry.last_checked_at ? new Date(entry.last_checked_at).toLocaleString() : "never";
+    const lastChecked = timeAgo(entry.last_checked_at);
+    const routeArrow = w.trip_type === "one_way" ? "&rarr;" : "&harr;";
     const priceClass = last && last.price <= w.max_price ? "under" : "";
     return `
     <div class="card" data-index="${i}">
       <div class="card-head">
         <div>
-          <div class="route">${w.origin} &rarr; ${w.destination}</div>
+          <div class="route">${w.origin} ${routeArrow} ${w.destination}</div>
           <div class="meta">${w.name}</div>
           <div class="meta-row">
             <span class="meta-item">${ICONS.takeoff} ${w.outbound_window.start} → ${w.outbound_window.end}</span>
@@ -375,7 +404,7 @@ function renderList(watches, state) {
           </div>
           <div class="meta" style="margin-top:8px">
             <span class="meta-item" style="display:inline-flex">${ICONS.clock} Checks every ${w.check_interval_hours || 6}h ·</span>
-            stops after ${w.expires_after_days || "∞"} days · Last checked: ${lastChecked}
+            ${daysRemainingLabel(w.created_at, w.expires_after_days)} · Last checked: ${lastChecked}
           </div>
         </div>
         <div style="text-align:right">
