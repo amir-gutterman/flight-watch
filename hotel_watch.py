@@ -20,6 +20,9 @@ How it works:
   rendered DOM.
 - Review scores from Google Hotels are on a 5-point scale; `min_score` in
   the config should be on that same 5-point scale (e.g. 4.0, not 8).
+- Prices are always converted to EUR-per-night (forced via the currency
+  picker during URL resolution, then divided by the stay's night count) so
+  `max_price` and price history are comparable across watches and runs.
 """
 import os
 import sys
@@ -68,7 +71,9 @@ def to_cell_label(date):
 def resolve_search_url(page, destination, checkin, checkout):
     """One-time-per-watch UI flow: turns a destination + exact dates into a
     Google Hotels URL containing a `ts=` param, which encodes both into a
-    form the server will honor on a fresh page load."""
+    form the server will honor on a fresh page load. Also forces EUR so
+    prices are comparable across runs regardless of the runner's IP-based
+    default currency (otherwise Google silently picks one per request)."""
     q = destination.replace(" ", "%20")
     page.goto(f"https://www.google.com/travel/search?q=hotels%20in%20{q}", timeout=30000)
     page.wait_for_timeout(3000)
@@ -88,6 +93,24 @@ def resolve_search_url(page, destination, checkin, checkout):
 
     page.locator("text=View prices").first.click(force=True)
     page.wait_for_timeout(2500)
+
+    page.locator("span.twocKe").first.click()
+    page.wait_for_timeout(800)
+    currency_dialog = None
+    dialogs = page.locator('[role="dialog"]')
+    for i in range(dialogs.count()):
+        try:
+            if "Select currency" in dialogs.nth(i).inner_text(timeout=500):
+                currency_dialog = dialogs.nth(i)
+                break
+        except Exception:
+            continue
+    if currency_dialog:
+        currency_dialog.get_by_text("Euro", exact=False).first.click()
+        page.wait_for_timeout(500)
+        currency_dialog.get_by_role("button", name="Done").click()
+        page.wait_for_timeout(2000)
+
     return page.url
 
 
@@ -150,15 +173,18 @@ def search_hotels(destination, checkin, checkout, search_url=None):
     raw_entries = []
     walk_hotel_entries(data, raw_entries)
 
+    nights = max((checkout - checkin).days, 1)
+
     hotels = []
     for e in raw_entries:
-        price = parse_price(e[2])
-        if price is None:
+        total_price = parse_price(e[2])
+        if total_price is None:
             continue
+        per_night = total_price / nights
         hotels.append({
             "name": e[0],
-            "price": price,
-            "price_display": e[2],
+            "price": per_night,
+            "price_display": f"€{per_night:.0f}/night",
             "review_count": e[4],
             "review_score": e[5],
         })
