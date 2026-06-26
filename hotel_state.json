@@ -1,8 +1,99 @@
 {
   "madrid-sep-10-13": {
-    "hotels": {},
+    "hotels": {
+      "Hotel NH Collection Madrid Paseo del Prado": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 244.66666666666666
+          }
+        ],
+        "min_price": 244.66666666666666,
+        "last_price": 244.66666666666666
+      },
+      "Dear Hotel Madrid": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 141.33333333333334
+          }
+        ],
+        "min_price": 141.33333333333334,
+        "last_price": 141.33333333333334
+      },
+      "Travelodge Madrid Metropolitano": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 76.0
+          }
+        ],
+        "min_price": 76.0,
+        "last_price": 76.0
+      },
+      "Hotel F\u00e9nix Gran Meli\u00e1 - The Leading Hotels of the World": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 409.0
+          }
+        ],
+        "min_price": 409.0,
+        "last_price": 409.0
+      },
+      "Palacio de los Duques Gran Meli\u00e1 - The Leading Hotels of the World": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 456.6666666666667
+          }
+        ],
+        "min_price": 456.6666666666667,
+        "last_price": 456.6666666666667
+      },
+      "Mercure Madrid Centro": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 162.0
+          }
+        ],
+        "min_price": 162.0,
+        "last_price": 162.0
+      },
+      "INNSiDE by Meli\u00e1 Madrid Gran V\u00eda": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 174.0
+          }
+        ],
+        "min_price": 174.0,
+        "last_price": 174.0
+      },
+      "Hotel NH Madrid Nacional": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 143.66666666666666
+          }
+        ],
+        "min_price": 143.66666666666666,
+        "last_price": 143.66666666666666
+      },
+      "The Hat Madrid": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:27.703547",
+            "price": 42.333333333333336
+          }
+        ],
+        "min_price": 42.333333333333336,
+        "last_price": 42.333333333333336
+      }
+    },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-26T22:21:10.311928"
+    "last_checked_at": "2026-06-26T22:28:27.703547"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -21,10 +112,14 @@
           {
             "ts": "2026-06-26T22:21:33.650320",
             "price": 41.5
+          },
+          {
+            "ts": "2026-06-26T22:28:34.865525",
+            "price": 44.5
           }
         ],
         "min_price": 41.5,
-        "last_price": 41.5
+        "last_price": 44.5
       },
       "Garner Hotel Berlin - Spandau": {
         "history": [
@@ -75,9 +170,69 @@
         ],
         "min_price": 51.0,
         "last_price": 51.0
+      },
+      "Generator Berlin Alexanderplatz": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:34.865525",
+            "price": 22.5
+          }
+        ],
+        "min_price": 22.5,
+        "last_price": 22.5
+      },
+      "Crowne Plaza Berlin City Centre": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:34.865525",
+            "price": 51.0
+          }
+        ],
+        "min_price": 51.0,
+        "last_price": 51.0
+      },
+      "Holiday Inn Berlin Airport - Conf Centre by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:34.865525",
+            "price": 62.5
+          }
+        ],
+        "min_price": 62.5,
+        "last_price": 62.5
+      },
+      "Leonardo Boutique Hotel Berlin City South": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:34.865525",
+            "price": 36.0
+          }
+        ],
+        "min_price": 36.0,
+        "last_price": 36.0
+      },
+      "Generator Berlin Mitte": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:34.865525",
+            "price": 55.0
+          }
+        ],
+        "min_price": 55.0,
+        "last_price": 55.0
+      },
+      "Titanic Comfort Kurf\u00fcrstendamm": {
+        "history": [
+          {
+            "ts": "2026-06-26T22:28:34.865525",
+            "price": 36.5
+          }
+        ],
+        "min_price": 36.5,
+        "last_price": 36.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-26T22:21:33.650320"
+    "last_checked_at": "2026-06-26T22:28:34.865525"
   }
 }
