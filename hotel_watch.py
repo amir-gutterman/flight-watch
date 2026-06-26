@@ -153,6 +153,9 @@ def parse_price(price_str):
     return float(m.group(0).replace(",", ""))
 
 
+SEARCH_RETRIES = 3
+
+
 def search_hotels(destination, checkin, checkout, search_url=None):
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -160,18 +163,21 @@ def search_hotels(destination, checkin, checkout, search_url=None):
         try:
             if not search_url:
                 search_url = resolve_search_url(page, destination, checkin, checkout)
-            page.goto(search_url, timeout=30000)
-            page.wait_for_timeout(3500)
-            html = page.content()
+
+            # The fresh fetch occasionally renders before the embedded data is
+            # fully populated (or hits a transient empty response) - retry a
+            # few times rather than treating a one-off as "no hotels found".
+            raw_entries = []
+            for _ in range(SEARCH_RETRIES):
+                page.goto(search_url, timeout=30000)
+                page.wait_for_timeout(3500)
+                data = extract_ds0(page.content())
+                if data is not None:
+                    walk_hotel_entries(data, raw_entries)
+                if raw_entries:
+                    break
         finally:
             browser.close()
-
-    data = extract_ds0(html)
-    if data is None:
-        return search_url, []
-
-    raw_entries = []
-    walk_hotel_entries(data, raw_entries)
 
     nights = max((checkout - checkin).days, 1)
 
