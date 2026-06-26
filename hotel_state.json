@@ -1,1 +1,78 @@
-{}
+{
+  "madrid-sep-10-13": {
+    "hotels": {
+      "Zleep Madrid Airport": {
+        "history": [
+          {
+            "ts": "2026-06-26T18:57:40.818689",
+            "price": 704.0
+          }
+        ],
+        "min_price": 704.0,
+        "last_price": 704.0
+      },
+      "NYX Madrid": {
+        "history": [
+          {
+            "ts": "2026-06-26T18:57:40.818689",
+            "price": 405.0
+          }
+        ],
+        "min_price": 405.0,
+        "last_price": 405.0
+      },
+      "Hotel NH Madrid Nacional": {
+        "history": [
+          {
+            "ts": "2026-06-26T18:57:40.818689",
+            "price": 491.0
+          }
+        ],
+        "min_price": 491.0,
+        "last_price": 491.0
+      },
+      "Madrid Marriott Auditorium": {
+        "history": [
+          {
+            "ts": "2026-06-26T18:57:40.818689",
+            "price": 438.0
+          }
+        ],
+        "min_price": 438.0,
+        "last_price": 438.0
+      },
+      "Hotel Madrid Chamart\u00edn Affiliated by Meli\u00e1": {
+        "history": [
+          {
+            "ts": "2026-06-26T18:57:40.818689",
+            "price": 371.0
+          }
+        ],
+        "min_price": 371.0,
+        "last_price": 371.0
+      },
+      "Meli\u00e1 Castilla": {
+        "history": [
+          {
+            "ts": "2026-06-26T18:57:40.818689",
+            "price": 633.0
+          }
+        ],
+        "min_price": 633.0,
+        "last_price": 633.0
+      },
+      "Meli\u00e1 Madrid Princesa": {
+        "history": [
+          {
+            "ts": "2026-06-26T18:57:40.818689",
+            "price": 561.0
+          }
+        ],
+        "min_price": 561.0,
+        "last_price": 561.0
+      }
+    },
+    "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjAg7XuyqWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDVVNEYgIIARoA&qs=CAE4DQ&ap=MAE",
+    "last_checked_at": "2026-06-26T18:57:40.818689"
+  }
+}
