@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Flight Watch</title>
+<title>Travel Watch</title>
 <style>
   :root {
     --bg: #f4f6fb;
@@ -168,6 +168,12 @@
     pointer-events: none;
   }
   .toast.show { opacity: 1; }
+  .tabs { display: flex; gap: 4px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 4px; }
+  .tab-btn { background: transparent; color: var(--muted); padding: 7px 14px; border-radius: 8px; }
+  .tab-btn.active { background: var(--panel); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+  .score-pill { background: rgba(26,168,114,.15); color: var(--accent-2); }
   .spinner { display: inline-block; width: 13px; height: 13px; border: 2px solid rgba(255,255,255,.3); border-top-color: white; border-radius: 50%; animation: spin .7s linear infinite; vertical-align: -2px; margin-right: 6px; }
   @keyframes spin { to { transform: rotate(360deg); } }
 </style>
@@ -176,14 +182,20 @@
 <div class="wrap">
   <header>
     <div>
-      <h1><span class="dot"></span> Flight Watch</h1>
-      <div class="subtitle">Monitoring routes for price drops &middot; runs hourly on GitHub Actions</div>
+      <h1><span class="dot"></span> Travel Watch</h1>
+      <div class="subtitle" id="page-subtitle">Monitoring routes for price drops &middot; runs on GitHub Actions</div>
     </div>
     <div style="display:flex; gap:8px;">
       <button class="ghost small" id="settings-btn">Settings</button>
-      <button class="primary" id="add-btn">+ Add route</button>
+      <button class="primary" id="add-flight-btn">+ Add route</button>
+      <button class="primary" id="add-hotel-btn" style="display:none">+ Add hotel watch</button>
     </div>
   </header>
+
+  <div class="tabs" style="margin-bottom:20px; width:fit-content;">
+    <button class="tab-btn active" id="tab-flights">Flights</button>
+    <button class="tab-btn" id="tab-hotels">Hotels</button>
+  </div>
 
   <div id="token-bar">
     <p>
@@ -198,7 +210,12 @@
     </div>
   </div>
 
-  <div id="list"></div>
+  <div class="tab-panel active" id="panel-flights">
+    <div id="list"></div>
+  </div>
+  <div class="tab-panel" id="panel-hotels">
+    <div id="hotel-list"></div>
+  </div>
 </div>
 
 <dialog id="watch-dialog">
@@ -282,6 +299,55 @@
   </form>
 </dialog>
 
+<dialog id="hotel-dialog">
+  <h2 id="hotel-dialog-title">Add hotel watch</h2>
+  <form id="hotel-form">
+    <div class="form-grid">
+      <div class="full">
+        <label>Name</label>
+        <input name="name" required placeholder="e.g. Madrid weekend trip" />
+      </div>
+      <div class="full">
+        <label>Destination (city)</label>
+        <input name="destination" required placeholder="e.g. Madrid" />
+      </div>
+      <div>
+        <label>Check-in date</label>
+        <input name="checkin" type="date" required />
+      </div>
+      <div>
+        <label>Check-out date</label>
+        <input name="checkout" type="date" required />
+      </div>
+      <div>
+        <label>Min review score (out of 5)</label>
+        <input name="min_score" type="number" value="4.0" min="0" max="5" step="0.1" />
+      </div>
+      <div>
+        <label>Max price per stay</label>
+        <input name="max_price" type="number" required min="1" placeholder="800" />
+      </div>
+      <div>
+        <label>Check every (hours)</label>
+        <input name="check_interval_hours" type="number" value="6" min="1" />
+      </div>
+      <div>
+        <label>Stop after (days)</label>
+        <input name="expires_after_days" type="number" value="30" min="1" />
+      </div>
+      <div class="full meta" style="margin-top:-4px">
+        Alerts fire when any matching hotel's price drops 20%+ below the lowest price
+        ever recorded for it &mdash; not on the first sighting, which just sets the baseline.
+        Review scores use Google's 5-point scale (Booking's "8+" &asymp; 4.0+ here).
+      </div>
+    </div>
+    <div class="dialog-actions">
+      <button type="button" class="ghost" id="hotel-cancel-btn">Cancel</button>
+      <button type="submit" class="primary" id="hotel-save-btn">Save watch</button>
+    </div>
+  </form>
+</dialog>
+
 <div class="toast" id="toast"></div>
 
 <script>
@@ -322,8 +388,8 @@ async function ghPut(path, json, sha, message) {
   return res.json();
 }
 
-async function ghDispatch(force) {
-  const res = await fetch(`${API}/actions/workflows/flight-watch.yml/dispatches`, {
+async function ghDispatch(force, workflow = "flight-watch.yml") {
+  const res = await fetch(`${API}/actions/workflows/${workflow}/dispatches`, {
     method: "POST",
     headers: { Authorization: `Bearer ${getToken()}`, Accept: "application/vnd.github+json" },
     body: JSON.stringify({ ref: "master", inputs: { force: force ? "true" : "false" } }),
@@ -691,7 +757,7 @@ function openDialog(watches, idx) {
 attachAirportAutocomplete($("#watch-form").origin);
 attachAirportAutocomplete($("#watch-form").destination);
 
-$("#add-btn").addEventListener("click", () => openDialog(currentWatches, null));
+$("#add-flight-btn").addEventListener("click", () => openDialog(currentWatches, null));
 $("#cancel-btn").addEventListener("click", () => $("#watch-dialog").close());
 
 $("#watch-form").addEventListener("submit", async (e) => {
@@ -777,6 +843,233 @@ async function loadAndRender() {
 }
 
 loadAndRender();
+
+// ---------- Hotel watches ----------
+
+let currentHotelWatches = [];
+let hotelWatchesSha = null;
+let editingHotelIndex = null;
+let hotelsLoaded = false;
+
+function cheapestTracked(entry) {
+  const hotels = entry.hotels || {};
+  let best = null;
+  for (const [hotelName, h] of Object.entries(hotels)) {
+    if (h.last_price != null && (best === null || h.last_price < best.last_price)) {
+      best = { name: hotelName, ...h };
+    }
+  }
+  return best;
+}
+
+function renderHotelList(watches, state) {
+  const list = $("#hotel-list");
+  if (!watches.length) {
+    list.innerHTML = `<div class="empty">No hotel watches yet. Click "+ Add hotel watch" to start monitoring a destination.</div>`;
+    return;
+  }
+  list.innerHTML = watches.map((w, i) => {
+    const key = w.id || w.name;
+    const entry = state[key] || {};
+    const best = cheapestTracked(entry);
+    const lastChecked = timeAgo(entry.last_checked_at);
+    const trackedCount = Object.keys(entry.hotels || {}).length;
+    return `
+    <div class="card" data-index="${i}">
+      <div class="card-head">
+        <div>
+          <div class="route">${w.destination}</div>
+          <div class="meta">${w.name}</div>
+          <div class="meta-row">
+            <span class="meta-item">${ICONS.takeoff} ${w.checkin} → ${w.checkout}</span>
+          </div>
+          <div class="pill-row">
+            <span class="pill score-pill">Score ${w.min_score ?? 0}+</span>
+            <span class="pill">≤ ${w.max_price}</span>
+            ${trackedCount ? `<span class="pill">${trackedCount} hotels tracked</span>` : ""}
+          </div>
+          <div class="meta" style="margin-top:8px">
+            <span class="meta-item" style="display:inline-flex">${ICONS.clock} Checks every ${w.check_interval_hours || 6}h ·</span>
+            ${daysRemainingLabel(w.created_at, w.expires_after_days)} · Last checked: ${lastChecked}
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div class="kebab-wrap">
+            <button class="kebab-btn" aria-label="More actions">${ICONS.kebab}</button>
+            <div class="kebab-menu">
+              <button class="hedit-btn">${ICONS.edit} Edit</button>
+              <button class="hrun-btn">${ICONS.play} Run now</button>
+              <button class="hdelete-btn danger">${ICONS.trash} Delete</button>
+            </div>
+          </div>
+          <label class="switch" style="margin-top:6px; display:inline-block">
+            <input type="checkbox" class="htoggle" ${w.enabled !== false ? "checked" : ""} />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-top:14px;">
+        <div>
+          ${best
+            ? `<div class="result-label">Cheapest tracked</div>
+               <div class="meta" style="font-size:13px">${best.name}</div>`
+            : `<div class="result-label">Cheapest tracked</div>
+               <div class="meta" style="font-size:13px">Pending initial scan</div>`}
+        </div>
+        <div>
+          ${best
+            ? `<div class="price-now">${best.last_price}</div>`
+            : `<div class="price-now pending">—</div>`}
+        </div>
+      </div>
+      ${best ? sparkline(best.history) : ""}
+    </div>`;
+  }).join("");
+
+  list.querySelectorAll(".kebab-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const menu = btn.nextElementSibling;
+      const isOpen = menu.classList.contains("open");
+      list.querySelectorAll(".kebab-menu.open").forEach((m) => m.classList.remove("open"));
+      if (!isOpen) menu.classList.add("open");
+    });
+  });
+
+  list.querySelectorAll(".htoggle").forEach((el) => {
+    el.addEventListener("change", async (e) => {
+      const idx = Number(e.target.closest(".card").dataset.index);
+      watches[idx].enabled = e.target.checked;
+      await persistHotelWatches(watches, `Toggle ${watches[idx].name}`);
+      toast(`${watches[idx].name} ${e.target.checked ? "resumed" : "paused"}`);
+    });
+  });
+  list.querySelectorAll(".hedit-btn").forEach((el) => {
+    el.addEventListener("click", (e) => openHotelDialog(watches, Number(e.target.closest(".card").dataset.index)));
+  });
+  list.querySelectorAll(".hdelete-btn").forEach((el) => {
+    el.addEventListener("click", async (e) => {
+      const idx = Number(e.target.closest(".card").dataset.index);
+      if (!confirm(`Delete "${watches[idx].name}"?`)) return;
+      watches.splice(idx, 1);
+      await persistHotelWatches(watches, "Delete hotel watch");
+      await loadHotelAndRender();
+      toast("Hotel watch deleted");
+    });
+  });
+  list.querySelectorAll(".hrun-btn").forEach((el) => {
+    el.addEventListener("click", async (e) => {
+      const btn = e.currentTarget;
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner"></span> Triggering...`;
+      try {
+        await ghDispatch(true, "hotel-watch.yml");
+        toast("Check triggered — results appear in a minute or two");
+      } catch (err) {
+        toast("Failed to trigger: " + err.message);
+      }
+      btn.disabled = false;
+      btn.innerHTML = `${ICONS.play} Run now`;
+    });
+  });
+}
+
+async function persistHotelWatches(watches, message) {
+  const result = await ghPut("hotel_watches.json", watches, hotelWatchesSha, message);
+  hotelWatchesSha = result.content.sha;
+}
+
+function openHotelDialog(watches, idx) {
+  editingHotelIndex = idx;
+  const dialog = $("#hotel-dialog");
+  const form = $("#hotel-form");
+  form.reset();
+  $("#hotel-dialog-title").textContent = idx === null ? "Add hotel watch" : "Edit hotel watch";
+  if (idx !== null) {
+    const w = watches[idx];
+    form.name.value = w.name;
+    form.destination.value = w.destination;
+    form.checkin.value = w.checkin;
+    form.checkout.value = w.checkout;
+    form.min_score.value = w.min_score ?? 4.0;
+    form.max_price.value = w.max_price;
+    form.check_interval_hours.value = w.check_interval_hours ?? 6;
+    form.expires_after_days.value = w.expires_after_days ?? 30;
+  }
+  dialog.showModal();
+}
+
+$("#add-hotel-btn").addEventListener("click", () => openHotelDialog(currentHotelWatches, null));
+$("#hotel-cancel-btn").addEventListener("click", () => $("#hotel-dialog").close());
+
+$("#hotel-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const fd = new FormData(form);
+  const watch = {
+    id: editingHotelIndex !== null
+      ? currentHotelWatches[editingHotelIndex].id
+      : `${fd.get("destination")}-${fd.get("checkin")}-${Date.now()}`.toLowerCase().replace(/\s+/g, "-"),
+    name: fd.get("name"),
+    enabled: editingHotelIndex !== null ? currentHotelWatches[editingHotelIndex].enabled !== false : true,
+    created_at: editingHotelIndex !== null ? currentHotelWatches[editingHotelIndex].created_at : new Date().toISOString(),
+    check_interval_hours: Number(fd.get("check_interval_hours")),
+    expires_after_days: Number(fd.get("expires_after_days")),
+    destination: fd.get("destination"),
+    checkin: fd.get("checkin"),
+    checkout: fd.get("checkout"),
+    min_score: Number(fd.get("min_score")),
+    max_price: Number(fd.get("max_price")),
+  };
+  const btn = $("#hotel-save-btn");
+  btn.disabled = true;
+  btn.innerHTML = `<span class="spinner"></span> Saving...`;
+  try {
+    if (editingHotelIndex !== null) currentHotelWatches[editingHotelIndex] = watch;
+    else currentHotelWatches.push(watch);
+    await persistHotelWatches(currentHotelWatches, editingHotelIndex !== null ? `Edit ${watch.name}` : `Add ${watch.name}`);
+    $("#hotel-dialog").close();
+    toast("Saved");
+    await loadHotelAndRender();
+  } catch (err) {
+    toast("Save failed: " + err.message);
+  }
+  btn.disabled = false;
+  btn.textContent = "Save watch";
+});
+
+async function loadHotelAndRender() {
+  if (!getToken()) {
+    $("#hotel-list").innerHTML = `<div class="empty">Add a GitHub token above to load your hotel watches.</div>`;
+    return;
+  }
+  try {
+    const watchesRes = await ghGet("hotel_watches.json");
+    const stateRes = await ghGet("hotel_state.json");
+    currentHotelWatches = watchesRes.json || [];
+    hotelWatchesSha = watchesRes.sha;
+    renderHotelList(currentHotelWatches, stateRes.json || {});
+    hotelsLoaded = true;
+  } catch (err) {
+    $("#hotel-list").innerHTML = `<div class="empty">Failed to load: ${err.message}</div>`;
+  }
+}
+
+function switchTab(tab) {
+  const isFlights = tab === "flights";
+  $("#tab-flights").classList.toggle("active", isFlights);
+  $("#tab-hotels").classList.toggle("active", !isFlights);
+  $("#panel-flights").classList.toggle("active", isFlights);
+  $("#panel-hotels").classList.toggle("active", !isFlights);
+  $("#add-flight-btn").style.display = isFlights ? "" : "none";
+  $("#add-hotel-btn").style.display = isFlights ? "none" : "";
+  $("#page-subtitle").textContent = isFlights
+    ? "Monitoring routes for price drops · runs on GitHub Actions"
+    : "Monitoring hotel prices for 20%+ drops · runs on GitHub Actions";
+  if (!isFlights && !hotelsLoaded) loadHotelAndRender();
+}
+$("#tab-flights").addEventListener("click", () => switchTab("flights"));
+$("#tab-hotels").addEventListener("click", () => switchTab("hotels"));
 </script>
 </body>
 </html>
