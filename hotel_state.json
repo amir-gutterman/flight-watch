@@ -26,6 +26,10 @@
           {
             "ts": "2026-06-26T18:57:40.818689",
             "price": 491.0
+          },
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 491.0
           }
         ],
         "min_price": 491.0,
@@ -70,9 +74,135 @@
         ],
         "min_price": 561.0,
         "last_price": 561.0
+      },
+      "ibis budget Madrid Albasanz": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 363.0
+          }
+        ],
+        "min_price": 363.0,
+        "last_price": 363.0
+      },
+      "Hotel NH Collection Madrid Paseo del Prado": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 837.0
+          }
+        ],
+        "min_price": 837.0,
+        "last_price": 837.0
+      },
+      "Dear Hotel Madrid": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 483.0
+          }
+        ],
+        "min_price": 483.0,
+        "last_price": 483.0
+      },
+      "Travelodge Madrid Metropolitano": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 260.0
+          }
+        ],
+        "min_price": 260.0,
+        "last_price": 260.0
+      },
+      "Hard Rock Hotel Madrid": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 805.0
+          }
+        ],
+        "min_price": 805.0,
+        "last_price": 805.0
+      },
+      "Hyatt Centric Gran Via Madrid": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 1144.0
+          }
+        ],
+        "min_price": 1144.0,
+        "last_price": 1144.0
+      },
+      "Hotel NH Madrid Atocha": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 340.0
+          }
+        ],
+        "min_price": 340.0,
+        "last_price": 340.0
+      },
+      "AC Hotel Carlton Madrid": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:26.251885",
+            "price": 500.0
+          }
+        ],
+        "min_price": 500.0,
+        "last_price": 500.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjAg7XuyqWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDVVNEYgIIARoA&qs=CAE4DQ&ap=MAE",
-    "last_checked_at": "2026-06-26T18:57:40.818689"
+    "last_checked_at": "2026-06-26T21:51:26.251885"
+  },
+  "berlin-2026-08-06-1782510628159": {
+    "hotels": {
+      "Generator Berlin Alexanderplatz": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:46.434832",
+            "price": 51.0
+          }
+        ],
+        "min_price": 51.0,
+        "last_price": 51.0
+      },
+      "Crowne Plaza Berlin City Centre": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:46.434832",
+            "price": 115.0
+          }
+        ],
+        "min_price": 115.0,
+        "last_price": 115.0
+      },
+      "Holiday Inn Berlin Airport - Conf Centre by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:46.434832",
+            "price": 143.0
+          }
+        ],
+        "min_price": 143.0,
+        "last_price": 143.0
+      },
+      "Generator Berlin Mitte": {
+        "history": [
+          {
+            "ts": "2026-06-26T21:51:46.434832",
+            "price": 125.0
+          }
+        ],
+        "min_price": 125.0,
+        "last_price": 125.0
+      }
+    },
+    "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiY4rfj8aWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDVVNEGgA&qs=CAE4DQ&ap=MAE",
+    "last_checked_at": "2026-06-26T21:51:46.434832"
   }
 }
