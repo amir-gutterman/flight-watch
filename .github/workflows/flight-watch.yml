@@ -10,6 +10,13 @@ on:
         type: boolean
         default: false
 
+# Overlapping runs (e.g. a manual "Run now" landing near a scheduled tick)
+# both push to the same state file - queue them instead of racing, since a
+# git conflict mid-push otherwise fails the whole job.
+concurrency:
+  group: flight-watch
+  cancel-in-progress: false
+
 jobs:
   check-prices:
     runs-on: ubuntu-latest
@@ -38,5 +45,9 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add state.json watches.json
           git diff --cached --quiet || git commit -m "Update price state"
-          git pull --rebase -q
-          git push
+          for i in 1 2 3; do
+            git rebase --abort 2>/dev/null || true
+            git pull --rebase -q && git push && break
+            echo "push/rebase failed, retrying ($i)..."
+            sleep 5
+          done
