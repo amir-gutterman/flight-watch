@@ -388,6 +388,10 @@
           {
             "ts": "2026-06-27T18:46:56.417631",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-27T21:37:31.358703",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -429,6 +433,10 @@
           },
           {
             "ts": "2026-06-27T18:46:56.417631",
+            "price": 79.0
+          },
+          {
+            "ts": "2026-06-27T21:37:31.358703",
             "price": 79.0
           }
         ],
@@ -483,6 +491,10 @@
           },
           {
             "ts": "2026-06-27T14:28:31.739464",
+            "price": 57.0
+          },
+          {
+            "ts": "2026-06-27T21:37:31.358703",
             "price": 57.0
           }
         ],
@@ -672,6 +684,10 @@
           {
             "ts": "2026-06-27T17:07:59.271074",
             "price": 35.0
+          },
+          {
+            "ts": "2026-06-27T21:37:31.358703",
+            "price": 35.0
           }
         ],
         "min_price": 30.0,
@@ -699,6 +715,10 @@
           },
           {
             "ts": "2026-06-27T17:07:59.271074",
+            "price": 47.5
+          },
+          {
+            "ts": "2026-06-27T21:37:31.358703",
             "price": 47.5
           }
         ],
@@ -734,10 +754,30 @@
         ],
         "min_price": 40.5,
         "last_price": 40.5
+      },
+      "Hotel Indigo Berlin - Ku'Damm by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-27T21:37:31.358703",
+            "price": 42.5
+          }
+        ],
+        "min_price": 42.5,
+        "last_price": 42.5
+      },
+      "Pullman Berlin Schweizerhof": {
+        "history": [
+          {
+            "ts": "2026-06-27T21:37:31.358703",
+            "price": 62.5
+          }
+        ],
+        "min_price": 62.5,
+        "last_price": 62.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-27T18:46:56.417631"
+    "last_checked_at": "2026-06-27T21:37:31.358703"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
