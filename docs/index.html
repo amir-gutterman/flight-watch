@@ -622,9 +622,9 @@ function renderList(watches, state) {
             <span class="pill">${w.direct_only ? "Direct only" : "Any stops"}</span>
             <span class="pill">≤ ${w.max_price} ${w.currency || "USD"}</span>
           </div>
-          <div class="meta" style="margin-top:8px">
-            <span class="meta-item" style="display:inline-flex">${ICONS.clock} Checks every ${w.check_interval_hours || 6}h ·</span>
-            ${daysRemainingLabel(w.created_at, w.expires_after_days)} · Last checked: ${lastChecked}
+          <div class="meta" style="margin-top:8px; display:flex; align-items:center; gap:5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+            <span style="display:inline-flex; flex-shrink:0">${ICONS.clock}</span>
+            <span style="overflow:hidden; text-overflow:ellipsis;">Checks every ${w.check_interval_hours || 6}h · ${daysRemainingLabel(w.created_at, w.expires_after_days)} · Last checked: ${lastChecked}</span>
           </div>
         </div>
         <div style="text-align:right">
@@ -891,9 +891,9 @@ function renderHotelList(watches, state) {
             <span class="pill">≤ €${w.max_price}/night</span>
             ${trackedCount ? `<span class="pill">${trackedCount} hotels tracked</span>` : ""}
           </div>
-          <div class="meta" style="margin-top:8px">
-            <span class="meta-item" style="display:inline-flex">${ICONS.clock} Checks every ${w.check_interval_hours || 6}h ·</span>
-            ${daysRemainingLabel(w.created_at, w.expires_after_days)} · Last checked: ${lastChecked}
+          <div class="meta" style="margin-top:8px; display:flex; align-items:center; gap:5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+            <span style="display:inline-flex; flex-shrink:0">${ICONS.clock}</span>
+            <span style="overflow:hidden; text-overflow:ellipsis;">Checks every ${w.check_interval_hours || 6}h · ${daysRemainingLabel(w.created_at, w.expires_after_days)} · Last checked: ${lastChecked}</span>
           </div>
         </div>
         <div style="text-align:right">
