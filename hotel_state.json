@@ -108,6 +108,10 @@
           {
             "ts": "2026-06-27T18:44:29.183461",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-06-27T18:46:48.169443",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -152,6 +156,10 @@
           {
             "ts": "2026-06-27T11:06:58.448181",
             "price": 76.66666666666667
+          },
+          {
+            "ts": "2026-06-27T18:46:48.169443",
+            "price": 76.66666666666667
           }
         ],
         "min_price": 76.66666666666667,
@@ -165,6 +173,10 @@
           },
           {
             "ts": "2026-06-27T18:44:29.183461",
+            "price": 123.0
+          },
+          {
+            "ts": "2026-06-27T18:46:48.169443",
             "price": 123.0
           }
         ],
@@ -190,6 +202,10 @@
           {
             "ts": "2026-06-27T11:16:36.504318",
             "price": 103.66666666666667
+          },
+          {
+            "ts": "2026-06-27T18:46:48.169443",
+            "price": 103.66666666666667
           }
         ],
         "min_price": 103.66666666666667,
@@ -207,6 +223,10 @@
           },
           {
             "ts": "2026-06-27T18:44:29.183461",
+            "price": 106.33333333333333
+          },
+          {
+            "ts": "2026-06-27T18:46:48.169443",
             "price": 106.33333333333333
           }
         ],
@@ -241,6 +261,10 @@
           },
           {
             "ts": "2026-06-27T18:44:29.183461",
+            "price": 106.66666666666667
+          },
+          {
+            "ts": "2026-06-27T18:46:48.169443",
             "price": 106.66666666666667
           }
         ],
@@ -282,6 +306,10 @@
           {
             "ts": "2026-06-27T18:44:29.183461",
             "price": 173.66666666666666
+          },
+          {
+            "ts": "2026-06-27T18:46:48.169443",
+            "price": 173.66666666666666
           }
         ],
         "min_price": 173.66666666666666,
@@ -289,7 +317,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-27T18:44:29.183461"
+    "last_checked_at": "2026-06-27T18:46:48.169443"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -356,6 +384,10 @@
           {
             "ts": "2026-06-27T17:07:59.271074",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-27T18:46:56.417631",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -393,6 +425,10 @@
           },
           {
             "ts": "2026-06-27T17:07:59.271074",
+            "price": 79.0
+          },
+          {
+            "ts": "2026-06-27T18:46:56.417631",
             "price": 79.0
           }
         ],
@@ -506,6 +542,10 @@
           {
             "ts": "2026-06-27T11:16:44.472120",
             "price": 50.5
+          },
+          {
+            "ts": "2026-06-27T18:46:56.417631",
+            "price": 50.5
           }
         ],
         "min_price": 50.5,
@@ -527,6 +567,10 @@
           },
           {
             "ts": "2026-06-27T09:27:47.219171",
+            "price": 62.5
+          },
+          {
+            "ts": "2026-06-27T18:46:56.417631",
             "price": 62.5
           }
         ],
@@ -670,10 +714,30 @@
         ],
         "min_price": 43.5,
         "last_price": 43.5
+      },
+      "iStay by NH Berlin City Ost": {
+        "history": [
+          {
+            "ts": "2026-06-27T18:46:56.417631",
+            "price": 42.5
+          }
+        ],
+        "min_price": 42.5,
+        "last_price": 42.5
+      },
+      "ibis Berlin Hauptbahnhof": {
+        "history": [
+          {
+            "ts": "2026-06-27T18:46:56.417631",
+            "price": 40.5
+          }
+        ],
+        "min_price": 40.5,
+        "last_price": 40.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-27T17:07:59.271074"
+    "last_checked_at": "2026-06-27T18:46:56.417631"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -706,9 +770,49 @@
         ],
         "min_price": 77.33333333333333,
         "last_price": 77.33333333333333
+      },
+      "H\u00f4tel Litt\u00e9raire Le Swann, BW Premier Collection": {
+        "history": [
+          {
+            "ts": "2026-06-27T18:47:04.800887",
+            "price": 55.0
+          }
+        ],
+        "min_price": 55.0,
+        "last_price": 55.0
+      },
+      "H\u00f4tel Elys\u00e9es Union": {
+        "history": [
+          {
+            "ts": "2026-06-27T18:47:04.800887",
+            "price": 86.33333333333333
+          }
+        ],
+        "min_price": 86.33333333333333,
+        "last_price": 86.33333333333333
+      },
+      "H\u00f4tel Mercure Paris Suresnes Longchamp": {
+        "history": [
+          {
+            "ts": "2026-06-27T18:47:04.800887",
+            "price": 28.666666666666668
+          }
+        ],
+        "min_price": 28.666666666666668,
+        "last_price": 28.666666666666668
+      },
+      "H\u00f4tel Ch\u00e2teau Frontenac": {
+        "history": [
+          {
+            "ts": "2026-06-27T18:47:04.800887",
+            "price": 119.33333333333333
+          }
+        ],
+        "min_price": 119.33333333333333,
+        "last_price": 119.33333333333333
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-27T11:17:08.181779"
+    "last_checked_at": "2026-06-27T18:47:04.800887"
   }
 }
