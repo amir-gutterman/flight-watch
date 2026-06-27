@@ -423,8 +423,18 @@ function daysRemainingLabel(createdAt, expiresAfterDays) {
   return remaining <= 0 ? "stopping soon" : `stops in ${remaining}d`;
 }
 
+function formatDate(dateStr) {
+  // Parse by splitting rather than `new Date(...)` to avoid UTC/local
+  // timezone shifting a date-only string (e.g. "2026-09-01") by a day.
+  if (!dateStr) return dateStr;
+  const datePart = dateStr.slice(0, 10);
+  const [y, m, d] = datePart.split("-");
+  if (!y || !m || !d) return dateStr;
+  return `${d}-${m}-${y}`;
+}
+
 function shortDate(isoString) {
-  return new Date(isoString).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  return formatDate(isoString);
 }
 
 function sparkline(history) {
@@ -612,9 +622,9 @@ function renderList(watches, state) {
           <div class="route">${w.origin} ${routeArrow} ${w.destination}</div>
           <div class="meta">${w.name}</div>
           <div class="meta-row">
-            <span class="meta-item">${ICONS.takeoff} ${w.outbound_window.start} → ${w.outbound_window.end}</span>
+            <span class="meta-item">${ICONS.takeoff} ${formatDate(w.outbound_window.start)} → ${formatDate(w.outbound_window.end)}</span>
             ${w.trip_type !== "one_way" && w.return_window
-              ? `<span class="meta-item">${ICONS.landing} ${w.return_window.start} → ${w.return_window.end}</span>`
+              ? `<span class="meta-item">${ICONS.landing} ${formatDate(w.return_window.start)} → ${formatDate(w.return_window.end)}</span>`
               : ""}
           </div>
           <div class="pill-row">
@@ -646,7 +656,7 @@ function renderList(watches, state) {
         <div>
           ${last
             ? `<div class="result-label">Best match dates</div>
-               <div class="meta" style="font-size:13px">${last.ret_date ? `${last.out_date} → ${last.ret_date}` : last.out_date}</div>`
+               <div class="meta" style="font-size:13px">${last.ret_date ? `${formatDate(last.out_date)} → ${formatDate(last.ret_date)}` : formatDate(last.out_date)}</div>`
             : `<div class="result-label">Best match dates</div>
                <div class="meta" style="font-size:13px">Pending initial scan</div>`}
         </div>
@@ -884,7 +894,7 @@ function renderHotelList(watches, state) {
           <div class="route">${w.destination}</div>
           <div class="meta">${w.name}</div>
           <div class="meta-row">
-            <span class="meta-item">${ICONS.takeoff} ${w.checkin} → ${w.checkout}</span>
+            <span class="meta-item">${ICONS.takeoff} ${formatDate(w.checkin)} → ${formatDate(w.checkout)}</span>
           </div>
           <div class="pill-row">
             <span class="pill score-pill">Score ${w.min_score ?? 0}+</span>
