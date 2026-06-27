@@ -116,15 +116,23 @@
           {
             "ts": "2026-06-26T22:28:34.865525",
             "price": 44.5
+          },
+          {
+            "ts": "2026-06-27T02:53:00.238303",
+            "price": 43.5
           }
         ],
         "min_price": 41.5,
-        "last_price": 44.5
+        "last_price": 43.5
       },
       "Garner Hotel Berlin - Spandau": {
         "history": [
           {
             "ts": "2026-06-26T22:21:33.650320",
+            "price": 79.0
+          },
+          {
+            "ts": "2026-06-27T02:53:00.238303",
             "price": 79.0
           }
         ],
@@ -176,6 +184,10 @@
           {
             "ts": "2026-06-26T22:28:34.865525",
             "price": 22.5
+          },
+          {
+            "ts": "2026-06-27T02:53:00.238303",
+            "price": 22.5
           }
         ],
         "min_price": 22.5,
@@ -195,6 +207,10 @@
         "history": [
           {
             "ts": "2026-06-26T22:28:34.865525",
+            "price": 62.5
+          },
+          {
+            "ts": "2026-06-27T02:53:00.238303",
             "price": 62.5
           }
         ],
@@ -216,6 +232,10 @@
           {
             "ts": "2026-06-26T22:28:34.865525",
             "price": 55.0
+          },
+          {
+            "ts": "2026-06-27T02:53:00.238303",
+            "price": 55.0
           }
         ],
         "min_price": 55.0,
@@ -230,9 +250,19 @@
         ],
         "min_price": 36.5,
         "last_price": 36.5
+      },
+      "Hampton by Hilton Berlin City East Side Gallery": {
+        "history": [
+          {
+            "ts": "2026-06-27T02:53:00.238303",
+            "price": 51.5
+          }
+        ],
+        "min_price": 51.5,
+        "last_price": 51.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-26T22:28:34.865525"
+    "last_checked_at": "2026-06-27T02:53:00.238303"
   }
 }
