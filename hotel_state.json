@@ -168,6 +168,10 @@
           {
             "ts": "2026-06-27T06:29:03.324264",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-27T09:27:47.219171",
+            "price": 43.5
           }
         ],
         "min_price": 41.5,
@@ -185,6 +189,10 @@
           },
           {
             "ts": "2026-06-27T06:29:03.324264",
+            "price": 79.0
+          },
+          {
+            "ts": "2026-06-27T09:27:47.219171",
             "price": 79.0
           }
         ],
@@ -244,6 +252,10 @@
           {
             "ts": "2026-06-27T06:29:03.324264",
             "price": 22.5
+          },
+          {
+            "ts": "2026-06-27T09:27:47.219171",
+            "price": 22.5
           }
         ],
         "min_price": 22.5,
@@ -254,10 +266,14 @@
           {
             "ts": "2026-06-26T22:28:34.865525",
             "price": 51.0
+          },
+          {
+            "ts": "2026-06-27T09:27:47.219171",
+            "price": 50.5
           }
         ],
-        "min_price": 51.0,
-        "last_price": 51.0
+        "min_price": 50.5,
+        "last_price": 50.5
       },
       "Holiday Inn Berlin Airport - Conf Centre by IHG": {
         "history": [
@@ -271,6 +287,10 @@
           },
           {
             "ts": "2026-06-27T06:29:03.324264",
+            "price": 62.5
+          },
+          {
+            "ts": "2026-06-27T09:27:47.219171",
             "price": 62.5
           }
         ],
@@ -300,6 +320,10 @@
           {
             "ts": "2026-06-27T06:29:03.324264",
             "price": 55.0
+          },
+          {
+            "ts": "2026-06-27T09:27:47.219171",
+            "price": 55.0
           }
         ],
         "min_price": 55.0,
@@ -320,6 +344,10 @@
           {
             "ts": "2026-06-27T02:53:00.238303",
             "price": 51.5
+          },
+          {
+            "ts": "2026-06-27T09:27:47.219171",
+            "price": 51.5
           }
         ],
         "min_price": 51.5,
@@ -327,6 +355,6 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-27T06:29:03.324264"
+    "last_checked_at": "2026-06-27T09:27:47.219171"
   }
 }
