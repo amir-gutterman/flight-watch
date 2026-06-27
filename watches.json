@@ -91,5 +91,30 @@
     },
     "min_stay_days": 7,
     "max_stay_days": 14
+  },
+  {
+    "id": "tlv-lis-1782557275369",
+    "name": "Tel Aviv Lisbon",
+    "enabled": true,
+    "created_at": "2026-06-27T10:47:55.369Z",
+    "check_interval_hours": 12,
+    "expires_after_days": 10,
+    "origin": "TLV",
+    "destination": "LIS",
+    "trip_type": "round_trip",
+    "outbound_window": {
+      "start": "2026-08-01",
+      "end": "2026-08-31"
+    },
+    "direct_only": true,
+    "currency": "EUR",
+    "max_price": 400,
+    "adults": 1,
+    "return_window": {
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "min_stay_days": 10,
+    "max_stay_days": 15
   }
 ]
