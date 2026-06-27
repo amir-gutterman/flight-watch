@@ -49,6 +49,24 @@ DATE_CELL_RE = re.compile(r"^[A-Za-z]+, [A-Za-z]+ \d+, \d{4}$")
 PRICE_RE = re.compile(r"[\d,]+")
 HISTORY_CAP = 200
 
+# Google's per-hotel data has no clean "property type" field (the small int
+# arrays attached to each entry are shared amenity tags, not type markers -
+# confirmed by inspecting real hostel vs. hotel entries side by side), so
+# excluding hostels/shared-room properties has to go by name. This combines
+# generic wording with known hostel-chain brand names (e.g. "Generator",
+# which has no "hostel" in its own name) - it's a best-effort heuristic, not
+# a guaranteed match against Google's internal classification.
+HOSTEL_KEYWORDS = [
+    "hostel", "hostal", "backpacker",
+    "generator", "wombat", "st christopher", "meininger", "selina",
+    "safestay", "clink", "yha ", "a&o ", "easyhostel",
+]
+
+
+def is_hostel(name):
+    lowered = name.lower()
+    return any(kw in lowered for kw in HOSTEL_KEYWORDS)
+
 # Finds the scrollable ancestor of any visible calendar day cell and scrolls
 # it - used to bring later months into view without relying on a "next
 # month" button (Google's calendar here is an infinite-scroll list).
@@ -299,6 +317,7 @@ def run(dry_run=False, force=False):
             h for h in hotels
             if (min_score is None or h["review_score"] >= min_score)
             and (max_price is None or h["price"] <= max_price)
+            and not is_hostel(h["name"])
         ]
         print(f"[{name}] {len(hotels)} hotels found, {len(matching)} match filters")
 

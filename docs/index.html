@@ -339,7 +339,9 @@
         Alerts fire when any matching hotel's price drops 20%+ below the lowest price
         ever recorded for it &mdash; not on the first sighting, which just sets the baseline.
         Prices are always EUR, per night. Review scores use Google's 5-point scale
-        (Booking's "8+" &asymp; 4.0+ here).
+        (Booking's "8+" &asymp; 4.0+ here). Hostels/shared-room properties are
+        excluded automatically by name matching &mdash; a best-effort heuristic,
+        since Google's data doesn't expose a clean property-type field.
       </div>
     </div>
     <div class="dialog-actions">
