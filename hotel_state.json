@@ -124,6 +124,10 @@
           {
             "ts": "2026-06-27T18:46:48.169443",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-06-28T16:42:39.621167",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -188,6 +192,10 @@
           {
             "ts": "2026-06-28T09:41:18.650462",
             "price": 75.33333333333333
+          },
+          {
+            "ts": "2026-06-28T16:42:39.621167",
+            "price": 75.33333333333333
           }
         ],
         "min_price": 75.33333333333333,
@@ -205,6 +213,10 @@
           },
           {
             "ts": "2026-06-27T18:46:48.169443",
+            "price": 123.0
+          },
+          {
+            "ts": "2026-06-28T16:42:39.621167",
             "price": 123.0
           }
         ],
@@ -256,6 +268,10 @@
           {
             "ts": "2026-06-27T18:46:48.169443",
             "price": 106.33333333333333
+          },
+          {
+            "ts": "2026-06-28T16:42:39.621167",
+            "price": 106.33333333333333
           }
         ],
         "min_price": 106.33333333333333,
@@ -298,6 +314,10 @@
           {
             "ts": "2026-06-28T09:41:18.650462",
             "price": 107.33333333333333
+          },
+          {
+            "ts": "2026-06-28T16:42:39.621167",
+            "price": 107.33333333333333
           }
         ],
         "min_price": 106.66666666666667,
@@ -312,6 +332,10 @@
           {
             "ts": "2026-06-28T09:41:18.650462",
             "price": 118.66666666666667
+          },
+          {
+            "ts": "2026-06-28T16:42:39.621167",
+            "price": 118.66666666666667
           }
         ],
         "min_price": 116.66666666666667,
@@ -321,6 +345,10 @@
         "history": [
           {
             "ts": "2026-06-27T18:44:29.183461",
+            "price": 90.33333333333333
+          },
+          {
+            "ts": "2026-06-28T16:42:39.621167",
             "price": 90.33333333333333
           }
         ],
@@ -420,10 +448,20 @@
         ],
         "min_price": 307.3333333333333,
         "last_price": 307.3333333333333
+      },
+      "Hotel Avani Alonso Mart\u00ednez Madrid - Formerly NH Alonso Mart\u00ednez": {
+        "history": [
+          {
+            "ts": "2026-06-28T16:42:39.621167",
+            "price": 157.0
+          }
+        ],
+        "min_price": 157.0,
+        "last_price": 157.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T09:41:18.650462"
+    "last_checked_at": "2026-06-28T16:42:39.621167"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1034,6 +1072,10 @@
           {
             "ts": "2026-06-28T06:16:45.523160",
             "price": 149.66666666666666
+          },
+          {
+            "ts": "2026-06-28T16:42:47.275677",
+            "price": 149.66666666666666
           }
         ],
         "min_price": 149.66666666666666,
@@ -1128,9 +1170,29 @@
         ],
         "min_price": 43.0,
         "last_price": 43.0
+      },
+      "Hotel Paris Op\u00e9ra Affiliated by Meli\u00e1": {
+        "history": [
+          {
+            "ts": "2026-06-28T16:42:47.275677",
+            "price": 85.0
+          }
+        ],
+        "min_price": 85.0,
+        "last_price": 85.0
+      },
+      "Holiday Inn Paris - Montmartre by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-28T16:42:47.275677",
+            "price": 54.333333333333336
+          }
+        ],
+        "min_price": 54.333333333333336,
+        "last_price": 54.333333333333336
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T06:16:45.523160"
+    "last_checked_at": "2026-06-28T16:42:47.275677"
   }
 }
