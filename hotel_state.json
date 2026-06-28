@@ -572,6 +572,10 @@
           {
             "ts": "2026-06-28T18:04:15.657744",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-28T21:00:48.908007",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -642,6 +646,10 @@
           {
             "ts": "2026-06-28T18:04:15.657744",
             "price": 78.0
+          },
+          {
+            "ts": "2026-06-28T21:00:48.908007",
+            "price": 78.0
           }
         ],
         "min_price": 77.0,
@@ -667,6 +675,10 @@
           },
           {
             "ts": "2026-06-28T11:46:28.785401",
+            "price": 40.0
+          },
+          {
+            "ts": "2026-06-28T21:00:48.908007",
             "price": 40.0
           }
         ],
@@ -707,6 +719,10 @@
           },
           {
             "ts": "2026-06-28T11:46:28.785401",
+            "price": 57.0
+          },
+          {
+            "ts": "2026-06-28T21:00:48.908007",
             "price": 57.0
           }
         ],
@@ -976,6 +992,10 @@
           {
             "ts": "2026-06-27T21:37:31.358703",
             "price": 47.5
+          },
+          {
+            "ts": "2026-06-28T21:00:48.908007",
+            "price": 47.5
           }
         ],
         "min_price": 47.5,
@@ -1102,10 +1122,30 @@
         ],
         "min_price": 55.5,
         "last_price": 55.5
+      },
+      "art'otel Berlin Mitte": {
+        "history": [
+          {
+            "ts": "2026-06-28T21:00:48.908007",
+            "price": 55.5
+          }
+        ],
+        "min_price": 55.5,
+        "last_price": 55.5
+      },
+      "Hotel nhow Berlin": {
+        "history": [
+          {
+            "ts": "2026-06-28T21:00:48.908007",
+            "price": 54.0
+          }
+        ],
+        "min_price": 54.0,
+        "last_price": 54.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T18:04:15.657744"
+    "last_checked_at": "2026-06-28T21:00:48.908007"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
