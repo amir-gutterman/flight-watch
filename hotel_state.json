@@ -392,10 +392,14 @@
           {
             "ts": "2026-06-27T17:07:59.271074",
             "price": 26.5
+          },
+          {
+            "ts": "2026-06-28T06:16:38.270475",
+            "price": 26.0
           }
         ],
-        "min_price": 26.5,
-        "last_price": 26.5
+        "min_price": 26.0,
+        "last_price": 26.0
       },
       "Garner Hotel Berlin - Charlottenburg by IHG": {
         "history": [
@@ -446,6 +450,10 @@
           {
             "ts": "2026-06-28T01:34:09.919025",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-28T06:16:38.270475",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -495,6 +503,10 @@
           },
           {
             "ts": "2026-06-28T01:34:09.919025",
+            "price": 77.0
+          },
+          {
+            "ts": "2026-06-28T06:16:38.270475",
             "price": 77.0
           }
         ],
@@ -567,6 +579,10 @@
           },
           {
             "ts": "2026-06-27T14:28:31.739464",
+            "price": 52.0
+          },
+          {
+            "ts": "2026-06-28T06:16:38.270475",
             "price": 52.0
           }
         ],
@@ -830,6 +846,10 @@
           {
             "ts": "2026-06-27T21:37:31.358703",
             "price": 42.5
+          },
+          {
+            "ts": "2026-06-28T06:16:38.270475",
+            "price": 42.5
           }
         ],
         "min_price": 42.5,
@@ -844,10 +864,30 @@
         ],
         "min_price": 62.5,
         "last_price": 62.5
+      },
+      "Holiday Inn - the niu, Hide Berlin Friedrichshain by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-28T06:16:38.270475",
+            "price": 43.0
+          }
+        ],
+        "min_price": 43.0,
+        "last_price": 43.0
+      },
+      "Holiday Inn Express Berlin City Centre by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-28T06:16:38.270475",
+            "price": 48.0
+          }
+        ],
+        "min_price": 48.0,
+        "last_price": 48.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T01:34:09.919025"
+    "last_checked_at": "2026-06-28T06:16:38.270475"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -855,6 +895,10 @@
         "history": [
           {
             "ts": "2026-06-27T11:17:08.181779",
+            "price": 149.66666666666666
+          },
+          {
+            "ts": "2026-06-28T06:16:45.523160",
             "price": 149.66666666666666
           }
         ],
@@ -920,9 +964,39 @@
         ],
         "min_price": 119.33333333333333,
         "last_price": 119.33333333333333
+      },
+      "Hotel Le 10 BIS": {
+        "history": [
+          {
+            "ts": "2026-06-28T06:16:45.523160",
+            "price": 92.0
+          }
+        ],
+        "min_price": 92.0,
+        "last_price": 92.0
+      },
+      "Montmartre Paris Suite": {
+        "history": [
+          {
+            "ts": "2026-06-28T06:16:45.523160",
+            "price": 77.66666666666667
+          }
+        ],
+        "min_price": 77.66666666666667,
+        "last_price": 77.66666666666667
+      },
+      "JO&JOE Paris Gentilly": {
+        "history": [
+          {
+            "ts": "2026-06-28T06:16:45.523160",
+            "price": 43.0
+          }
+        ],
+        "min_price": 43.0,
+        "last_price": 43.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-27T18:47:04.800887"
+    "last_checked_at": "2026-06-28T06:16:45.523160"
   }
 }
