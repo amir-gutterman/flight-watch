@@ -568,6 +568,10 @@
           {
             "ts": "2026-06-28T15:17:21.254779",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-28T18:04:15.657744",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -633,6 +637,10 @@
           },
           {
             "ts": "2026-06-28T15:17:21.254779",
+            "price": 78.0
+          },
+          {
+            "ts": "2026-06-28T18:04:15.657744",
             "price": 78.0
           }
         ],
@@ -816,6 +824,10 @@
           {
             "ts": "2026-06-28T15:17:21.254779",
             "price": 62.5
+          },
+          {
+            "ts": "2026-06-28T18:04:15.657744",
+            "price": 62.5
           }
         ],
         "min_price": 62.5,
@@ -829,6 +841,10 @@
           },
           {
             "ts": "2026-06-28T15:17:21.254779",
+            "price": 35.5
+          },
+          {
+            "ts": "2026-06-28T18:04:15.657744",
             "price": 35.5
           }
         ],
@@ -1056,10 +1072,40 @@
         ],
         "min_price": 47.5,
         "last_price": 47.5
+      },
+      "Holiday Inn Express Berlin - Alexanderplatz by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-28T18:04:15.657744",
+            "price": 54.0
+          }
+        ],
+        "min_price": 54.0,
+        "last_price": 54.0
+      },
+      "CAMPANILE BERLIN BRANDENBURG AIRPORT": {
+        "history": [
+          {
+            "ts": "2026-06-28T18:04:15.657744",
+            "price": 24.0
+          }
+        ],
+        "min_price": 24.0,
+        "last_price": 24.0
+      },
+      "martas Hotel Allegra Berlin": {
+        "history": [
+          {
+            "ts": "2026-06-28T18:04:15.657744",
+            "price": 55.5
+          }
+        ],
+        "min_price": 55.5,
+        "last_price": 55.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T15:17:21.254779"
+    "last_checked_at": "2026-06-28T18:04:15.657744"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
