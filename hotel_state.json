@@ -166,6 +166,10 @@
           {
             "ts": "2026-06-28T01:34:02.218060",
             "price": 192.0
+          },
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 192.0
           }
         ],
         "min_price": 192.0,
@@ -180,10 +184,14 @@
           {
             "ts": "2026-06-27T18:46:48.169443",
             "price": 76.66666666666667
+          },
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 75.33333333333333
           }
         ],
-        "min_price": 76.66666666666667,
-        "last_price": 76.66666666666667
+        "min_price": 75.33333333333333,
+        "last_price": 75.33333333333333
       },
       "Hotel NH Madrid Barajas Airport": {
         "history": [
@@ -286,20 +294,28 @@
           {
             "ts": "2026-06-27T18:46:48.169443",
             "price": 106.66666666666667
+          },
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 107.33333333333333
           }
         ],
         "min_price": 106.66666666666667,
-        "last_price": 106.66666666666667
+        "last_price": 107.33333333333333
       },
       "NYX Madrid": {
         "history": [
           {
             "ts": "2026-06-27T11:16:36.504318",
             "price": 116.66666666666667
+          },
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 118.66666666666667
           }
         ],
         "min_price": 116.66666666666667,
-        "last_price": 116.66666666666667
+        "last_price": 118.66666666666667
       },
       "Exe Suites 33": {
         "history": [
@@ -364,10 +380,50 @@
         ],
         "min_price": 99.33333333333333,
         "last_price": 99.33333333333333
+      },
+      "Atocha Hotel Madrid, Tapestry Collection by Hilton": {
+        "history": [
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 157.66666666666666
+          }
+        ],
+        "min_price": 157.66666666666666,
+        "last_price": 157.66666666666666
+      },
+      "Spark by Hilton Madrid Alcal\u00e1": {
+        "history": [
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 203.66666666666666
+          }
+        ],
+        "min_price": 203.66666666666666,
+        "last_price": 203.66666666666666
+      },
+      "Zleep Madrid Airport": {
+        "history": [
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 206.0
+          }
+        ],
+        "min_price": 206.0,
+        "last_price": 206.0
+      },
+      "Hotel Montera Madrid, Curio Collection By Hilton": {
+        "history": [
+          {
+            "ts": "2026-06-28T09:41:18.650462",
+            "price": 307.3333333333333
+          }
+        ],
+        "min_price": 307.3333333333333,
+        "last_price": 307.3333333333333
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T01:34:02.218060"
+    "last_checked_at": "2026-06-28T09:41:18.650462"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -396,10 +452,14 @@
           {
             "ts": "2026-06-28T06:16:38.270475",
             "price": 26.0
+          },
+          {
+            "ts": "2026-06-28T09:41:26.526431",
+            "price": 26.5
           }
         ],
         "min_price": 26.0,
-        "last_price": 26.0
+        "last_price": 26.5
       },
       "Garner Hotel Berlin - Charlottenburg by IHG": {
         "history": [
@@ -453,6 +513,10 @@
           },
           {
             "ts": "2026-06-28T06:16:38.270475",
+            "price": 43.5
+          },
+          {
+            "ts": "2026-06-28T09:41:26.526431",
             "price": 43.5
           }
         ],
@@ -508,10 +572,14 @@
           {
             "ts": "2026-06-28T06:16:38.270475",
             "price": 77.0
+          },
+          {
+            "ts": "2026-06-28T09:41:26.526431",
+            "price": 78.0
           }
         ],
         "min_price": 77.0,
-        "last_price": 77.0
+        "last_price": 78.0
       },
       "Mercure Hotel Berlin City": {
         "history": [
@@ -583,6 +651,10 @@
           },
           {
             "ts": "2026-06-28T06:16:38.270475",
+            "price": 52.0
+          },
+          {
+            "ts": "2026-06-28T09:41:26.526431",
             "price": 52.0
           }
         ],
@@ -870,24 +942,32 @@
           {
             "ts": "2026-06-28T06:16:38.270475",
             "price": 43.0
+          },
+          {
+            "ts": "2026-06-28T09:41:26.526431",
+            "price": 41.0
           }
         ],
-        "min_price": 43.0,
-        "last_price": 43.0
+        "min_price": 41.0,
+        "last_price": 41.0
       },
       "Holiday Inn Express Berlin City Centre by IHG": {
         "history": [
           {
             "ts": "2026-06-28T06:16:38.270475",
             "price": 48.0
+          },
+          {
+            "ts": "2026-06-28T09:41:26.526431",
+            "price": 49.0
           }
         ],
         "min_price": 48.0,
-        "last_price": 48.0
+        "last_price": 49.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T06:16:38.270475"
+    "last_checked_at": "2026-06-28T09:41:26.526431"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
