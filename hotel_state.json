@@ -546,6 +546,10 @@
           {
             "ts": "2026-06-28T11:46:28.785401",
             "price": 26.5
+          },
+          {
+            "ts": "2026-06-29T05:12:08.532494",
+            "price": 26.5
           }
         ],
         "min_price": 26.0,
@@ -628,6 +632,10 @@
           {
             "ts": "2026-06-29T00:07:10.781164",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-29T05:12:08.532494",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -705,6 +713,10 @@
           },
           {
             "ts": "2026-06-29T00:07:10.781164",
+            "price": 78.0
+          },
+          {
+            "ts": "2026-06-29T05:12:08.532494",
             "price": 78.0
           }
         ],
@@ -998,6 +1010,10 @@
           {
             "ts": "2026-06-27T17:07:59.271074",
             "price": 32.0
+          },
+          {
+            "ts": "2026-06-29T05:12:08.532494",
+            "price": 32.0
           }
         ],
         "min_price": 32.0,
@@ -1038,6 +1054,10 @@
           {
             "ts": "2026-06-29T00:07:10.781164",
             "price": 48.0
+          },
+          {
+            "ts": "2026-06-29T05:12:08.532494",
+            "price": 48.0
           }
         ],
         "min_price": 48.0,
@@ -1067,6 +1087,10 @@
           },
           {
             "ts": "2026-06-29T00:07:10.781164",
+            "price": 47.5
+          },
+          {
+            "ts": "2026-06-29T05:12:08.532494",
             "price": 47.5
           }
         ],
@@ -1136,10 +1160,14 @@
           {
             "ts": "2026-06-28T09:41:26.526431",
             "price": 41.0
+          },
+          {
+            "ts": "2026-06-29T05:12:08.532494",
+            "price": 42.5
           }
         ],
         "min_price": 41.0,
-        "last_price": 41.0
+        "last_price": 42.5
       },
       "Holiday Inn Express Berlin City Centre by IHG": {
         "history": [
@@ -1237,7 +1265,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T00:07:10.781164"
+    "last_checked_at": "2026-06-29T05:12:08.532494"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -1253,6 +1281,10 @@
           },
           {
             "ts": "2026-06-28T16:42:47.275677",
+            "price": 149.66666666666666
+          },
+          {
+            "ts": "2026-06-29T05:12:16.168356",
             "price": 149.66666666666666
           }
         ],
@@ -1344,6 +1376,10 @@
           {
             "ts": "2026-06-28T06:16:45.523160",
             "price": 43.0
+          },
+          {
+            "ts": "2026-06-29T05:12:16.168356",
+            "price": 43.0
           }
         ],
         "min_price": 43.0,
@@ -1368,9 +1404,29 @@
         ],
         "min_price": 54.333333333333336,
         "last_price": 54.333333333333336
+      },
+      "France Albion": {
+        "history": [
+          {
+            "ts": "2026-06-29T05:12:16.168356",
+            "price": 51.0
+          }
+        ],
+        "min_price": 51.0,
+        "last_price": 51.0
+      },
+      "Crowne Plaza Paris - Republique by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-29T05:12:16.168356",
+            "price": 111.66666666666667
+          }
+        ],
+        "min_price": 111.66666666666667,
+        "last_price": 111.66666666666667
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-28T16:42:47.275677"
+    "last_checked_at": "2026-06-29T05:12:16.168356"
   }
 }
