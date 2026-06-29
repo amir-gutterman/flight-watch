@@ -64,6 +64,10 @@
           {
             "ts": "2026-06-28T01:34:02.218060",
             "price": 409.0
+          },
+          {
+            "ts": "2026-06-29T10:08:16.103669",
+            "price": 409.0
           }
         ],
         "min_price": 409.0,
@@ -73,6 +77,10 @@
         "history": [
           {
             "ts": "2026-06-26T22:28:27.703547",
+            "price": 456.6666666666667
+          },
+          {
+            "ts": "2026-06-29T10:08:16.103669",
             "price": 456.6666666666667
           }
         ],
@@ -97,6 +105,10 @@
           },
           {
             "ts": "2026-06-27T06:28:55.922490",
+            "price": 174.0
+          },
+          {
+            "ts": "2026-06-29T10:08:16.103669",
             "price": 174.0
           }
         ],
@@ -189,6 +201,10 @@
           },
           {
             "ts": "2026-06-29T00:07:03.182551",
+            "price": 192.0
+          },
+          {
+            "ts": "2026-06-29T10:08:16.103669",
             "price": 192.0
           }
         ],
@@ -472,6 +488,10 @@
           {
             "ts": "2026-06-29T00:07:03.182551",
             "price": 307.3333333333333
+          },
+          {
+            "ts": "2026-06-29T10:08:16.103669",
+            "price": 307.3333333333333
           }
         ],
         "min_price": 307.3333333333333,
@@ -492,6 +512,10 @@
           {
             "ts": "2026-06-29T00:07:03.182551",
             "price": 250.66666666666666
+          },
+          {
+            "ts": "2026-06-29T10:08:16.103669",
+            "price": 250.66666666666666
           }
         ],
         "min_price": 250.66666666666666,
@@ -506,10 +530,40 @@
         ],
         "min_price": 269.0,
         "last_price": 269.0
+      },
+      "Meli\u00e1 Madrid Serrano": {
+        "history": [
+          {
+            "ts": "2026-06-29T10:08:16.103669",
+            "price": 238.0
+          }
+        ],
+        "min_price": 238.0,
+        "last_price": 238.0
+      },
+      "Meli\u00e1 Avenida Am\u00e9rica": {
+        "history": [
+          {
+            "ts": "2026-06-29T10:08:16.103669",
+            "price": 156.33333333333334
+          }
+        ],
+        "min_price": 156.33333333333334,
+        "last_price": 156.33333333333334
+      },
+      "ibis budget Madrid Albasanz": {
+        "history": [
+          {
+            "ts": "2026-06-29T10:08:16.103669",
+            "price": 106.33333333333333
+          }
+        ],
+        "min_price": 106.33333333333333,
+        "last_price": 106.33333333333333
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T00:07:03.182551"
+    "last_checked_at": "2026-06-29T10:08:16.103669"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1040,10 +1094,14 @@
           {
             "ts": "2026-06-27T21:37:31.358703",
             "price": 35.0
+          },
+          {
+            "ts": "2026-06-29T10:08:23.816163",
+            "price": 35.5
           }
         ],
         "min_price": 30.0,
-        "last_price": 35.0
+        "last_price": 35.5
       },
       "H2 Hotel Berlin-Alexanderplatz": {
         "history": [
@@ -1198,6 +1256,10 @@
           {
             "ts": "2026-06-28T18:04:15.657744",
             "price": 54.0
+          },
+          {
+            "ts": "2026-06-29T10:08:23.816163",
+            "price": 54.0
           }
         ],
         "min_price": 54.0,
@@ -1262,10 +1324,50 @@
         ],
         "min_price": 38.5,
         "last_price": 38.5
+      },
+      "Garner Hotel Berlin - Mitte": {
+        "history": [
+          {
+            "ts": "2026-06-29T10:08:23.816163",
+            "price": 51.0
+          }
+        ],
+        "min_price": 51.0,
+        "last_price": 51.0
+      },
+      "JW Marriott Hotel Berlin": {
+        "history": [
+          {
+            "ts": "2026-06-29T10:08:23.816163",
+            "price": 60.5
+          }
+        ],
+        "min_price": 60.5,
+        "last_price": 60.5
+      },
+      "Hotel Berlin, Berlin, a member of Radisson Individuals": {
+        "history": [
+          {
+            "ts": "2026-06-29T10:08:23.816163",
+            "price": 44.0
+          }
+        ],
+        "min_price": 44.0,
+        "last_price": 44.0
+      },
+      "Hotel AMANO Grand Central": {
+        "history": [
+          {
+            "ts": "2026-06-29T10:08:23.816163",
+            "price": 44.0
+          }
+        ],
+        "min_price": 44.0,
+        "last_price": 44.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T05:12:08.532494"
+    "last_checked_at": "2026-06-29T10:08:23.816163"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
