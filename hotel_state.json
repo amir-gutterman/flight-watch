@@ -148,6 +148,10 @@
           {
             "ts": "2026-06-29T00:07:03.182551",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-06-29T17:35:10.029184",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -250,6 +254,10 @@
           {
             "ts": "2026-06-28T16:42:39.621167",
             "price": 123.0
+          },
+          {
+            "ts": "2026-06-29T17:35:10.029184",
+            "price": 123.0
           }
         ],
         "min_price": 123.0,
@@ -259,6 +267,10 @@
         "history": [
           {
             "ts": "2026-06-27T11:06:58.448181",
+            "price": 108.66666666666667
+          },
+          {
+            "ts": "2026-06-29T17:35:10.029184",
             "price": 108.66666666666667
           }
         ],
@@ -350,6 +362,10 @@
           {
             "ts": "2026-06-28T16:42:39.621167",
             "price": 107.33333333333333
+          },
+          {
+            "ts": "2026-06-29T17:35:10.029184",
+            "price": 107.33333333333333
           }
         ],
         "min_price": 106.66666666666667,
@@ -368,10 +384,14 @@
           {
             "ts": "2026-06-28T16:42:39.621167",
             "price": 118.66666666666667
+          },
+          {
+            "ts": "2026-06-29T17:35:10.029184",
+            "price": 116.66666666666667
           }
         ],
         "min_price": 116.66666666666667,
-        "last_price": 118.66666666666667
+        "last_price": 116.66666666666667
       },
       "Exe Suites 33": {
         "history": [
@@ -502,6 +522,10 @@
           {
             "ts": "2026-06-28T16:42:39.621167",
             "price": 157.0
+          },
+          {
+            "ts": "2026-06-29T17:35:10.029184",
+            "price": 157.0
           }
         ],
         "min_price": 157.0,
@@ -560,10 +584,20 @@
         ],
         "min_price": 106.33333333333333,
         "last_price": 106.33333333333333
+      },
+      "INNSiDE by Meli\u00e1 Madrid Valdebebas": {
+        "history": [
+          {
+            "ts": "2026-06-29T17:35:10.029184",
+            "price": 194.0
+          }
+        ],
+        "min_price": 194.0,
+        "last_price": 194.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T10:08:16.103669"
+    "last_checked_at": "2026-06-29T17:35:10.029184"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -604,10 +638,14 @@
           {
             "ts": "2026-06-29T05:12:08.532494",
             "price": 26.5
+          },
+          {
+            "ts": "2026-06-29T17:35:18.037729",
+            "price": 29.5
           }
         ],
         "min_price": 26.0,
-        "last_price": 26.5
+        "last_price": 29.5
       },
       "Garner Hotel Berlin - Charlottenburg by IHG": {
         "history": [
@@ -694,6 +732,10 @@
           {
             "ts": "2026-06-29T14:34:27.307695",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-29T17:35:18.037729",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -779,6 +821,10 @@
           },
           {
             "ts": "2026-06-29T14:34:27.307695",
+            "price": 78.0
+          },
+          {
+            "ts": "2026-06-29T17:35:18.037729",
             "price": 78.0
           }
         ],
@@ -884,10 +930,14 @@
           {
             "ts": "2026-06-28T11:46:28.785401",
             "price": 52.0
+          },
+          {
+            "ts": "2026-06-29T17:35:18.037729",
+            "price": 46.5
           }
         ],
-        "min_price": 51.0,
-        "last_price": 52.0
+        "min_price": 46.5,
+        "last_price": 46.5
       },
       "Generator Berlin Alexanderplatz": {
         "history": [
@@ -1248,6 +1298,10 @@
           {
             "ts": "2026-06-28T09:41:26.526431",
             "price": 49.0
+          },
+          {
+            "ts": "2026-06-29T17:35:18.037729",
+            "price": 49.0
           }
         ],
         "min_price": 48.0,
@@ -1387,7 +1441,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T14:34:27.307695"
+    "last_checked_at": "2026-06-29T17:35:18.037729"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -1546,9 +1600,49 @@
         ],
         "min_price": 111.66666666666667,
         "last_price": 111.66666666666667
+      },
+      "H\u00f4tel Bridget": {
+        "history": [
+          {
+            "ts": "2026-06-29T17:35:25.996517",
+            "price": 53.666666666666664
+          }
+        ],
+        "min_price": 53.666666666666664,
+        "last_price": 53.666666666666664
+      },
+      "H\u00f4tel International.": {
+        "history": [
+          {
+            "ts": "2026-06-29T17:35:25.996517",
+            "price": 61.0
+          }
+        ],
+        "min_price": 61.0,
+        "last_price": 61.0
+      },
+      "Hilton Paris Opera": {
+        "history": [
+          {
+            "ts": "2026-06-29T17:35:25.996517",
+            "price": 125.33333333333333
+          }
+        ],
+        "min_price": 125.33333333333333,
+        "last_price": 125.33333333333333
+      },
+      "Le Belgrand Hotel Paris Champs Elysees, Tapestry Collection by Hilton": {
+        "history": [
+          {
+            "ts": "2026-06-29T17:35:25.996517",
+            "price": 120.0
+          }
+        ],
+        "min_price": 120.0,
+        "last_price": 120.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T05:12:16.168356"
+    "last_checked_at": "2026-06-29T17:35:25.996517"
   }
 }
