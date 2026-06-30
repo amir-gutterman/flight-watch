@@ -738,10 +738,14 @@
           {
             "ts": "2026-06-30T08:29:33.848274",
             "price": 26.0
+          },
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 26.5
           }
         ],
         "min_price": 26.0,
-        "last_price": 26.0
+        "last_price": 26.5
       },
       "Garner Hotel Berlin - Charlottenburg by IHG": {
         "history": [
@@ -962,6 +966,10 @@
           {
             "ts": "2026-06-30T11:44:56.209287",
             "price": 78.0
+          },
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 78.0
           }
         ],
         "min_price": 77.0,
@@ -995,6 +1003,10 @@
           },
           {
             "ts": "2026-06-30T04:44:18.538678",
+            "price": 40.0
+          },
+          {
+            "ts": "2026-06-30T14:14:40.963462",
             "price": 40.0
           }
         ],
@@ -1146,10 +1158,14 @@
           {
             "ts": "2026-06-30T08:29:33.848274",
             "price": 50.5
+          },
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 45.0
           }
         ],
-        "min_price": 50.5,
-        "last_price": 50.5
+        "min_price": 45.0,
+        "last_price": 45.0
       },
       "Holiday Inn Berlin Airport - Conf Centre by IHG": {
         "history": [
@@ -1310,10 +1326,14 @@
           {
             "ts": "2026-06-30T08:29:33.848274",
             "price": 30.5
+          },
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 32.0
           }
         ],
         "min_price": 30.5,
-        "last_price": 30.5
+        "last_price": 32.0
       },
       "LOGINN Hotel Berlin Airport": {
         "history": [
@@ -1392,10 +1412,14 @@
           {
             "ts": "2026-06-29T05:12:08.532494",
             "price": 47.5
+          },
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 47.0
           }
         ],
-        "min_price": 47.5,
-        "last_price": 47.5
+        "min_price": 47.0,
+        "last_price": 47.0
       },
       "Sheraton Berlin Grand Hotel Esplanade": {
         "history": [
@@ -1590,6 +1614,10 @@
           {
             "ts": "2026-06-30T08:29:33.848274",
             "price": 38.5
+          },
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 38.5
           }
         ],
         "min_price": 38.5,
@@ -1634,10 +1662,30 @@
         ],
         "min_price": 44.0,
         "last_price": 44.0
+      },
+      "Mercure Hotel Berlin Tempelhof": {
+        "history": [
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 42.0
+          }
+        ],
+        "min_price": 42.0,
+        "last_price": 42.0
+      },
+      "Scandic Berlin Kurf\u00fcrstendamm": {
+        "history": [
+          {
+            "ts": "2026-06-30T14:14:40.963462",
+            "price": 44.0
+          }
+        ],
+        "min_price": 44.0,
+        "last_price": 44.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-30T11:44:56.209287"
+    "last_checked_at": "2026-06-30T14:14:40.963462"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
