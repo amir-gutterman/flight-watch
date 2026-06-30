@@ -796,6 +796,10 @@
           {
             "ts": "2026-06-30T16:37:00.885834",
             "price": 26.5
+          },
+          {
+            "ts": "2026-06-30T18:55:23.182251",
+            "price": 26.5
           }
         ],
         "min_price": 26.0,
@@ -1070,6 +1074,10 @@
           {
             "ts": "2026-06-30T16:37:00.885834",
             "price": 40.0
+          },
+          {
+            "ts": "2026-06-30T18:55:23.182251",
+            "price": 40.0
           }
         ],
         "min_price": 40.0,
@@ -1228,6 +1236,10 @@
           {
             "ts": "2026-06-30T16:37:00.885834",
             "price": 45.0
+          },
+          {
+            "ts": "2026-06-30T18:55:23.182251",
+            "price": 45.0
           }
         ],
         "min_price": 45.0,
@@ -1308,10 +1320,14 @@
           {
             "ts": "2026-06-30T16:37:00.885834",
             "price": 36.0
+          },
+          {
+            "ts": "2026-06-30T18:55:23.182251",
+            "price": 35.5
           }
         ],
         "min_price": 35.5,
-        "last_price": 36.0
+        "last_price": 35.5
       },
       "Generator Berlin Mitte": {
         "history": [
@@ -1670,10 +1686,14 @@
           {
             "ts": "2026-06-29T00:07:10.781164",
             "price": 48.0
+          },
+          {
+            "ts": "2026-06-30T18:55:23.182251",
+            "price": 49.0
           }
         ],
         "min_price": 48.0,
-        "last_price": 48.0
+        "last_price": 49.0
       },
       "Hotel Air in Berlin": {
         "history": [
@@ -1692,10 +1712,14 @@
           {
             "ts": "2026-06-30T16:37:00.885834",
             "price": 38.0
+          },
+          {
+            "ts": "2026-06-30T18:55:23.182251",
+            "price": 37.5
           }
         ],
-        "min_price": 38.0,
-        "last_price": 38.0
+        "min_price": 37.5,
+        "last_price": 37.5
       },
       "Garner Hotel Berlin - Mitte": {
         "history": [
@@ -1760,10 +1784,20 @@
         ],
         "min_price": 44.0,
         "last_price": 44.0
+      },
+      "Hotel NH Berlin Kurf\u00fcrstendamm": {
+        "history": [
+          {
+            "ts": "2026-06-30T18:55:23.182251",
+            "price": 43.0
+          }
+        ],
+        "min_price": 43.0,
+        "last_price": 43.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-30T16:37:00.885834"
+    "last_checked_at": "2026-06-30T18:55:23.182251"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
