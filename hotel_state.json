@@ -248,10 +248,14 @@
           {
             "ts": "2026-06-28T16:42:39.621167",
             "price": 75.33333333333333
+          },
+          {
+            "ts": "2026-06-30T08:29:25.584625",
+            "price": 80.66666666666667
           }
         ],
         "min_price": 75.33333333333333,
-        "last_price": 75.33333333333333
+        "last_price": 80.66666666666667
       },
       "Hotel NH Madrid Barajas Airport": {
         "history": [
@@ -352,10 +356,14 @@
           {
             "ts": "2026-06-27T11:16:36.504318",
             "price": 326.0
+          },
+          {
+            "ts": "2026-06-30T08:29:25.584625",
+            "price": 355.6666666666667
           }
         ],
         "min_price": 326.0,
-        "last_price": 326.0
+        "last_price": 355.6666666666667
       },
       "Eurostars Puerta Madrid": {
         "history": [
@@ -403,6 +411,10 @@
           },
           {
             "ts": "2026-06-29T17:35:10.029184",
+            "price": 116.66666666666667
+          },
+          {
+            "ts": "2026-06-30T08:29:25.584625",
             "price": 116.66666666666667
           }
         ],
@@ -456,10 +468,14 @@
           {
             "ts": "2026-06-29T00:07:03.182551",
             "price": 185.33333333333334
+          },
+          {
+            "ts": "2026-06-30T08:29:25.584625",
+            "price": 202.0
           }
         ],
         "min_price": 185.33333333333334,
-        "last_price": 185.33333333333334
+        "last_price": 202.0
       },
       "DoubleTree by Hilton Madrid - Prado": {
         "history": [
@@ -632,10 +648,40 @@
         ],
         "min_price": 235.0,
         "last_price": 235.0
+      },
+      "Madrid Marriott Auditorium": {
+        "history": [
+          {
+            "ts": "2026-06-30T08:29:25.584625",
+            "price": 126.66666666666667
+          }
+        ],
+        "min_price": 126.66666666666667,
+        "last_price": 126.66666666666667
+      },
+      "The Central House Lavapi\u00e9s": {
+        "history": [
+          {
+            "ts": "2026-06-30T08:29:25.584625",
+            "price": 124.0
+          }
+        ],
+        "min_price": 124.0,
+        "last_price": 124.0
+      },
+      "ibis Styles Madrid City Las Ventas": {
+        "history": [
+          {
+            "ts": "2026-06-30T08:29:25.584625",
+            "price": 313.3333333333333
+          }
+        ],
+        "min_price": 313.3333333333333,
+        "last_price": 313.3333333333333
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-30T00:02:32.786383"
+    "last_checked_at": "2026-06-30T08:29:25.584625"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -688,10 +734,14 @@
           {
             "ts": "2026-06-30T04:44:18.538678",
             "price": 29.5
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
+            "price": 26.0
           }
         ],
         "min_price": 26.0,
-        "last_price": 29.5
+        "last_price": 26.0
       },
       "Garner Hotel Berlin - Charlottenburg by IHG": {
         "history": [
@@ -794,6 +844,10 @@
           {
             "ts": "2026-06-30T04:44:18.538678",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -895,6 +949,10 @@
           },
           {
             "ts": "2026-06-30T04:44:18.538678",
+            "price": 78.0
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
             "price": 78.0
           }
         ],
@@ -1076,6 +1134,10 @@
           {
             "ts": "2026-06-30T04:44:18.538678",
             "price": 50.5
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
+            "price": 50.5
           }
         ],
         "min_price": 50.5,
@@ -1121,6 +1183,10 @@
           },
           {
             "ts": "2026-06-29T22:38:31.769584",
+            "price": 62.5
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
             "price": 62.5
           }
         ],
@@ -1224,10 +1290,14 @@
           {
             "ts": "2026-06-29T05:12:08.532494",
             "price": 32.0
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
+            "price": 30.5
           }
         ],
-        "min_price": 32.0,
-        "last_price": 32.0
+        "min_price": 30.5,
+        "last_price": 30.5
       },
       "LOGINN Hotel Berlin Airport": {
         "history": [
@@ -1382,6 +1452,10 @@
           {
             "ts": "2026-06-30T04:44:18.538678",
             "price": 42.0
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
+            "price": 42.0
           }
         ],
         "min_price": 41.0,
@@ -1496,6 +1570,10 @@
           {
             "ts": "2026-06-29T00:07:10.781164",
             "price": 38.5
+          },
+          {
+            "ts": "2026-06-30T08:29:33.848274",
+            "price": 38.5
           }
         ],
         "min_price": 38.5,
@@ -1543,7 +1621,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-30T04:44:18.538678"
+    "last_checked_at": "2026-06-30T08:29:33.848274"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
