@@ -800,6 +800,10 @@
           {
             "ts": "2026-06-30T18:55:23.182251",
             "price": 26.5
+          },
+          {
+            "ts": "2026-06-30T20:58:12.863418",
+            "price": 26.5
           }
         ],
         "min_price": 26.0,
@@ -1240,6 +1244,10 @@
           {
             "ts": "2026-06-30T18:55:23.182251",
             "price": 45.0
+          },
+          {
+            "ts": "2026-06-30T20:58:12.863418",
+            "price": 45.0
           }
         ],
         "min_price": 45.0,
@@ -1382,6 +1390,10 @@
           {
             "ts": "2026-06-29T00:07:10.781164",
             "price": 51.0
+          },
+          {
+            "ts": "2026-06-30T20:58:12.863418",
+            "price": 51.0
           }
         ],
         "min_price": 51.0,
@@ -1415,6 +1427,10 @@
           },
           {
             "ts": "2026-06-30T14:14:40.963462",
+            "price": 32.0
+          },
+          {
+            "ts": "2026-06-30T20:58:12.863418",
             "price": 32.0
           }
         ],
@@ -1501,6 +1517,10 @@
           },
           {
             "ts": "2026-06-30T14:14:40.963462",
+            "price": 47.0
+          },
+          {
+            "ts": "2026-06-30T20:58:12.863418",
             "price": 47.0
           }
         ],
@@ -1690,6 +1710,10 @@
           {
             "ts": "2026-06-30T18:55:23.182251",
             "price": 49.0
+          },
+          {
+            "ts": "2026-06-30T20:58:12.863418",
+            "price": 49.0
           }
         ],
         "min_price": 48.0,
@@ -1790,14 +1814,28 @@
           {
             "ts": "2026-06-30T18:55:23.182251",
             "price": 43.0
+          },
+          {
+            "ts": "2026-06-30T20:58:12.863418",
+            "price": 43.0
           }
         ],
         "min_price": 43.0,
         "last_price": 43.0
+      },
+      "Hotel NH Collection Berlin Mitte Friedrichstrasse": {
+        "history": [
+          {
+            "ts": "2026-06-30T20:58:12.863418",
+            "price": 56.5
+          }
+        ],
+        "min_price": 56.5,
+        "last_price": 56.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-30T18:55:23.182251"
+    "last_checked_at": "2026-06-30T20:58:12.863418"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
