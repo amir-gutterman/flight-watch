@@ -684,6 +684,10 @@
           {
             "ts": "2026-06-29T19:54:21.468540",
             "price": 29.5
+          },
+          {
+            "ts": "2026-06-30T04:44:18.538678",
+            "price": 29.5
           }
         ],
         "min_price": 26.0,
@@ -786,6 +790,10 @@
           {
             "ts": "2026-06-29T22:38:31.769584",
             "price": 43.5
+          },
+          {
+            "ts": "2026-06-30T04:44:18.538678",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -884,6 +892,10 @@
           {
             "ts": "2026-06-29T22:38:31.769584",
             "price": 78.0
+          },
+          {
+            "ts": "2026-06-30T04:44:18.538678",
+            "price": 78.0
           }
         ],
         "min_price": 77.0,
@@ -913,6 +925,10 @@
           },
           {
             "ts": "2026-06-28T21:00:48.908007",
+            "price": 40.0
+          },
+          {
+            "ts": "2026-06-30T04:44:18.538678",
             "price": 40.0
           }
         ],
@@ -1055,6 +1071,10 @@
           },
           {
             "ts": "2026-06-29T22:38:31.769584",
+            "price": 50.5
+          },
+          {
+            "ts": "2026-06-30T04:44:18.538678",
             "price": 50.5
           }
         ],
@@ -1358,10 +1378,14 @@
           {
             "ts": "2026-06-29T05:12:08.532494",
             "price": 42.5
+          },
+          {
+            "ts": "2026-06-30T04:44:18.538678",
+            "price": 42.0
           }
         ],
         "min_price": 41.0,
-        "last_price": 42.5
+        "last_price": 42.0
       },
       "Holiday Inn Express Berlin City Centre by IHG": {
         "history": [
@@ -1519,7 +1543,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T22:38:31.769584"
+    "last_checked_at": "2026-06-30T04:44:18.538678"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -1540,10 +1564,14 @@
           {
             "ts": "2026-06-29T05:12:16.168356",
             "price": 149.66666666666666
+          },
+          {
+            "ts": "2026-06-30T04:44:25.847797",
+            "price": 146.0
           }
         ],
-        "min_price": 149.66666666666666,
-        "last_price": 149.66666666666666
+        "min_price": 146.0,
+        "last_price": 146.0
       },
       "Hotel Marignan Quartier Latin": {
         "history": [
@@ -1718,9 +1746,29 @@
         ],
         "min_price": 120.0,
         "last_price": 120.0
+      },
+      "Hotel Maison Hamelin Paris - Handwritten Collection": {
+        "history": [
+          {
+            "ts": "2026-06-30T04:44:25.847797",
+            "price": 83.66666666666667
+          }
+        ],
+        "min_price": 83.66666666666667,
+        "last_price": 83.66666666666667
+      },
+      "Holiday Inn Paris Palais de L\u2019elys\u00e9E by IHG": {
+        "history": [
+          {
+            "ts": "2026-06-30T04:44:25.847797",
+            "price": 120.33333333333333
+          }
+        ],
+        "min_price": 120.33333333333333,
+        "last_price": 120.33333333333333
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-29T17:35:25.996517"
+    "last_checked_at": "2026-06-30T04:44:25.847797"
   }
 }
