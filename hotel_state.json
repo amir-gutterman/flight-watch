@@ -1382,6 +1382,10 @@
           {
             "ts": "2026-06-30T18:55:23.182251",
             "price": 35.5
+          },
+          {
+            "ts": "2026-07-01T03:36:20.145255",
+            "price": 35.5
           }
         ],
         "min_price": 35.5,
@@ -1418,10 +1422,14 @@
           {
             "ts": "2026-06-29T22:38:31.769584",
             "price": 36.0
+          },
+          {
+            "ts": "2026-07-01T03:36:20.145255",
+            "price": 51.0
           }
         ],
         "min_price": 36.0,
-        "last_price": 36.0
+        "last_price": 51.0
       },
       "Hampton by Hilton Berlin City East Side Gallery": {
         "history": [
@@ -1614,10 +1622,14 @@
           {
             "ts": "2026-06-27T18:46:56.417631",
             "price": 40.5
+          },
+          {
+            "ts": "2026-07-01T03:36:20.145255",
+            "price": 43.0
           }
         ],
         "min_price": 40.5,
-        "last_price": 40.5
+        "last_price": 43.0
       },
       "Hotel Indigo Berlin - Ku'Damm by IHG": {
         "history": [
@@ -1737,6 +1749,10 @@
           },
           {
             "ts": "2026-06-29T14:34:27.307695",
+            "price": 55.5
+          },
+          {
+            "ts": "2026-07-01T03:36:20.145255",
             "price": 55.5
           }
         ],
@@ -1902,10 +1918,30 @@
         ],
         "min_price": 56.5,
         "last_price": 56.5
+      },
+      "Mercure Hotel & Residenz Berlin Checkpoint Charlie": {
+        "history": [
+          {
+            "ts": "2026-07-01T03:36:20.145255",
+            "price": 52.5
+          }
+        ],
+        "min_price": 52.5,
+        "last_price": 52.5
+      },
+      "Holiday Inn Berlin - City East Side by IHG": {
+        "history": [
+          {
+            "ts": "2026-07-01T03:36:20.145255",
+            "price": 47.5
+          }
+        ],
+        "min_price": 47.5,
+        "last_price": 47.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-30T23:45:05.645055"
+    "last_checked_at": "2026-07-01T03:36:20.145255"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -2160,9 +2196,29 @@
         ],
         "min_price": 101.33333333333333,
         "last_price": 101.33333333333333
+      },
+      "Pullman Paris Tour Eiffel": {
+        "history": [
+          {
+            "ts": "2026-07-01T03:36:28.309247",
+            "price": 136.0
+          }
+        ],
+        "min_price": 136.0,
+        "last_price": 136.0
+      },
+      "Reims H\u00f4tel Paris": {
+        "history": [
+          {
+            "ts": "2026-07-01T03:36:28.309247",
+            "price": 30.0
+          }
+        ],
+        "min_price": 30.0,
+        "last_price": 30.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-06-30T16:37:10.011961"
+    "last_checked_at": "2026-07-01T03:36:28.309247"
   }
 }
