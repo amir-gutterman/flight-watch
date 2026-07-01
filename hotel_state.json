@@ -18,6 +18,10 @@
           {
             "ts": "2026-07-01T14:30:36.485473",
             "price": 244.66666666666666
+          },
+          {
+            "ts": "2026-07-01T21:06:10.763591",
+            "price": 244.66666666666666
           }
         ],
         "min_price": 244.66666666666666,
@@ -65,6 +69,10 @@
           },
           {
             "ts": "2026-07-01T08:10:48.227013",
+            "price": 83.33333333333333
+          },
+          {
+            "ts": "2026-07-01T21:06:10.763591",
             "price": 83.33333333333333
           }
         ],
@@ -204,6 +212,10 @@
           {
             "ts": "2026-07-01T14:30:36.485473",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-01T21:06:10.763591",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -237,6 +249,10 @@
           },
           {
             "ts": "2026-07-01T08:10:48.227013",
+            "price": 42.333333333333336
+          },
+          {
+            "ts": "2026-07-01T21:06:10.763591",
             "price": 42.333333333333336
           }
         ],
@@ -490,10 +506,14 @@
           {
             "ts": "2026-07-01T08:10:48.227013",
             "price": 117.0
+          },
+          {
+            "ts": "2026-07-01T21:06:10.763591",
+            "price": 114.66666666666667
           }
         ],
-        "min_price": 116.66666666666667,
-        "last_price": 117.0
+        "min_price": 114.66666666666667,
+        "last_price": 114.66666666666667
       },
       "Exe Suites 33": {
         "history": [
@@ -562,10 +582,14 @@
           {
             "ts": "2026-07-01T14:30:36.485473",
             "price": 182.66666666666666
+          },
+          {
+            "ts": "2026-07-01T21:06:10.763591",
+            "price": 182.33333333333334
           }
         ],
         "min_price": 182.0,
-        "last_price": 182.66666666666666
+        "last_price": 182.33333333333334
       },
       "DoubleTree by Hilton Madrid - Prado": {
         "history": [
@@ -750,10 +774,14 @@
           {
             "ts": "2026-06-30T00:02:32.786383",
             "price": 235.0
+          },
+          {
+            "ts": "2026-07-01T21:06:10.763591",
+            "price": 207.66666666666666
           }
         ],
-        "min_price": 235.0,
-        "last_price": 235.0
+        "min_price": 207.66666666666666,
+        "last_price": 207.66666666666666
       },
       "Madrid Marriott Auditorium": {
         "history": [
@@ -868,10 +896,20 @@
         ],
         "min_price": 128.33333333333334,
         "last_price": 128.33333333333334
+      },
+      "Madrid Marriott Hotel Princesa Plaza": {
+        "history": [
+          {
+            "ts": "2026-07-01T21:06:10.763591",
+            "price": 152.0
+          }
+        ],
+        "min_price": 152.0,
+        "last_price": 152.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T14:30:36.485473"
+    "last_checked_at": "2026-07-01T21:06:10.763591"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
