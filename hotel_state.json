@@ -14,6 +14,10 @@
           {
             "ts": "2026-06-30T00:02:32.786383",
             "price": 244.66666666666666
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 244.66666666666666
           }
         ],
         "min_price": 244.66666666666666,
@@ -196,6 +200,10 @@
           {
             "ts": "2026-07-01T08:10:48.227013",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -266,10 +274,20 @@
           {
             "ts": "2026-06-29T10:08:16.103669",
             "price": 192.0
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 150.66666666666666
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 150.66666666666666
           }
         ],
-        "min_price": 192.0,
-        "last_price": 192.0
+        "min_price": 150.66666666666666,
+        "last_price": 150.66666666666666,
+        "alerted_price": 150.66666666666666,
+        "alerted_at": "2026-07-01T14:30:38.290559"
       },
       "Holiday Inn Express Madrid - Alcobendas by IHG": {
         "history": [
@@ -540,20 +558,28 @@
           {
             "ts": "2026-07-01T08:10:48.227013",
             "price": 182.33333333333334
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 182.66666666666666
           }
         ],
         "min_price": 182.0,
-        "last_price": 182.33333333333334
+        "last_price": 182.66666666666666
       },
       "DoubleTree by Hilton Madrid - Prado": {
         "history": [
           {
             "ts": "2026-06-28T01:34:02.218060",
             "price": 172.33333333333334
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 177.33333333333334
           }
         ],
         "min_price": 172.33333333333334,
-        "last_price": 172.33333333333334
+        "last_price": 177.33333333333334
       },
       "Hotel NH Madrid Atocha": {
         "history": [
@@ -578,10 +604,14 @@
           {
             "ts": "2026-06-28T09:41:18.650462",
             "price": 157.66666666666666
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 162.66666666666666
           }
         ],
         "min_price": 157.66666666666666,
-        "last_price": 157.66666666666666
+        "last_price": 162.66666666666666
       },
       "Spark by Hilton Madrid Alcal\u00e1": {
         "history": [
@@ -661,6 +691,14 @@
           },
           {
             "ts": "2026-06-30T00:02:32.786383",
+            "price": 269.0
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
+            "price": 269.0
+          },
+          {
+            "ts": "2026-07-01T14:30:36.485473",
             "price": 269.0
           }
         ],
@@ -833,7 +871,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T08:10:48.227013"
+    "last_checked_at": "2026-07-01T14:30:36.485473"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1024,6 +1062,10 @@
           {
             "ts": "2026-06-30T11:44:56.209287",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-01T14:30:46.330166",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -1141,6 +1183,10 @@
           },
           {
             "ts": "2026-06-30T16:37:00.885834",
+            "price": 78.0
+          },
+          {
+            "ts": "2026-07-01T14:30:46.330166",
             "price": 78.0
           }
         ],
@@ -1412,6 +1458,10 @@
           {
             "ts": "2026-06-30T11:44:56.209287",
             "price": 62.5
+          },
+          {
+            "ts": "2026-07-01T14:30:46.330166",
+            "price": 62.5
           }
         ],
         "min_price": 62.5,
@@ -1454,10 +1504,14 @@
           {
             "ts": "2026-07-01T11:38:18.125482",
             "price": 35.5
+          },
+          {
+            "ts": "2026-07-01T14:30:46.330166",
+            "price": 36.0
           }
         ],
         "min_price": 35.5,
-        "last_price": 35.5
+        "last_price": 36.0
       },
       "Generator Berlin Mitte": {
         "history": [
@@ -2041,7 +2095,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T11:38:18.125482"
+    "last_checked_at": "2026-07-01T14:30:46.330166"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -2096,10 +2150,14 @@
           {
             "ts": "2026-06-27T18:47:04.800887",
             "price": 55.0
+          },
+          {
+            "ts": "2026-07-01T14:30:54.556590",
+            "price": 54.333333333333336
           }
         ],
-        "min_price": 55.0,
-        "last_price": 55.0
+        "min_price": 54.333333333333336,
+        "last_price": 54.333333333333336
       },
       "H\u00f4tel Elys\u00e9es Union": {
         "history": [
@@ -2168,10 +2226,14 @@
           {
             "ts": "2026-06-29T05:12:16.168356",
             "price": 43.0
+          },
+          {
+            "ts": "2026-07-01T14:30:54.556590",
+            "price": 42.666666666666664
           }
         ],
-        "min_price": 43.0,
-        "last_price": 43.0
+        "min_price": 42.666666666666664,
+        "last_price": 42.666666666666664
       },
       "Hotel Paris Op\u00e9ra Affiliated by Meli\u00e1": {
         "history": [
@@ -2316,9 +2378,29 @@
         ],
         "min_price": 30.0,
         "last_price": 30.0
+      },
+      "Secret de Paris - Hotel & Spa": {
+        "history": [
+          {
+            "ts": "2026-07-01T14:30:54.556590",
+            "price": 84.66666666666667
+          }
+        ],
+        "min_price": 84.66666666666667,
+        "last_price": 84.66666666666667
+      },
+      "Hotel Garden Saint Martin (H\u00f4tel Quartier R\u00e9publique, canal Saint-Martin Paris)": {
+        "history": [
+          {
+            "ts": "2026-07-01T14:30:54.556590",
+            "price": 51.333333333333336
+          }
+        ],
+        "min_price": 51.333333333333336,
+        "last_price": 51.333333333333336
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T03:36:28.309247"
+    "last_checked_at": "2026-07-01T14:30:54.556590"
   }
 }
