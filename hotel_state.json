@@ -1196,6 +1196,10 @@
           {
             "ts": "2026-07-01T17:13:59.100625",
             "price": 78.0
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
+            "price": 78.0
           }
         ],
         "min_price": 77.0,
@@ -1245,6 +1249,10 @@
           },
           {
             "ts": "2026-06-30T23:45:05.645055",
+            "price": 40.0
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
             "price": 40.0
           }
         ],
@@ -1411,6 +1419,10 @@
           },
           {
             "ts": "2026-06-30T20:58:12.863418",
+            "price": 45.0
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
             "price": 45.0
           }
         ],
@@ -1602,10 +1614,14 @@
           {
             "ts": "2026-07-01T11:38:18.125482",
             "price": 51.5
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
+            "price": 51.0
           }
         ],
         "min_price": 51.0,
-        "last_price": 51.5
+        "last_price": 51.0
       },
       "IntercityHotel Berlin Airport Area North": {
         "history": [
@@ -1798,15 +1814,23 @@
           {
             "ts": "2026-06-28T06:16:38.270475",
             "price": 42.5
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
+            "price": 41.0
           }
         ],
-        "min_price": 42.5,
-        "last_price": 42.5
+        "min_price": 41.0,
+        "last_price": 41.0
       },
       "Pullman Berlin Schweizerhof": {
         "history": [
           {
             "ts": "2026-06-27T21:37:31.358703",
+            "price": 62.5
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
             "price": 62.5
           }
         ],
@@ -1834,10 +1858,14 @@
           {
             "ts": "2026-06-30T08:29:33.848274",
             "price": 42.0
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
+            "price": 42.5
           }
         ],
         "min_price": 41.0,
-        "last_price": 42.0
+        "last_price": 42.5
       },
       "Holiday Inn Express Berlin City Centre by IHG": {
         "history": [
@@ -2062,6 +2090,10 @@
           {
             "ts": "2026-06-30T20:58:12.863418",
             "price": 43.0
+          },
+          {
+            "ts": "2026-07-01T19:17:52.545087",
+            "price": 43.0
           }
         ],
         "min_price": 43.0,
@@ -2108,10 +2140,20 @@
         ],
         "min_price": 47.5,
         "last_price": 47.5
+      },
+      "25hours Hotel Bikini Berlin": {
+        "history": [
+          {
+            "ts": "2026-07-01T19:17:52.545087",
+            "price": 62.5
+          }
+        ],
+        "min_price": 62.5,
+        "last_price": 62.5
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T17:13:59.100625"
+    "last_checked_at": "2026-07-01T19:17:52.545087"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
