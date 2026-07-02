@@ -298,6 +298,10 @@
           {
             "ts": "2026-07-01T14:30:36.485473",
             "price": 150.66666666666666
+          },
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 150.66666666666666
           }
         ],
         "min_price": 150.66666666666666,
@@ -326,10 +330,14 @@
           {
             "ts": "2026-06-30T08:29:25.584625",
             "price": 80.66666666666667
+          },
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 83.66666666666667
           }
         ],
         "min_price": 75.33333333333333,
-        "last_price": 80.66666666666667
+        "last_price": 83.66666666666667
       },
       "Hotel NH Madrid Barajas Airport": {
         "history": [
@@ -424,6 +432,10 @@
           {
             "ts": "2026-06-27T11:16:36.504318",
             "price": 90.0
+          },
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 90.0
           }
         ],
         "min_price": 90.0,
@@ -510,10 +522,14 @@
           {
             "ts": "2026-07-01T21:06:10.763591",
             "price": 114.66666666666667
+          },
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 114.33333333333333
           }
         ],
-        "min_price": 114.66666666666667,
-        "last_price": 114.66666666666667
+        "min_price": 114.33333333333333,
+        "last_price": 114.33333333333333
       },
       "Exe Suites 33": {
         "history": [
@@ -586,10 +602,14 @@
           {
             "ts": "2026-07-01T21:06:10.763591",
             "price": 182.33333333333334
+          },
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 202.0
           }
         ],
         "min_price": 182.0,
-        "last_price": 182.33333333333334
+        "last_price": 202.0
       },
       "DoubleTree by Hilton Madrid - Prado": {
         "history": [
@@ -792,10 +812,14 @@
           {
             "ts": "2026-06-30T23:44:57.124795",
             "price": 126.66666666666667
+          },
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 127.0
           }
         ],
         "min_price": 126.66666666666667,
-        "last_price": 126.66666666666667
+        "last_price": 127.0
       },
       "The Central House Lavapi\u00e9s": {
         "history": [
@@ -812,10 +836,16 @@
           {
             "ts": "2026-06-30T08:29:25.584625",
             "price": 313.3333333333333
+          },
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 238.66666666666666
           }
         ],
-        "min_price": 313.3333333333333,
-        "last_price": 313.3333333333333
+        "min_price": 238.66666666666666,
+        "last_price": 238.66666666666666,
+        "alerted_price": 238.66666666666666,
+        "alerted_at": "2026-07-02T04:39:28.617887"
       },
       "Meli\u00e1 Madrid Princesa": {
         "history": [
@@ -906,10 +936,20 @@
         ],
         "min_price": 152.0,
         "last_price": 152.0
+      },
+      "Novotel Madrid Feria and Airport": {
+        "history": [
+          {
+            "ts": "2026-07-02T04:39:26.988443",
+            "price": 326.0
+          }
+        ],
+        "min_price": 326.0,
+        "last_price": 326.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T21:06:10.763591"
+    "last_checked_at": "2026-07-02T04:39:26.988443"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1112,6 +1152,10 @@
           {
             "ts": "2026-07-01T22:46:49.188637",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-02T04:39:36.406651",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -1246,10 +1290,14 @@
           {
             "ts": "2026-07-01T22:46:49.188637",
             "price": 78.0
+          },
+          {
+            "ts": "2026-07-02T04:39:36.406651",
+            "price": 79.0
           }
         ],
         "min_price": 77.0,
-        "last_price": 78.0
+        "last_price": 79.0
       },
       "Mercure Hotel Berlin City": {
         "history": [
@@ -1470,6 +1518,10 @@
           {
             "ts": "2026-07-01T19:17:52.545087",
             "price": 45.0
+          },
+          {
+            "ts": "2026-07-02T04:39:36.406651",
+            "price": 45.0
           }
         ],
         "min_price": 45.0,
@@ -1668,6 +1720,10 @@
           {
             "ts": "2026-07-01T19:17:52.545087",
             "price": 51.0
+          },
+          {
+            "ts": "2026-07-02T04:39:36.406651",
+            "price": 51.0
           }
         ],
         "min_price": 51.0,
@@ -1740,10 +1796,14 @@
           {
             "ts": "2026-06-29T10:08:23.816163",
             "price": 35.5
+          },
+          {
+            "ts": "2026-07-02T04:39:36.406651",
+            "price": 35.0
           }
         ],
         "min_price": 30.0,
-        "last_price": 35.5
+        "last_price": 35.0
       },
       "H2 Hotel Berlin-Alexanderplatz": {
         "history": [
@@ -1915,6 +1975,10 @@
           },
           {
             "ts": "2026-07-01T19:17:52.545087",
+            "price": 42.5
+          },
+          {
+            "ts": "2026-07-02T04:39:36.406651",
             "price": 42.5
           }
         ],
@@ -2207,7 +2271,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T22:46:49.188637"
+    "last_checked_at": "2026-07-02T04:39:36.406651"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
@@ -2290,6 +2354,10 @@
           {
             "ts": "2026-06-27T18:47:04.800887",
             "price": 28.666666666666668
+          },
+          {
+            "ts": "2026-07-02T04:39:43.795946",
+            "price": 28.666666666666668
           }
         ],
         "min_price": 28.666666666666668,
@@ -2342,10 +2410,14 @@
           {
             "ts": "2026-07-01T14:30:54.556590",
             "price": 42.666666666666664
+          },
+          {
+            "ts": "2026-07-02T04:39:43.795946",
+            "price": 43.0
           }
         ],
         "min_price": 42.666666666666664,
-        "last_price": 42.666666666666664
+        "last_price": 43.0
       },
       "Hotel Paris Op\u00e9ra Affiliated by Meli\u00e1": {
         "history": [
@@ -2476,10 +2548,14 @@
           {
             "ts": "2026-07-01T03:36:28.309247",
             "price": 136.0
+          },
+          {
+            "ts": "2026-07-02T04:39:43.795946",
+            "price": 132.66666666666666
           }
         ],
-        "min_price": 136.0,
-        "last_price": 136.0
+        "min_price": 132.66666666666666,
+        "last_price": 132.66666666666666
       },
       "Reims H\u00f4tel Paris": {
         "history": [
@@ -2510,9 +2586,39 @@
         ],
         "min_price": 51.333333333333336,
         "last_price": 51.333333333333336
+      },
+      "H\u00f4tel Paris d'Issy": {
+        "history": [
+          {
+            "ts": "2026-07-02T04:39:43.795946",
+            "price": 49.666666666666664
+          }
+        ],
+        "min_price": 49.666666666666664,
+        "last_price": 49.666666666666664
+      },
+      "Grand Hotel Fran\u00e7ais": {
+        "history": [
+          {
+            "ts": "2026-07-02T04:39:43.795946",
+            "price": 49.666666666666664
+          }
+        ],
+        "min_price": 49.666666666666664,
+        "last_price": 49.666666666666664
+      },
+      "H\u00f4tel de Londres Eiffel": {
+        "history": [
+          {
+            "ts": "2026-07-02T04:39:43.795946",
+            "price": 109.33333333333333
+          }
+        ],
+        "min_price": 109.33333333333333,
+        "last_price": 109.33333333333333
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Paris&ved=0CAAQ5JsGahcKEwj42d7jpaeVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaTwoxEi0yJDB4NDdlNjZlMWYwNmUyYjcwZjoweDQwYjgyYzM2ODhjOTQ2MDoFUGFyaXMaABIaEhQKBwjqDxAHGAoSBwjqDxAHGA0YAzICCAEqDQoJOgNFVVJiAggBGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-01T14:30:54.556590"
+    "last_checked_at": "2026-07-02T04:39:43.795946"
   }
 }
