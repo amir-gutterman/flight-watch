@@ -220,6 +220,10 @@
           {
             "ts": "2026-07-02T11:06:38.527493",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-02T17:45:01.063795",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -346,6 +350,10 @@
           {
             "ts": "2026-07-02T11:06:38.527493",
             "price": 83.66666666666667
+          },
+          {
+            "ts": "2026-07-02T17:45:01.063795",
+            "price": 83.66666666666667
           }
         ],
         "min_price": 75.33333333333333,
@@ -371,6 +379,10 @@
           },
           {
             "ts": "2026-06-29T17:35:10.029184",
+            "price": 123.0
+          },
+          {
+            "ts": "2026-07-02T17:45:01.063795",
             "price": 123.0
           }
         ],
@@ -441,6 +453,10 @@
           },
           {
             "ts": "2026-07-02T11:06:38.527493",
+            "price": 106.33333333333333
+          },
+          {
+            "ts": "2026-07-02T17:45:01.063795",
             "price": 106.33333333333333
           }
         ],
@@ -546,10 +562,14 @@
           {
             "ts": "2026-07-02T04:39:26.988443",
             "price": 114.33333333333333
+          },
+          {
+            "ts": "2026-07-02T17:45:01.063795",
+            "price": 97.33333333333333
           }
         ],
-        "min_price": 114.33333333333333,
-        "last_price": 114.33333333333333
+        "min_price": 97.33333333333333,
+        "last_price": 97.33333333333333
       },
       "Exe Suites 33": {
         "history": [
@@ -695,6 +715,10 @@
           },
           {
             "ts": "2026-07-02T11:06:38.527493",
+            "price": 155.0
+          },
+          {
+            "ts": "2026-07-02T17:45:01.063795",
             "price": 155.0
           }
         ],
@@ -846,10 +870,14 @@
           {
             "ts": "2026-07-02T11:06:38.527493",
             "price": 126.33333333333333
+          },
+          {
+            "ts": "2026-07-02T17:45:01.063795",
+            "price": 126.0
           }
         ],
-        "min_price": 126.33333333333333,
-        "last_price": 126.33333333333333
+        "min_price": 126.0,
+        "last_price": 126.0
       },
       "The Central House Lavapi\u00e9s": {
         "history": [
@@ -980,10 +1008,20 @@
         ],
         "min_price": 326.0,
         "last_price": 355.6666666666667
+      },
+      "Hotel NH Madrid Ventas": {
+        "history": [
+          {
+            "ts": "2026-07-02T17:45:01.063795",
+            "price": 145.0
+          }
+        ],
+        "min_price": 145.0,
+        "last_price": 145.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-02T11:06:38.527493"
+    "last_checked_at": "2026-07-02T17:45:01.063795"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1210,6 +1248,10 @@
           {
             "ts": "2026-07-02T08:11:14.272957",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-02T17:45:09.643263",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -1363,6 +1405,10 @@
           },
           {
             "ts": "2026-07-02T15:40:41.875648",
+            "price": 79.0
+          },
+          {
+            "ts": "2026-07-02T17:45:09.643263",
             "price": 79.0
           }
         ],
@@ -1682,10 +1728,14 @@
           {
             "ts": "2026-07-01T22:46:49.188637",
             "price": 62.5
+          },
+          {
+            "ts": "2026-07-02T17:45:09.643263",
+            "price": 64.5
           }
         ],
         "min_price": 62.5,
-        "last_price": 62.5
+        "last_price": 64.5
       },
       "Leonardo Boutique Hotel Berlin City South": {
         "history": [
@@ -2098,6 +2148,10 @@
           {
             "ts": "2026-07-02T15:40:41.875648",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-02T17:45:09.643263",
+            "price": 43.5
           }
         ],
         "min_price": 41.0,
@@ -2160,10 +2214,14 @@
           {
             "ts": "2026-06-29T14:34:27.307695",
             "price": 54.0
+          },
+          {
+            "ts": "2026-07-02T17:45:09.643263",
+            "price": 52.5
           }
         ],
-        "min_price": 54.0,
-        "last_price": 54.0
+        "min_price": 52.5,
+        "last_price": 52.5
       },
       "CAMPANILE BERLIN BRANDENBURG AIRPORT": {
         "history": [
@@ -2405,7 +2463,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-02T15:40:41.875648"
+    "last_checked_at": "2026-07-02T17:45:09.643263"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
