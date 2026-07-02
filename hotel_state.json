@@ -1026,10 +1026,14 @@
           {
             "ts": "2026-06-30T23:45:05.645055",
             "price": 24.5
+          },
+          {
+            "ts": "2026-07-02T08:11:14.272957",
+            "price": 29.5
           }
         ],
         "min_price": 24.5,
-        "last_price": 24.5
+        "last_price": 29.5
       },
       "Garner Hotel Berlin - Charlottenburg by IHG": {
         "history": [
@@ -1155,6 +1159,10 @@
           },
           {
             "ts": "2026-07-02T04:39:36.406651",
+            "price": 43.5
+          },
+          {
+            "ts": "2026-07-02T08:11:14.272957",
             "price": 43.5
           }
         ],
@@ -1294,6 +1302,10 @@
           {
             "ts": "2026-07-02T04:39:36.406651",
             "price": 79.0
+          },
+          {
+            "ts": "2026-07-02T08:11:14.272957",
+            "price": 79.0
           }
         ],
         "min_price": 77.0,
@@ -1347,6 +1359,10 @@
           },
           {
             "ts": "2026-07-01T19:17:52.545087",
+            "price": 40.0
+          },
+          {
+            "ts": "2026-07-02T08:11:14.272957",
             "price": 40.0
           }
         ],
@@ -1430,10 +1446,14 @@
           {
             "ts": "2026-06-29T19:54:21.468540",
             "price": 46.5
+          },
+          {
+            "ts": "2026-07-02T08:11:14.272957",
+            "price": 58.0
           }
         ],
         "min_price": 46.5,
-        "last_price": 46.5
+        "last_price": 58.0
       },
       "Generator Berlin Alexanderplatz": {
         "history": [
@@ -1980,10 +2000,14 @@
           {
             "ts": "2026-07-02T04:39:36.406651",
             "price": 42.5
+          },
+          {
+            "ts": "2026-07-02T08:11:14.272957",
+            "price": 43.5
           }
         ],
         "min_price": 41.0,
-        "last_price": 42.5
+        "last_price": 43.5
       },
       "Holiday Inn Express Berlin City Centre by IHG": {
         "history": [
@@ -2271,7 +2295,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-02T04:39:36.406651"
+    "last_checked_at": "2026-07-02T08:11:14.272957"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
