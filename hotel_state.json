@@ -216,6 +216,10 @@
           {
             "ts": "2026-07-01T21:06:10.763591",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -302,6 +306,10 @@
           {
             "ts": "2026-07-02T04:39:26.988443",
             "price": 150.66666666666666
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
+            "price": 150.66666666666666
           }
         ],
         "min_price": 150.66666666666666,
@@ -333,6 +341,10 @@
           },
           {
             "ts": "2026-07-02T04:39:26.988443",
+            "price": 83.66666666666667
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
             "price": 83.66666666666667
           }
         ],
@@ -396,6 +408,10 @@
           {
             "ts": "2026-06-27T18:46:48.169443",
             "price": 103.66666666666667
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
+            "price": 103.66666666666667
           }
         ],
         "min_price": 103.66666666666667,
@@ -421,6 +437,10 @@
           },
           {
             "ts": "2026-06-28T16:42:39.621167",
+            "price": 106.33333333333333
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
             "price": 106.33333333333333
           }
         ],
@@ -672,10 +692,16 @@
           {
             "ts": "2026-06-28T09:41:18.650462",
             "price": 206.0
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
+            "price": 155.0
           }
         ],
-        "min_price": 206.0,
-        "last_price": 206.0
+        "min_price": 155.0,
+        "last_price": 155.0,
+        "alerted_price": 155.0,
+        "alerted_at": "2026-07-02T11:06:40.649272"
       },
       "Hotel Montera Madrid, Curio Collection By Hilton": {
         "history": [
@@ -816,10 +842,14 @@
           {
             "ts": "2026-07-02T04:39:26.988443",
             "price": 127.0
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
+            "price": 126.33333333333333
           }
         ],
-        "min_price": 126.66666666666667,
-        "last_price": 127.0
+        "min_price": 126.33333333333333,
+        "last_price": 126.33333333333333
       },
       "The Central House Lavapi\u00e9s": {
         "history": [
@@ -942,14 +972,18 @@
           {
             "ts": "2026-07-02T04:39:26.988443",
             "price": 326.0
+          },
+          {
+            "ts": "2026-07-02T11:06:38.527493",
+            "price": 355.6666666666667
           }
         ],
         "min_price": 326.0,
-        "last_price": 326.0
+        "last_price": 355.6666666666667
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-02T04:39:26.988443"
+    "last_checked_at": "2026-07-02T11:06:38.527493"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1029,6 +1063,10 @@
           },
           {
             "ts": "2026-07-02T08:11:14.272957",
+            "price": 29.5
+          },
+          {
+            "ts": "2026-07-02T11:06:48.396998",
             "price": 29.5
           }
         ],
@@ -1306,6 +1344,10 @@
           {
             "ts": "2026-07-02T08:11:14.272957",
             "price": 79.0
+          },
+          {
+            "ts": "2026-07-02T11:06:48.396998",
+            "price": 79.0
           }
         ],
         "min_price": 77.0,
@@ -1364,6 +1406,10 @@
           {
             "ts": "2026-07-02T08:11:14.272957",
             "price": 40.0
+          },
+          {
+            "ts": "2026-07-02T11:06:48.396998",
+            "price": 40.0
           }
         ],
         "min_price": 40.0,
@@ -1411,6 +1457,10 @@
           },
           {
             "ts": "2026-06-29T00:07:10.781164",
+            "price": 57.0
+          },
+          {
+            "ts": "2026-07-02T11:06:48.396998",
             "price": 57.0
           }
         ],
@@ -1658,10 +1708,14 @@
           {
             "ts": "2026-07-01T17:13:59.100625",
             "price": 36.0
+          },
+          {
+            "ts": "2026-07-02T11:06:48.396998",
+            "price": 39.5
           }
         ],
         "min_price": 35.5,
-        "last_price": 36.0
+        "last_price": 39.5
       },
       "Generator Berlin Mitte": {
         "history": [
@@ -2004,10 +2058,14 @@
           {
             "ts": "2026-07-02T08:11:14.272957",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-02T11:06:48.396998",
+            "price": 44.5
           }
         ],
         "min_price": 41.0,
-        "last_price": 43.5
+        "last_price": 44.5
       },
       "Holiday Inn Express Berlin City Centre by IHG": {
         "history": [
@@ -2025,6 +2083,10 @@
           },
           {
             "ts": "2026-06-29T19:54:21.468540",
+            "price": 49.0
+          },
+          {
+            "ts": "2026-07-02T11:06:48.396998",
             "price": 49.0
           }
         ],
@@ -2295,7 +2357,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-02T08:11:14.272957"
+    "last_checked_at": "2026-07-02T11:06:48.396998"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
