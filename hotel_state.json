@@ -1234,6 +1234,10 @@
           {
             "ts": "2026-07-02T23:36:41.702442",
             "price": 29.5
+          },
+          {
+            "ts": "2026-07-03T17:56:47.404556",
+            "price": 29.5
           }
         ],
         "min_price": 24.5,
@@ -1391,6 +1395,10 @@
           },
           {
             "ts": "2026-07-03T14:41:06.773932",
+            "price": 43.5
+          },
+          {
+            "ts": "2026-07-03T17:56:47.404556",
             "price": 43.5
           }
         ],
@@ -1578,6 +1586,10 @@
           {
             "ts": "2026-07-03T14:41:06.773932",
             "price": 79.0
+          },
+          {
+            "ts": "2026-07-03T17:56:47.404556",
+            "price": 79.0
           }
         ],
         "min_price": 77.0,
@@ -1757,6 +1769,10 @@
           },
           {
             "ts": "2026-07-03T14:41:06.773932",
+            "price": 58.0
+          },
+          {
+            "ts": "2026-07-03T17:56:47.404556",
             "price": 58.0
           }
         ],
@@ -2388,6 +2404,10 @@
           {
             "ts": "2026-07-03T12:12:11.794213",
             "price": 45.5
+          },
+          {
+            "ts": "2026-07-03T17:56:47.404556",
+            "price": 45.5
           }
         ],
         "min_price": 41.0,
@@ -2433,6 +2453,10 @@
           },
           {
             "ts": "2026-07-03T14:41:06.773932",
+            "price": 51.0
+          },
+          {
+            "ts": "2026-07-03T17:56:47.404556",
             "price": 51.0
           }
         ],
@@ -2731,7 +2755,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-03T14:41:06.773932"
+    "last_checked_at": "2026-07-03T17:56:47.404556"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
