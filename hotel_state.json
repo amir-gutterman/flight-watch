@@ -1664,6 +1664,10 @@
           {
             "ts": "2026-07-02T20:41:26.315650",
             "price": 40.0
+          },
+          {
+            "ts": "2026-07-03T21:03:53.464006",
+            "price": 40.0
           }
         ],
         "min_price": 40.0,
@@ -1877,6 +1881,10 @@
           },
           {
             "ts": "2026-07-03T12:12:11.794213",
+            "price": 45.0
+          },
+          {
+            "ts": "2026-07-03T21:03:53.464006",
             "price": 45.0
           }
         ],
@@ -2576,6 +2584,10 @@
           {
             "ts": "2026-07-02T23:36:41.702442",
             "price": 58.0
+          },
+          {
+            "ts": "2026-07-03T21:03:53.464006",
+            "price": 58.0
           }
         ],
         "min_price": 48.0,
@@ -2706,10 +2718,14 @@
           {
             "ts": "2026-07-02T23:36:41.702442",
             "price": 52.0
+          },
+          {
+            "ts": "2026-07-03T21:03:53.464006",
+            "price": 51.5
           }
         ],
-        "min_price": 52.0,
-        "last_price": 52.0
+        "min_price": 51.5,
+        "last_price": 51.5
       },
       "Mercure Hotel & Residenz Berlin Checkpoint Charlie": {
         "history": [
@@ -2752,10 +2768,30 @@
         ],
         "min_price": 62.5,
         "last_price": 62.5
+      },
+      "Me and All Hotel Berlin East Side, by Hyatt": {
+        "history": [
+          {
+            "ts": "2026-07-03T21:03:53.464006",
+            "price": 39.5
+          }
+        ],
+        "min_price": 39.5,
+        "last_price": 39.5
+      },
+      "Hotel Vita Berlin": {
+        "history": [
+          {
+            "ts": "2026-07-03T21:03:53.464006",
+            "price": 78.0
+          }
+        ],
+        "min_price": 78.0,
+        "last_price": 78.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-03T17:56:47.404556"
+    "last_checked_at": "2026-07-03T21:03:53.464006"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
