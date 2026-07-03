@@ -128,6 +128,10 @@
           {
             "ts": "2026-06-30T23:44:57.124795",
             "price": 162.0
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
+            "price": 162.0
           }
         ],
         "min_price": 162.0,
@@ -149,6 +153,10 @@
           },
           {
             "ts": "2026-06-30T00:02:32.786383",
+            "price": 174.0
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
             "price": 174.0
           }
         ],
@@ -224,6 +232,10 @@
           {
             "ts": "2026-07-02T17:45:01.063795",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -261,6 +273,10 @@
           },
           {
             "ts": "2026-07-01T21:06:10.763591",
+            "price": 42.333333333333336
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
             "price": 42.333333333333336
           }
         ],
@@ -313,6 +329,10 @@
           },
           {
             "ts": "2026-07-02T11:06:38.527493",
+            "price": 150.66666666666666
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
             "price": 150.66666666666666
           }
         ],
@@ -660,10 +680,14 @@
           {
             "ts": "2026-07-01T14:30:36.485473",
             "price": 177.33333333333334
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
+            "price": 177.66666666666666
           }
         ],
         "min_price": 172.33333333333334,
-        "last_price": 177.33333333333334
+        "last_price": 177.66666666666666
       },
       "Hotel NH Madrid Atocha": {
         "history": [
@@ -677,6 +701,10 @@
           },
           {
             "ts": "2026-06-30T00:02:32.786383",
+            "price": 98.0
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
             "price": 98.0
           }
         ],
@@ -740,10 +768,14 @@
           {
             "ts": "2026-06-29T10:08:16.103669",
             "price": 307.3333333333333
+          },
+          {
+            "ts": "2026-07-03T02:44:14.932078",
+            "price": 307.0
           }
         ],
-        "min_price": 307.3333333333333,
-        "last_price": 307.3333333333333
+        "min_price": 307.0,
+        "last_price": 307.0
       },
       "Hotel Avani Alonso Mart\u00ednez Madrid - Formerly NH Alonso Mart\u00ednez": {
         "history": [
@@ -1018,10 +1050,20 @@
         ],
         "min_price": 145.0,
         "last_price": 145.0
+      },
+      "Hyatt Centric Gran Via Madrid": {
+        "history": [
+          {
+            "ts": "2026-07-03T02:44:14.932078",
+            "price": 354.3333333333333
+          }
+        ],
+        "min_price": 354.3333333333333,
+        "last_price": 354.3333333333333
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-02T17:45:01.063795"
+    "last_checked_at": "2026-07-03T02:44:14.932078"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1260,6 +1302,10 @@
           {
             "ts": "2026-07-02T17:45:09.643263",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-03T02:44:22.359045",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -1426,10 +1472,14 @@
           {
             "ts": "2026-07-02T23:36:41.702442",
             "price": 79.0
+          },
+          {
+            "ts": "2026-07-03T02:44:22.359045",
+            "price": 84.0
           }
         ],
         "min_price": 77.0,
-        "last_price": 79.0
+        "last_price": 84.0
       },
       "Mercure Hotel Berlin City": {
         "history": [
@@ -1589,6 +1639,10 @@
           },
           {
             "ts": "2026-07-02T08:11:14.272957",
+            "price": 58.0
+          },
+          {
+            "ts": "2026-07-03T02:44:22.359045",
             "price": 58.0
           }
         ],
@@ -2234,10 +2288,14 @@
           {
             "ts": "2026-07-02T15:40:41.875648",
             "price": 50.0
+          },
+          {
+            "ts": "2026-07-03T02:44:22.359045",
+            "price": 51.0
           }
         ],
         "min_price": 48.0,
-        "last_price": 50.0
+        "last_price": 51.0
       },
       "Michelberger Hotel": {
         "history": [
@@ -2265,6 +2323,10 @@
           },
           {
             "ts": "2026-07-02T17:45:09.643263",
+            "price": 52.5
+          },
+          {
+            "ts": "2026-07-03T02:44:22.359045",
             "price": 52.5
           }
         ],
@@ -2523,7 +2585,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-02T23:36:41.702442"
+    "last_checked_at": "2026-07-03T02:44:22.359045"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
