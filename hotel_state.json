@@ -1350,6 +1350,10 @@
           {
             "ts": "2026-07-03T12:12:11.794213",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-03T14:41:06.773932",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -1532,6 +1536,10 @@
           {
             "ts": "2026-07-03T12:12:11.794213",
             "price": 79.0
+          },
+          {
+            "ts": "2026-07-03T14:41:06.773932",
+            "price": 79.0
           }
         ],
         "min_price": 77.0,
@@ -1658,6 +1666,10 @@
           {
             "ts": "2026-07-02T11:06:48.396998",
             "price": 57.0
+          },
+          {
+            "ts": "2026-07-03T14:41:06.773932",
+            "price": 57.0
           }
         ],
         "min_price": 57.0,
@@ -1703,6 +1715,10 @@
           },
           {
             "ts": "2026-07-03T09:56:21.392007",
+            "price": 58.0
+          },
+          {
+            "ts": "2026-07-03T14:41:06.773932",
             "price": 58.0
           }
         ],
@@ -2376,6 +2392,10 @@
           {
             "ts": "2026-07-03T09:56:21.392007",
             "price": 51.0
+          },
+          {
+            "ts": "2026-07-03T14:41:06.773932",
+            "price": 51.0
           }
         ],
         "min_price": 48.0,
@@ -2673,7 +2693,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-03T12:12:11.794213"
+    "last_checked_at": "2026-07-03T14:41:06.773932"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
