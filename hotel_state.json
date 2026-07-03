@@ -236,6 +236,10 @@
           {
             "ts": "2026-07-03T02:44:14.932078",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -334,6 +338,10 @@
           {
             "ts": "2026-07-03T02:44:14.932078",
             "price": 150.66666666666666
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
+            "price": 150.66666666666666
           }
         ],
         "min_price": 150.66666666666666,
@@ -374,6 +382,10 @@
           {
             "ts": "2026-07-02T17:45:01.063795",
             "price": 83.66666666666667
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
+            "price": 83.66666666666667
           }
         ],
         "min_price": 75.33333333333333,
@@ -404,10 +416,14 @@
           {
             "ts": "2026-07-02T17:45:01.063795",
             "price": 123.0
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
+            "price": 122.33333333333333
           }
         ],
-        "min_price": 123.0,
-        "last_price": 123.0
+        "min_price": 122.33333333333333,
+        "last_price": 122.33333333333333
       },
       "Hotel Madrid Chamart\u00edn Affiliated by Meli\u00e1": {
         "history": [
@@ -586,10 +602,14 @@
           {
             "ts": "2026-07-02T17:45:01.063795",
             "price": 97.33333333333333
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
+            "price": 98.0
           }
         ],
         "min_price": 97.33333333333333,
-        "last_price": 97.33333333333333
+        "last_price": 98.0
       },
       "Exe Suites 33": {
         "history": [
@@ -665,6 +685,10 @@
           },
           {
             "ts": "2026-07-02T04:39:26.988443",
+            "price": 202.0
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
             "price": 202.0
           }
         ],
@@ -906,10 +930,14 @@
           {
             "ts": "2026-07-02T17:45:01.063795",
             "price": 126.0
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
+            "price": 126.33333333333333
           }
         ],
         "min_price": 126.0,
-        "last_price": 126.0
+        "last_price": 126.33333333333333
       },
       "The Central House Lavapi\u00e9s": {
         "history": [
@@ -1036,10 +1064,14 @@
           {
             "ts": "2026-07-02T11:06:38.527493",
             "price": 355.6666666666667
+          },
+          {
+            "ts": "2026-07-03T09:56:14.212879",
+            "price": 361.6666666666667
           }
         ],
         "min_price": 326.0,
-        "last_price": 355.6666666666667
+        "last_price": 361.6666666666667
       },
       "Hotel NH Madrid Ventas": {
         "history": [
@@ -1063,7 +1095,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-03T02:44:14.932078"
+    "last_checked_at": "2026-07-03T09:56:14.212879"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
@@ -1310,6 +1342,10 @@
           {
             "ts": "2026-07-03T06:30:25.160376",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-03T09:56:21.392007",
+            "price": 43.5
           }
         ],
         "min_price": 40.5,
@@ -1484,10 +1520,14 @@
           {
             "ts": "2026-07-03T06:30:25.160376",
             "price": 84.0
+          },
+          {
+            "ts": "2026-07-03T09:56:21.392007",
+            "price": 79.0
           }
         ],
         "min_price": 77.0,
-        "last_price": 84.0
+        "last_price": 79.0
       },
       "Mercure Hotel Berlin City": {
         "history": [
@@ -1651,6 +1691,10 @@
           },
           {
             "ts": "2026-07-03T02:44:22.359045",
+            "price": 58.0
+          },
+          {
+            "ts": "2026-07-03T09:56:21.392007",
             "price": 58.0
           }
         ],
@@ -2266,10 +2310,14 @@
           {
             "ts": "2026-07-02T23:36:41.702442",
             "price": 43.5
+          },
+          {
+            "ts": "2026-07-03T09:56:21.392007",
+            "price": 45.5
           }
         ],
         "min_price": 41.0,
-        "last_price": 43.5
+        "last_price": 45.5
       },
       "Holiday Inn Express Berlin City Centre by IHG": {
         "history": [
@@ -2303,6 +2351,10 @@
           },
           {
             "ts": "2026-07-03T02:44:22.359045",
+            "price": 51.0
+          },
+          {
+            "ts": "2026-07-03T09:56:21.392007",
             "price": 51.0
           }
         ],
@@ -2601,7 +2653,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Berlin&ved=0CAAQ5JsGahcKEwiYt7q2-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4NDdhODRlMzczZjAzNTkwMToweDQyMTIwNDY1YjVlM2I3MDoGQmVybGluGgASGhIUCgcI6g8QCBgGEgcI6g8QCBgIGAIyAggBKgkKBToDRVVSGgA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-03T06:30:25.160376"
+    "last_checked_at": "2026-07-03T09:56:21.392007"
   },
   "paris-2026-07-10-1782558948757": {
     "hotels": {
