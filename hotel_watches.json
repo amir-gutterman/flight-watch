@@ -15,7 +15,7 @@
   {
     "id": "berlin-2026-08-06-1782510628159",
     "name": "Berlin August",
-    "enabled": true,
+    "enabled": false,
     "created_at": "2026-06-26T21:50:28.159Z",
     "check_interval_hours": 2,
     "expires_after_days": 7,
