@@ -104,6 +104,10 @@
           {
             "ts": "2026-07-03T22:32:56.915243",
             "price": 409.0
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
+            "price": 409.0
           }
         ],
         "min_price": 409.0,
@@ -125,6 +129,10 @@
           },
           {
             "ts": "2026-07-03T22:32:56.915243",
+            "price": 456.6666666666667
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
             "price": 456.6666666666667
           }
         ],
@@ -365,6 +373,10 @@
           },
           {
             "ts": "2026-07-04T07:22:10.971800",
+            "price": 150.66666666666666
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
             "price": 150.66666666666666
           }
         ],
@@ -896,6 +908,10 @@
           {
             "ts": "2026-07-03T02:44:14.932078",
             "price": 307.0
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
+            "price": 307.0
           }
         ],
         "min_price": 307.0,
@@ -928,10 +944,14 @@
           {
             "ts": "2026-06-30T00:02:32.786383",
             "price": 250.66666666666666
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
+            "price": 252.33333333333334
           }
         ],
         "min_price": 250.66666666666666,
-        "last_price": 250.66666666666666
+        "last_price": 252.33333333333334
       },
       "Hotel NH Collection Madrid Palacio de Tepa": {
         "history": [
@@ -964,6 +984,10 @@
           {
             "ts": "2026-06-29T10:08:16.103669",
             "price": 238.0
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
+            "price": 238.0
           }
         ],
         "min_price": 238.0,
@@ -973,6 +997,10 @@
         "history": [
           {
             "ts": "2026-06-29T10:08:16.103669",
+            "price": 156.33333333333334
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
             "price": 156.33333333333334
           }
         ],
@@ -1012,10 +1040,14 @@
           {
             "ts": "2026-07-01T21:06:10.763591",
             "price": 207.66666666666666
+          },
+          {
+            "ts": "2026-07-05T04:39:23.305579",
+            "price": 188.0
           }
         ],
-        "min_price": 207.66666666666666,
-        "last_price": 207.66666666666666
+        "min_price": 188.0,
+        "last_price": 188.0
       },
       "Madrid Marriott Auditorium": {
         "history": [
@@ -1288,10 +1320,20 @@
         ],
         "min_price": 168.66666666666666,
         "last_price": 168.66666666666666
+      },
+      "Sercotel Madrid Aeropuerto": {
+        "history": [
+          {
+            "ts": "2026-07-05T04:39:23.305579",
+            "price": 170.33333333333334
+          }
+        ],
+        "min_price": 170.33333333333334,
+        "last_price": 170.33333333333334
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-04T21:27:15.215713"
+    "last_checked_at": "2026-07-05T04:39:23.305579"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
