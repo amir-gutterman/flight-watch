@@ -474,6 +474,10 @@
           {
             "ts": "2026-07-06T17:58:32.751258",
             "price": 83.66666666666667
+          },
+          {
+            "ts": "2026-07-07T01:16:39.610469",
+            "price": 83.66666666666667
           }
         ],
         "min_price": 75.33333333333333,
@@ -648,6 +652,10 @@
           {
             "ts": "2026-07-06T11:48:15.283283",
             "price": 90.0
+          },
+          {
+            "ts": "2026-07-07T01:16:39.610469",
+            "price": 90.0
           }
         ],
         "min_price": 90.0,
@@ -786,10 +794,14 @@
           {
             "ts": "2026-07-06T17:58:32.751258",
             "price": 103.0
+          },
+          {
+            "ts": "2026-07-07T01:16:39.610469",
+            "price": 102.66666666666667
           }
         ],
         "min_price": 97.33333333333333,
-        "last_price": 103.0
+        "last_price": 102.66666666666667
       },
       "Exe Suites 33": {
         "history": [
@@ -999,6 +1011,10 @@
           },
           {
             "ts": "2026-07-06T17:58:32.751258",
+            "price": 155.0
+          },
+          {
+            "ts": "2026-07-07T01:16:39.610469",
             "price": 155.0
           }
         ],
@@ -1246,10 +1262,14 @@
           {
             "ts": "2026-07-06T11:48:15.283283",
             "price": 238.66666666666666
+          },
+          {
+            "ts": "2026-07-07T01:16:39.610469",
+            "price": 195.0
           }
         ],
-        "min_price": 238.66666666666666,
-        "last_price": 238.66666666666666,
+        "min_price": 195.0,
+        "last_price": 195.0,
         "alerted_price": 238.66666666666666,
         "alerted_at": "2026-07-02T04:39:28.617887"
       },
@@ -1372,6 +1392,10 @@
           {
             "ts": "2026-07-06T11:48:15.283283",
             "price": 331.3333333333333
+          },
+          {
+            "ts": "2026-07-07T01:16:39.610469",
+            "price": 331.3333333333333
           }
         ],
         "min_price": 326.0,
@@ -1493,7 +1517,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-06T17:58:32.751258"
+    "last_checked_at": "2026-07-07T01:16:39.610469"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
