@@ -30,6 +30,10 @@
           {
             "ts": "2026-07-07T17:34:36.389524",
             "price": 230.66666666666666
+          },
+          {
+            "ts": "2026-07-07T23:56:32.177181",
+            "price": 230.66666666666666
           }
         ],
         "min_price": 230.66666666666666,
@@ -182,6 +186,10 @@
           {
             "ts": "2026-07-03T02:44:14.932078",
             "price": 174.0
+          },
+          {
+            "ts": "2026-07-07T23:56:32.177181",
+            "price": 174.0
           }
         ],
         "min_price": 174.0,
@@ -292,6 +300,10 @@
           {
             "ts": "2026-07-07T17:34:36.389524",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-07T23:56:32.177181",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -341,6 +353,10 @@
           },
           {
             "ts": "2026-07-07T17:34:36.389524",
+            "price": 42.333333333333336
+          },
+          {
+            "ts": "2026-07-07T23:56:32.177181",
             "price": 42.333333333333336
           }
         ],
@@ -1180,6 +1196,10 @@
           {
             "ts": "2026-07-07T09:37:26.375001",
             "price": 78.0
+          },
+          {
+            "ts": "2026-07-07T23:56:32.177181",
+            "price": 78.0
           }
         ],
         "min_price": 78.0,
@@ -1276,10 +1296,14 @@
           {
             "ts": "2026-07-07T17:34:36.389524",
             "price": 126.66666666666667
+          },
+          {
+            "ts": "2026-07-07T23:56:32.177181",
+            "price": 142.0
           }
         ],
         "min_price": 126.0,
-        "last_price": 126.66666666666667
+        "last_price": 142.0
       },
       "The Central House Lavapi\u00e9s": {
         "history": [
@@ -1576,10 +1600,14 @@
           {
             "ts": "2026-07-07T09:37:26.375001",
             "price": 93.33333333333333
+          },
+          {
+            "ts": "2026-07-07T23:56:32.177181",
+            "price": 85.33333333333333
           }
         ],
-        "min_price": 93.33333333333333,
-        "last_price": 93.33333333333333
+        "min_price": 85.33333333333333,
+        "last_price": 85.33333333333333
       },
       "Hotel Regente Madrid": {
         "history": [
@@ -1613,7 +1641,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-07T17:34:36.389524"
+    "last_checked_at": "2026-07-07T23:56:32.177181"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
