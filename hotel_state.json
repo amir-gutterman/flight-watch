@@ -26,10 +26,14 @@
           {
             "ts": "2026-07-03T22:32:56.915243",
             "price": 244.66666666666666
+          },
+          {
+            "ts": "2026-07-07T17:34:36.389524",
+            "price": 230.66666666666666
           }
         ],
-        "min_price": 244.66666666666666,
-        "last_price": 244.66666666666666
+        "min_price": 230.66666666666666,
+        "last_price": 230.66666666666666
       },
       "Dear Hotel Madrid": {
         "history": [
@@ -284,6 +288,10 @@
           {
             "ts": "2026-07-07T09:37:26.375001",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-07T17:34:36.389524",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -329,6 +337,10 @@
           },
           {
             "ts": "2026-07-07T09:37:26.375001",
+            "price": 42.333333333333336
+          },
+          {
+            "ts": "2026-07-07T17:34:36.389524",
             "price": 42.333333333333336
           }
         ],
@@ -401,6 +413,10 @@
           },
           {
             "ts": "2026-07-07T09:37:26.375001",
+            "price": 113.33333333333333
+          },
+          {
+            "ts": "2026-07-07T17:34:36.389524",
             "price": 113.33333333333333
           }
         ],
@@ -1256,6 +1272,10 @@
           {
             "ts": "2026-07-06T17:58:32.751258",
             "price": 126.66666666666667
+          },
+          {
+            "ts": "2026-07-07T17:34:36.389524",
+            "price": 126.66666666666667
           }
         ],
         "min_price": 126.0,
@@ -1468,10 +1488,14 @@
           {
             "ts": "2026-07-03T22:32:56.915243",
             "price": 107.0
+          },
+          {
+            "ts": "2026-07-07T17:34:36.389524",
+            "price": 119.33333333333333
           }
         ],
         "min_price": 107.0,
-        "last_price": 107.0
+        "last_price": 119.33333333333333
       },
       "Hotel Madrid Plaza Espa\u00f1a Affiliated by Meli\u00e1": {
         "history": [
@@ -1576,10 +1600,20 @@
         ],
         "min_price": 166.0,
         "last_price": 166.0
+      },
+      "B&B Hotel Madrid Centro Plaza Mayor": {
+        "history": [
+          {
+            "ts": "2026-07-07T17:34:36.389524",
+            "price": 127.66666666666667
+          }
+        ],
+        "min_price": 127.66666666666667,
+        "last_price": 127.66666666666667
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-07T09:37:26.375001"
+    "last_checked_at": "2026-07-07T17:34:36.389524"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
