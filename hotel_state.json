@@ -280,6 +280,10 @@
           {
             "ts": "2026-07-06T17:58:32.751258",
             "price": 143.66666666666666
+          },
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 143.66666666666666
           }
         ],
         "min_price": 143.66666666666666,
@@ -321,6 +325,10 @@
           },
           {
             "ts": "2026-07-03T02:44:14.932078",
+            "price": 42.333333333333336
+          },
+          {
+            "ts": "2026-07-07T09:37:26.375001",
             "price": 42.333333333333336
           }
         ],
@@ -390,12 +398,16 @@
           {
             "ts": "2026-07-05T04:39:23.305579",
             "price": 150.66666666666666
+          },
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 113.33333333333333
           }
         ],
-        "min_price": 150.66666666666666,
-        "last_price": 150.66666666666666,
-        "alerted_price": 150.66666666666666,
-        "alerted_at": "2026-07-01T14:30:38.290559"
+        "min_price": 113.33333333333333,
+        "last_price": 113.33333333333333,
+        "alerted_price": 113.33333333333333,
+        "alerted_at": "2026-07-07T09:37:27.187251"
       },
       "Holiday Inn Express Madrid - Alcobendas by IHG": {
         "history": [
@@ -1044,10 +1056,14 @@
           {
             "ts": "2026-07-05T04:39:23.305579",
             "price": 307.0
+          },
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 333.0
           }
         ],
         "min_price": 307.0,
-        "last_price": 307.0
+        "last_price": 333.0
       },
       "Hotel Avani Alonso Mart\u00ednez Madrid - Formerly NH Alonso Mart\u00ednez": {
         "history": [
@@ -1144,10 +1160,16 @@
           {
             "ts": "2026-06-29T10:08:16.103669",
             "price": 106.33333333333333
+          },
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 78.0
           }
         ],
-        "min_price": 106.33333333333333,
-        "last_price": 106.33333333333333
+        "min_price": 78.0,
+        "last_price": 78.0,
+        "alerted_price": 78.0,
+        "alerted_at": "2026-07-07T09:37:27.959041"
       },
       "INNSiDE by Meli\u00e1 Madrid Valdebebas": {
         "history": [
@@ -1514,10 +1536,50 @@
         ],
         "min_price": 151.66666666666666,
         "last_price": 151.66666666666666
+      },
+      "Hyatt Regency Madrid Residences": {
+        "history": [
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 718.3333333333334
+          }
+        ],
+        "min_price": 718.3333333333334,
+        "last_price": 718.3333333333334
+      },
+      "ibis Madrid Norte Las Tablas": {
+        "history": [
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 93.33333333333333
+          }
+        ],
+        "min_price": 93.33333333333333,
+        "last_price": 93.33333333333333
+      },
+      "Hotel Regente Madrid": {
+        "history": [
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 178.0
+          }
+        ],
+        "min_price": 178.0,
+        "last_price": 178.0
+      },
+      "Windsor Puerta del Sol": {
+        "history": [
+          {
+            "ts": "2026-07-07T09:37:26.375001",
+            "price": 166.0
+          }
+        ],
+        "min_price": 166.0,
+        "last_price": 166.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-07T01:16:39.610469"
+    "last_checked_at": "2026-07-07T09:37:26.375001"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
