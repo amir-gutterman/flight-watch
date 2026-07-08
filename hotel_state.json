@@ -760,10 +760,14 @@
           {
             "ts": "2026-06-29T17:35:10.029184",
             "price": 107.33333333333333
+          },
+          {
+            "ts": "2026-07-08T13:02:06.441988",
+            "price": 108.66666666666667
           }
         ],
         "min_price": 106.66666666666667,
-        "last_price": 107.33333333333333
+        "last_price": 108.66666666666667
       },
       "NYX Madrid": {
         "history": [
@@ -858,10 +862,14 @@
           {
             "ts": "2026-07-07T01:16:39.610469",
             "price": 102.66666666666667
+          },
+          {
+            "ts": "2026-07-08T13:02:06.441988",
+            "price": 103.0
           }
         ],
         "min_price": 97.33333333333333,
-        "last_price": 102.66666666666667
+        "last_price": 103.0
       },
       "Exe Suites 33": {
         "history": [
@@ -970,10 +978,14 @@
           {
             "ts": "2026-07-08T06:12:52.751107",
             "price": 181.66666666666666
+          },
+          {
+            "ts": "2026-07-08T13:02:06.441988",
+            "price": 182.0
           }
         ],
         "min_price": 181.66666666666666,
-        "last_price": 181.66666666666666
+        "last_price": 182.0
       },
       "DoubleTree by Hilton Madrid - Prado": {
         "history": [
@@ -1228,10 +1240,14 @@
           {
             "ts": "2026-07-08T06:12:52.751107",
             "price": 84.66666666666667
+          },
+          {
+            "ts": "2026-07-08T13:02:06.441988",
+            "price": 84.33333333333333
           }
         ],
         "min_price": 78.0,
-        "last_price": 84.66666666666667,
+        "last_price": 84.33333333333333,
         "alerted_price": 78.0,
         "alerted_at": "2026-07-07T09:37:27.959041"
       },
@@ -1598,10 +1614,14 @@
           {
             "ts": "2026-07-05T11:53:34.167505",
             "price": 76.33333333333333
+          },
+          {
+            "ts": "2026-07-08T13:02:06.441988",
+            "price": 75.0
           }
         ],
-        "min_price": 76.33333333333333,
-        "last_price": 76.33333333333333
+        "min_price": 75.0,
+        "last_price": 75.0
       },
       "ibis Madrid Aeropuerto Barajas": {
         "history": [
@@ -1611,6 +1631,10 @@
           },
           {
             "ts": "2026-07-06T11:48:15.283283",
+            "price": 151.66666666666666
+          },
+          {
+            "ts": "2026-07-08T13:02:06.441988",
             "price": 151.66666666666666
           }
         ],
@@ -1674,10 +1698,20 @@
         ],
         "min_price": 127.66666666666667,
         "last_price": 127.66666666666667
+      },
+      "Hotel Nuevo Boston": {
+        "history": [
+          {
+            "ts": "2026-07-08T13:02:06.441988",
+            "price": 138.66666666666666
+          }
+        ],
+        "min_price": 138.66666666666666,
+        "last_price": 138.66666666666666
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-08T06:12:52.751107"
+    "last_checked_at": "2026-07-08T13:02:06.441988"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
