@@ -554,6 +554,10 @@
           {
             "ts": "2026-07-08T20:22:30.776005",
             "price": 83.66666666666667
+          },
+          {
+            "ts": "2026-07-09T15:55:50.736695",
+            "price": 83.66666666666667
           }
         ],
         "min_price": 75.33333333333333,
@@ -660,10 +664,14 @@
           {
             "ts": "2026-07-06T11:48:15.283283",
             "price": 104.33333333333333
+          },
+          {
+            "ts": "2026-07-09T15:55:50.736695",
+            "price": 103.66666666666667
           }
         ],
         "min_price": 103.66666666666667,
-        "last_price": 104.33333333333333
+        "last_price": 103.66666666666667
       },
       "Hotel NH Madrid Las Tablas": {
         "history": [
@@ -784,6 +792,10 @@
           {
             "ts": "2026-07-08T20:22:30.776005",
             "price": 108.33333333333333
+          },
+          {
+            "ts": "2026-07-09T15:55:50.736695",
+            "price": 108.33333333333333
           }
         ],
         "min_price": 106.66666666666667,
@@ -889,6 +901,10 @@
           },
           {
             "ts": "2026-07-08T20:22:30.776005",
+            "price": 102.66666666666667
+          },
+          {
+            "ts": "2026-07-09T15:55:50.736695",
             "price": 102.66666666666667
           }
         ],
@@ -1124,12 +1140,16 @@
           {
             "ts": "2026-07-07T01:16:39.610469",
             "price": 155.0
+          },
+          {
+            "ts": "2026-07-09T15:55:50.736695",
+            "price": 103.33333333333333
           }
         ],
-        "min_price": 155.0,
-        "last_price": 155.0,
-        "alerted_price": 155.0,
-        "alerted_at": "2026-07-02T11:06:40.649272"
+        "min_price": 103.33333333333333,
+        "last_price": 103.33333333333333,
+        "alerted_price": 103.33333333333333,
+        "alerted_at": "2026-07-09T15:55:51.714490"
       },
       "Hotel Montera Madrid, Curio Collection By Hilton": {
         "history": [
@@ -1292,6 +1312,10 @@
           {
             "ts": "2026-07-08T20:22:30.776005",
             "price": 84.33333333333333
+          },
+          {
+            "ts": "2026-07-09T15:55:50.736695",
+            "price": 84.33333333333333
           }
         ],
         "min_price": 78.0,
@@ -1399,6 +1423,10 @@
           },
           {
             "ts": "2026-07-08T20:22:30.776005",
+            "price": 126.33333333333333
+          },
+          {
+            "ts": "2026-07-09T15:55:50.736695",
             "price": 126.33333333333333
           }
         ],
@@ -1785,7 +1813,7 @@
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-09T05:36:32.226541"
+    "last_checked_at": "2026-07-09T15:55:50.736695"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
