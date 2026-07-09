@@ -38,10 +38,14 @@
           {
             "ts": "2026-07-08T06:12:52.751107",
             "price": 230.66666666666666
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 214.0
           }
         ],
-        "min_price": 230.66666666666666,
-        "last_price": 230.66666666666666
+        "min_price": 214.0,
+        "last_price": 214.0
       },
       "Dear Hotel Madrid": {
         "history": [
@@ -120,6 +124,10 @@
           {
             "ts": "2026-07-05T04:39:23.305579",
             "price": 409.0
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 409.0
           }
         ],
         "min_price": 409.0,
@@ -145,6 +153,10 @@
           },
           {
             "ts": "2026-07-05T04:39:23.305579",
+            "price": 456.6666666666667
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
             "price": 456.6666666666667
           }
         ],
@@ -1056,10 +1068,14 @@
           {
             "ts": "2026-07-04T07:22:10.971800",
             "price": 163.66666666666666
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 168.66666666666666
           }
         ],
         "min_price": 157.66666666666666,
-        "last_price": 163.66666666666666
+        "last_price": 168.66666666666666
       },
       "Spark by Hilton Madrid Alcal\u00e1": {
         "history": [
@@ -1144,6 +1160,10 @@
           {
             "ts": "2026-07-08T06:12:52.751107",
             "price": 307.0
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 307.0
           }
         ],
         "min_price": 307.0,
@@ -1180,10 +1200,14 @@
           {
             "ts": "2026-07-05T04:39:23.305579",
             "price": 252.33333333333334
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 266.0
           }
         ],
         "min_price": 250.66666666666666,
-        "last_price": 252.33333333333334
+        "last_price": 266.0
       },
       "Hotel NH Collection Madrid Palacio de Tepa": {
         "history": [
@@ -1220,10 +1244,14 @@
           {
             "ts": "2026-07-05T04:39:23.305579",
             "price": 238.0
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 240.66666666666666
           }
         ],
         "min_price": 238.0,
-        "last_price": 238.0
+        "last_price": 240.66666666666666
       },
       "Meli\u00e1 Avenida Am\u00e9rica": {
         "history": [
@@ -1588,6 +1616,10 @@
           {
             "ts": "2026-07-07T17:34:36.389524",
             "price": 119.33333333333333
+          },
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 119.33333333333333
           }
         ],
         "min_price": 107.0,
@@ -1740,10 +1772,20 @@
         ],
         "min_price": 138.66666666666666,
         "last_price": 138.66666666666666
+      },
+      "Bob W Madrid Atocha": {
+        "history": [
+          {
+            "ts": "2026-07-09T05:36:32.226541",
+            "price": 89.0
+          }
+        ],
+        "min_price": 89.0,
+        "last_price": 89.0
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-08T20:22:30.776005"
+    "last_checked_at": "2026-07-09T05:36:32.226541"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
