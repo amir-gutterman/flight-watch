@@ -144,6 +144,10 @@
           {
             "ts": "2026-07-11T01:00:45.916655",
             "price": 409.0
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
+            "price": 409.0
           }
         ],
         "min_price": 409.0,
@@ -185,6 +189,10 @@
           },
           {
             "ts": "2026-07-11T01:00:45.916655",
+            "price": 456.6666666666667
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
             "price": 456.6666666666667
           }
         ],
@@ -690,10 +698,14 @@
           {
             "ts": "2026-06-30T16:36:52.304436",
             "price": 108.66666666666667
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
+            "price": 142.0
           }
         ],
         "min_price": 108.66666666666667,
-        "last_price": 108.66666666666667
+        "last_price": 142.0
       },
       "ibis budget Madrid Calle Alcal\u00e1": {
         "history": [
@@ -1298,6 +1310,10 @@
           {
             "ts": "2026-07-11T01:00:45.916655",
             "price": 307.0
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
+            "price": 307.0
           }
         ],
         "min_price": 307.0,
@@ -1408,10 +1424,14 @@
           {
             "ts": "2026-07-05T04:39:23.305579",
             "price": 156.33333333333334
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
+            "price": 194.66666666666666
           }
         ],
         "min_price": 156.33333333333334,
-        "last_price": 156.33333333333334
+        "last_price": 194.66666666666666
       },
       "ibis budget Madrid Albasanz": {
         "history": [
@@ -1684,10 +1704,14 @@
           {
             "ts": "2026-07-10T18:59:00.143978",
             "price": 128.33333333333334
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
+            "price": 128.0
           }
         ],
-        "min_price": 128.33333333333334,
-        "last_price": 128.33333333333334
+        "min_price": 128.0,
+        "last_price": 128.0
       },
       "Madrid Marriott Hotel Princesa Plaza": {
         "history": [
@@ -1801,6 +1825,10 @@
           },
           {
             "ts": "2026-07-11T01:00:45.916655",
+            "price": 142.0
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
             "price": 142.0
           }
         ],
@@ -1972,6 +2000,10 @@
           {
             "ts": "2026-07-11T01:00:45.916655",
             "price": 89.0
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
+            "price": 89.0
           }
         ],
         "min_price": 89.0,
@@ -1982,14 +2014,18 @@
           {
             "ts": "2026-07-10T18:59:00.143978",
             "price": 161.66666666666666
+          },
+          {
+            "ts": "2026-07-11T07:10:44.331653",
+            "price": 161.33333333333334
           }
         ],
-        "min_price": 161.66666666666666,
-        "last_price": 161.66666666666666
+        "min_price": 161.33333333333334,
+        "last_price": 161.33333333333334
       }
     },
     "search_url": "https://www.google.com/travel/search?q=hotels%20in%20Madrid&ved=0CAAQ5JsGahcKEwjQgqGr-KWVAxUAAAAAHQAAAAAQBw&ts=CAESCgoCCAMKAggDEAAaUAoyEi4yJDB4ZDQyMjk5NzgwMGEzYzgxOjB4YzQzNmRlYzE2MThjMjI2OToGTWFkcmlkGgASGhIUCgcI6g8QCRgKEgcI6g8QCRgNGAMyAggBKg0KCToDRVVSYgIIARoA&qs=CAE4DUgA&ap=MAE",
-    "last_checked_at": "2026-07-11T01:00:45.916655"
+    "last_checked_at": "2026-07-11T07:10:44.331653"
   },
   "berlin-2026-08-06-1782510628159": {
     "hotels": {
