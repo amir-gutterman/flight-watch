@@ -369,6 +369,20 @@ const toast = (msg) => {
 function getToken() { return localStorage.getItem("fw_token") || ""; }
 function setToken(t) { localStorage.setItem("fw_token", t); }
 
+// Auto-import token from URL hash: open the page with #token=YOUR_PAT and it
+// saves to localStorage then strips the hash so the token isn't visible in
+// the address bar. Hash fragments never leave the browser / hit the server.
+(function () {
+  const hash = location.hash.slice(1);
+  const param = new URLSearchParams(hash);
+  const t = param.get("token");
+  if (t) {
+    setToken(t);
+    history.replaceState(null, "", location.pathname + location.search);
+    toast("Token saved from URL");
+  }
+})();
+
 async function ghGet(path) {
   const res = await fetch(`${API}/contents/${path}`, {
     headers: { Authorization: `Bearer ${getToken()}`, Accept: "application/vnd.github+json" },
